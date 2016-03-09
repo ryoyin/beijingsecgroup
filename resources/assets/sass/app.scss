@@ -1,2 +1,270 @@
-// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+//@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+/*************************************************
+************ Start: Media Max Width 991 **********
+*************************************************/
+@media (max-width: 991px) {
+	.lang-bar {		position: absolute;		top: 0px;		right: 0px;	}
+} 
+/*************************************************
+************* End: Media Max Width 991 ***********
+*************************************************/
+
+
+/*************************************************
+************ Start: Media Max Width 400 **********
+*************************************************/
+@media (max-width: 400px) {
+	.masthead {
+		h3 img {	position: absolute;	top: -2px; left: -9px; height: 35px !important; }	
+		.company-name { height: 88px;
+			&:nth-child(1) { font-size: 25px !important; }	
+			&:nth-child(2) { font-size: 18px !important; }
+		}
+	}
+}
+/*************************************************
+************* End: Media Max Width 400 ***********
+*************************************************/
+
+
+/*************************************************
+*************** Start: Master Header *************
+*************************************************/
+// Start: Master Header
+.masthead { display: inline-block; background-color: #3471a7; width: 100%; position: relative; background-image: url("img/header_background.jpg");
+
+	// Start: Top Left Block
+	h3 { display: inline-block; padding: 10px 10px 20px;
+
+		// Start: Company Logo
+		img { float: left; height: 75px; padding-left: 25px; padding-top: 10px; } 
+		// End: Company Logo
+
+		// Start: Company Name
+		.company-name { float: left; margin: 0px; padding: 0px; list-style: none;
+
+			li { padding-left: 20px; padding-top: 10px; color: #FFFFFF;
+
+				// Company Name drop shadow
+				&:nth-child(1) { font-size: 40px; text-shadow: 4px 4px 4px #0b487b; }
+				// Sub Company Name
+				&:nth-child(2) { padding-left: 27px; font-size: 21px; }
+
+			}
+
+		} // End: Company Name
+
+	} // End: Top Left Block
+	
+
+	// Start: Header Right
+	.header-right { float: right;
+
+		// Start: Top Right Language Bar
+		.lang-bar { float: right; color: #FFFFFF; padding: 10px 16px 0px; list-style: none;
+			li { float: left; padding: 0px 5px; }
+			a { color: #FFFFFF; }
+			a:hover { color: #fdff6c; text-decoration: none; }
+		} // End: Top Right Language Bar
+
+	} // End: Header Right
+
+	// Start: Login Block
+	.login-block {
+		//General
+		background-color: #2d318a; color: #FFFFFF; font-size: 20px; font-weight: bold;
+
+		//Position
+		position: absolute; bottom: 0px; right: 0px;		
+		
+		//Spacing
+		margin: 0px; margin-bottom: 0px; padding: 9px 25px 9px 44px;
+		
+		//Style
+		list-style: none; -webkit-border-top-left-radius: 18px; -moz-border-radius-topleft: 18px; border-top-left-radius: 18px;
+	} // End: Login Block
+
+} // End: Master Header
+/*************************************************
+**************** End: Master Header **************
+*************************************************/
+
+
+/*************************************************
+*************** START: Master Footer *************
+*************************************************/
+/*Footer*/
+.footer {
+	p { float: left; }
+	a { color: #000000; /*text-decoration: underline;*/ }
+	ul { list-style: none; margin: 0px; padding: 0px 0px; float: right; }
+	li { float: left; padding: 0px 5px; }
+	.weixin_qr { float: right; margin-bottom: 15px; 
+		li{ float: none; }
+	}
+}
+/*************************************************
+*************** END: Master Footer *************
+*************************************************/
+
+
+/*************************************************
+***************** Start: Home Page ***************
+*************************************************/
+// Start: Navigation Bar
+.main_navbar { border: 0px; border-radius: 0; background-color: #2e4571; margin-bottom: 0px; min-height: 40px;
+
+  li { font-weight: bold; font-size: 16px;
+
+		a { color: #FFFFFF !important; padding-top: 12px; padding-bottom: 12px; }
+
+	}
+
+} // End: Navigation Bar
+
+// Start: Banner
+.main_banner img { /*height: 350px !important; width: 200px;*/ } 
+// End: Banner
+
+// Start: Breadcrumb
+.breadcrumb { padding: 15px 0px 0px; background-color: #FFFFFF; } 
+// End: Breadcrumb
+
+// Start: Page Title
+.page-title { /*padding-top: 25px;*/ padding-bottom: 15px; color: #3471a7; font-size: 25px; font-weight: bold; } 
+// End: Page Title
+
+// Start: Trading Platform
+.trading-platform { padding: 0px 15px;
+
+	.row { margin: 0px 0px; }
+	h3 { color: #3471a7; }
+	.title { padding: 25px 0px 0px; color: #3471a7; font-size: 25px; font-weight: bold; }
+	img { height: 200px; }
+
+	// Start: App Trading
+	.app-trading { padding: 25px 0px;
+
+		// Start: QR Code
+		.qr-code { text-align: center;
+
+			img { height: 100px; }
+			p { text-align: center; padding-top: 10px; text-decoration: underline; cursor: pointer; }
+
+		} // End: QR Code
+
+		.left { 
+
+			ul { margin: 0px; padding: 0px; list-style: none;
+
+				li {
+					&:nth-child(1) { padding-bottom: 25px; }
+					&:nth-child(2) { text-align: right; }
+				}
+
+			}
+			
+		}
+		
+	} // End: App Trading
+
+	// Start: Online Trading
+	.online-trading { padding: 25px 0px;
+
+		.col-md-7 img { height: auto; width: 100%; }
+		.login-btn { font-size: 30px; }
+
+		.right { /*padding-top: 40px;*/
+
+			ul { margin: 0px; padding: 0px; list-style: none;
+				&:nth-child(1) { padding-bottom: 25px; }
+				&:nth-child(2) { text-align: right; }
+			}
+
+		}
+
+	} // End: Online Trading
+
+} // End: Trading Platform
+
+// Start: Service Block
+.service-block {
+
+	p { min-height: 85px; }	
+	h2 { color: #3471a7; font-weight: bold; }
+
+	.img-block {  text-align: center; 		
+		img { width: 90%;  padding-top: 10px; height: 225px; } 
+	}
+
+} // End: Service Block
+
+// Start: Stock Block
+.stock-block { padding-top: 25px;
+
+	.glyphicon-arrow-up { color: green; }
+	.glyphicon-arrow-down { color: red; }
+	.index-table thead th { color: #3471a7; font-weight: bold; }
+
+} // End: Stock Block
+
+/*About Us*/
+.about-us-block {
+	.page-title { padding-bottom: 0px; }
+	ul { list-style: none; margin: 0px; padding: 0px 15px; }
+	.stock-block { padding: 15px 15px 0px; }
+}
+
+/*Contact US*/
+.contact-us-block {
+	.information {
+		.row { padding: 0px 15px; }
+		h2 { margin-top: 0px; }
+		input { width: 100%; font-size: 15px; padding: 2px 7px; }
+		textarea { font-size: 15px; width: 100%; height: 100px; padding: 5px 7px; }
+		.submit { width: auto; }
+		i { width: 25px; padding-right: 10px; }
+	}
+
+	.title { font-weight: bold; }
+	.title, .content { padding-bottom: 10px; font-size: 15px; }
+
+}
+
+
+/*************************************************
+****************** END: Home Page ****************
+*************************************************/
+
+
+/*************************************************
+*************** START: Download Page *************
+*************************************************/
+/*download-block*/
+.download-block {
+
+	h3 { font-weight: bold; color: #3471a7;	 }
+	li { padding: 10px 0px; }
+
+	.download-table { margin-bottom: 30px; 
+		a { font-weight: bold; }
+		a:hover { text-decoration: none; }
+	}
+
+}
+/*************************************************
+**************** END: Download Page **************
+*************************************************/
+
+
+/*************************************************
+************** Start: Market News Page ***********
+*************************************************/
+.stock-block .index-temp {
+    display: none;
+}
+/*************************************************
+************** End: Market News Page ***********
+*************************************************/
 

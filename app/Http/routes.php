@@ -15,8 +15,8 @@
 //     return view('frontend.maintenance');
 // }));
 
-Route::get('/', array('as' => 'front-homepage', function () {
-    return view('frontend.index');
+/*Route::get('/', array('as' => 'front-homepage', function () {
+  return view('frontend.index');
 }));
 
 Route::get('/market-news', array('as' => 'front-marketnews', function () {
@@ -37,7 +37,53 @@ Route::get('/about-us', array('as' => 'front-aboutus', function () {
 
 Route::get('/contact-us', array('as' => 'front-contactus', function () {
     return view('frontend.contactus');
-}));
+}));*/
+
+/*
+|--------------------------------------------------------------------------
+| Sub Domain Routes
+|--------------------------------------------------------------------------
+|
+| This route is for admin.beijingsecgroup.com
+|
+*/
+Route::group(['domain' => 'dev.beijingsecgroup.com'], function () {
+
+  Route::get('/', array('as' => 'front-homepage', function () {
+	  return view('frontend.index');
+	}));
+
+	Route::get('/market-news', array('as' => 'front-marketnews', function () {
+	    return view('frontend.marketnews');
+	}));
+
+	Route::get('/company-structure', array('as' => 'front-structure', function () {
+	    return view('frontend.structure');
+	}));
+
+	Route::get('/download', array('as' => 'front-download', function () {
+	    return view('frontend.download');
+	}));
+
+	Route::get('/about-us', array('as' => 'front-aboutus', function () {
+	    return view('frontend.aboutus');
+	}));
+
+	Route::get('/contact-us', array('as' => 'front-contactus', function () {
+	    return view('frontend.contactus');
+	}));
+
+});
+
+Route::group(['domain' => 'admin.beijingsecgroup.com'], function () {
+
+  Route::get('/', array('as' => 'admin-homepage', function () {
+	  echo 'This is admin page';
+	}));
+
+	Route::get('/server/monitor', 'ServerMonitorController@index')->name('server-monitor');
+
+});
 
 /*
 |--------------------------------------------------------------------------

@@ -36,7 +36,9 @@
     <script src="js/site.js?time=20160303"></script>
 
     <!-- Custom CSS -->
-    <link href="dist/css/site.css?time=20160303" rel="stylesheet">
+    <!-- <link href="dist/css/site.css?time=20160303" rel="stylesheet"> -->
+    <link href="css/app.css" rel="stylesheet">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   </head>
   <body>
