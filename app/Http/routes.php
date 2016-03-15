@@ -47,41 +47,36 @@ Route::get('/contact-us', array('as' => 'front-contactus', function () {
 | This route is for admin.beijingsecgroup.com
 |
 */
-Route::group(['domain' => 'dev.beijingsecgroup.com'], function () {
+use Illuminate\Http\Request;
 
-  Route::get('/', array('as' => 'front-homepage', function () {
-	  return view('frontend.index');
-	}));
+Route::group(['domain' => 'dev.beijingsecgroup.com', 'middleware' => ['web']], function () {
 
-	Route::get('/market-news', array('as' => 'front-marketnews', function () {
-	    return view('frontend.marketnews');
-	}));
+	/*Static Page inside controller*/
+	Route::get('/', ['uses' => 'PageController@homepage', 'as' => 'front.homepage']);
+	Route::get('/market-news', ['uses' => 'PageController@marketnews', 'as' => 'front.marketnews']);
+	Route::get('/company-structure', ['uses' => 'PageController@companystructure', 'as' => 'front.companystructure']);
+	Route::get('/download', ['uses' => 'PageController@download', 'as' => 'front.download']);
+	Route::get('/about-us', ['uses' => 'PageController@aboutus', 'as' => 'front.aboutus']);
+	Route::get('/contact-us', ['uses' => 'PageController@contactus', 'as' => 'front.contactus']);
 
-	Route::get('/company-structure', array('as' => 'front-structure', function () {
-	    return view('frontend.structure');
-	}));
-
-	Route::get('/download', array('as' => 'front-download', function () {
-	    return view('frontend.download');
-	}));
-
-	Route::get('/about-us', array('as' => 'front-aboutus', function () {
-	    return view('frontend.aboutus');
-	}));
-
-	Route::get('/contact-us', array('as' => 'front-contactus', function () {
-	    return view('frontend.contactus');
-	}));
+	/*Route for sending enquiry to email*/
+	Route::post('/mail/send_enquiry', 'EmailController@send_web_enquiry')->name('email.send_web_enquiry');
 
 });
 
-Route::group(['domain' => 'admin.beijingsecgroup.com'], function () {
+Route::group(['domain' => 'admin.beijingsecgroup.com', 'middleware' => ['web']], function () {
 
   Route::get('/', array('as' => 'admin-homepage', function () {
 	  echo 'This is admin page';
 	}));
 
 	Route::get('/server/monitor', 'ServerMonitorController@index')->name('server-monitor');
+	Route::get('/server/checkserverstatus', 'ServerMonitorController@checkServerStatus')->name('server-status');
+
+	Route::get('/test', array('as' => 'admin-homepage', function () {
+	  return view('backend.test');
+	}));	
+	Route::post('/server/checkconnectionbyip', 'ServerMonitorController@checkConnectionByIP');
 
 });
 

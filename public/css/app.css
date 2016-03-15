@@ -29,6 +29,9 @@
 /*************************************************
 ************* End: Media Max Width 400 ***********
 *************************************************/
+.bg-success, .bg-danger {
+  padding: 10px 20px; }
+
 /*************************************************
 *************** Start: Master Header *************
 *************************************************/
@@ -97,28 +100,34 @@
 *************** START: Master Footer *************
 *************************************************/
 /*Footer*/
-.footer p {
-  float: left; }
-
-.footer a {
-  color: #000000;
-  /*text-decoration: underline;*/ }
-
 .footer ul {
   list-style: none;
   margin: 0px;
-  padding: 0px 0px;
+  padding: 0px; }
+
+.footer .app-block {
+  text-align: center;
+  padding-bottom: 25px; }
+  .footer .app-block .app-container {
+    display: inline-block; }
+    .footer .app-block .app-container .app-item {
+      float: left;
+      padding: 0px 10px; }
+      .footer .app-block .app-container .app-item li:nth-child(2) {
+        font-weight: bold; }
+
+.footer .bottom p {
+  float: left; }
+
+.footer .bottom a {
+  color: #000000;
+  /*text-decoration: underline;*/ }
+
+.footer .bottom ul {
   float: right; }
-
-.footer li {
-  float: left;
-  padding: 0px 5px; }
-
-.footer .weixin_qr {
-  float: right;
-  margin-bottom: 15px; }
-  .footer .weixin_qr li {
-    float: none; }
+  .footer .bottom ul li {
+    float: left;
+    padding: 0px 7px; }
 
 /*************************************************
 *************** END: Master Footer *************

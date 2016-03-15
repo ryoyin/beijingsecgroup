@@ -30,9 +30,8 @@
 				<div class="col-md-12 page-title">表格下載</div>
 				<div class="col-md-12">
 				<ul>
-					<li><a href="#account">開戶文件</a></li>
-					<li><a href="#investment">投資基金</a></li>
-					<li><a href="#properities">資產管理</a></li>
+					<li><a href="#account" style="font-weight: bold;">開戶文件</a></li>
+					<li><a href="#agreement" style="font-weight: bold;">協議書及附件</a></li>
 				</ul>
 				</div>
 			</div>
@@ -48,39 +47,19 @@
 					</thead>
 					<tbody>
 						<tr>
-							<th scope="row">開戶文件</th>
-							<td><a href="#"><i class="fa fa-file-pdf-o"></i> account_opening_form.pdf</a></td>
-							<td style="text-align: center"><i class="fa fa-download"></i></td>
+							<th scope="row">个人或联名帐戸表格</th>
+							<td><a href="document/pdf/北京证券集团开戸文件（个人或联名帐戸)表格.pdf" target="_blank"><i class="fa fa-file-pdf-o"></i> 北京证券集团开戸文件（个人或联名帐戸)表格.pdf</a></td>
+							<td style="text-align: center"><a href="document/pdf/北京证券集团开戸文件（个人或联名帐戸)表格.pdf" target="_blank"><i class="fa fa-download"></i></a>	</td>
 						</tr>
 						<tr>
-							<th scope="row">開戶文件</th>
-							<td><a href="#"><i class="fa fa-file-pdf-o"></i> account_opening_form.pdf</a></td>
-							<td style="text-align: center"><i class="fa fa-download"></i></td>
-						</tr>
-						<tr>
-							<th scope="row">開戶文件</th>
-							<td><a href="#"><i class="fa fa-file-pdf-o"></i> account_opening_form.pdf</a></td>
-							<td style="text-align: center"><i class="fa fa-download"></i></td>
-						</tr>
-						<tr>
-							<th scope="row">開戶文件</th>
-							<td><a href="#"><i class="fa fa-file-pdf-o"></i> account_opening_form.pdf</a></td>
-							<td style="text-align: center"><i class="fa fa-download"></i></td>
-						</tr>
-						<tr>
-							<th scope="row">開戶文件</th>
-							<td><a href="#"><i class="fa fa-file-pdf-o"></i> account_opening_form.pdf</a></td>
-							<td style="text-align: center"><i class="fa fa-download"></i></td>
-						</tr>
-						<tr>
-							<th scope="row">開戶文件</th>
-							<td><a href="#"><i class="fa fa-file-pdf-o"></i> account_opening_form.pdf</a></td>
-							<td style="text-align: center"><i class="fa fa-download"></i></td>
+							<th scope="row">公司帐戸表格</th>
+							<td><a href="document/pdf/北京证券集团开戸文件（公司帐戸)表格.pdf" target="_blank"><i class="fa fa-file-pdf-o"></i> 北京证券集团开戸文件（公司帐戸)表格.pdf</a></td>
+							<td style="text-align: center"><a href="document/pdf/北京证券集团开戸文件（公司帐戸)表格.pdf" target="_blank"><i class="fa fa-download"></i></a></td>
 						</tr>
 					</tbody>
 				</table>
 				
-				<h3><a name="investment">投資基金</a></h3>
+				<h3><a name="agreement">協議書及附件</a></h3>
 				<table class="table table-hover download-table">
 					<thead>
 						<tr>
@@ -91,45 +70,13 @@
 					</thead>
 					<tbody>
 						<tr>
-							<th scope="row">投資基金</th>
-							<td><a href="#"><i class="fa fa-file-pdf-o"></i> account_opening_form.pdf</a></td>
-							<td style="text-align: center"><i class="fa fa-download"></i></td>
-						</tr>
-						<tr>
-							<th scope="row">投資基金</th>
-							<td><a href="#"><i class="fa fa-file-pdf-o"></i> account_opening_form.pdf</a></td>
-							<td style="text-align: center"><i class="fa fa-download"></i></td>
-						</tr>
-						<tr>
-							<th scope="row">投資基金</th>
-							<td><a href="#"><i class="fa fa-file-pdf-o"></i> account_opening_form.pdf</a></td>
-							<td style="text-align: center"><i class="fa fa-download"></i></td>
+							<th scope="row">協議書及附件</th>
+							<td><a href="document/pdf/北京证券集团協議書及附件.pdf" target="_blank"><i class="fa fa-file-pdf-o"></i> 北京证券集团協議書及附件.pdf</a></td>
+							<td style="text-align: center"><a href="document/pdf/北京证券集团協議書及附件.pdf" target="_blank"><i class="fa fa-download"></i></a></td>
 						</tr>
 					</tbody>
 				</table>
-				
-				<h3><a name="properities">資產管理</a></h3>
-				<table class="table table-hover download-table">
-					<thead>
-						<tr>
-							<th>表格名稱</th>
-							<th>檔案</th>
-							<th style="text-align: center;">下載</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<th scope="row">資產管理</th>
-							<td><a href="#"><i class="fa fa-file-pdf-o"></i> account_opening_form.pdf</a></td>
-							<td style="text-align: center"><i class="fa fa-download"></i></td>
-						</tr>
-						<tr>
-							<th scope="row">資產管理</th>
-							<td><a href="#"><i class="fa fa-file-pdf-o"></i> account_opening_form.pdf</a></td>
-							<td style="text-align: center"><i class="fa fa-download"></i></td>
-						</tr>
-					</tbody>
-				</table>
+
 			</div>
 		</div>
 	</div>

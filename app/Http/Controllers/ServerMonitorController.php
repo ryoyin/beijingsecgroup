@@ -15,15 +15,22 @@ class ServerMonitorController extends Controller
      */
     public function index()
     {
+        // $server_list = $this->getServerList();
         $server_status = $this->getServerStatus();
         return view('backend.server_monitor', ["server_status" => $server_status]);
         // return view('backend.server_monitor');
     }
 
+    public function checkServerStatus($returnJSON = TRUE) {
+        $server_status = $this->getServerStatus();
+        $return = ($returnJSON ? json_encode($server_status):$server_status);
+        return $return;
+    }
+
     private function getServerList() {
 
         //internal server list
-        $server_lists = array(
+        $server_list = array(
             "vm_server" => array("fullname" => "虚拟伺服器", "ip" => "192.168.10.10", "status" => "pending"),
             "domain_server" => array("fullname" => "域和文件服务器", "ip" => "192.168.10.11", "status" => "pending"),
             "mail_server" => array("fullname" => "邮件服务器", "ip" => "192.168.10.12", "status" => "pending"),
@@ -31,10 +38,10 @@ class ServerMonitorController extends Controller
             "test_fail" => array("fullname" => "演示测试失败 (忽视  )", "ip" => "192.168.10.200", "status" => "pending")
         );
 
-        return $server_lists;
+        return $server_list;
     }
 
-    private function checkConnection($detail) {
+    public function checkConnection($detail) {
 
         exec("ping ".$detail['ip']." -n 1", $output, $return_var);
 
@@ -44,20 +51,30 @@ class ServerMonitorController extends Controller
 
     }
 
+    public function checkConnectionByIP(Request $request) {
+
+        exec("ping ".$request->input('ip')." -n 1", $output, $return_var);
+
+        $output2 = explode("=", $output[2]); //回覆自 192.168.10.125: 目的地主機無法連線。
+
+        return is_numeric(end($output2)) ? 1: 0; 
+
+    }
+
     private function getServerStatus() {
 
-        $server_lists = $this->getServerList();
-        foreach($server_lists AS $server_type => $detail) {
+        $server_list = $this->getServerList();
+        foreach($server_list AS $server_type => $detail) {
             
             $connection = $this->checkConnection($detail);
             if($connection) {
-                $server_lists[$server_type]['status'] = 'passed';
+                $server_list[$server_type]['status'] = 'passed';
             } else {
-                $server_lists[$server_type]['status'] = 'failed';
+                $server_list[$server_type]['status'] = 'failed';
             }
         }
 
-        return $server_lists;
+        return $server_list;
 
     }
 

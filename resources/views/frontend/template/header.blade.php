@@ -101,12 +101,12 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
               <!-- <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li> -->
-              <li><a href="{{route('front-homepage')}}">首页</a></li>
-              <li><a href="{{route('front-marketnews')}}">市场动态</a></li>
-              <li><a href="{{route('front-structure')}}">公司架构</a></li>
-              <li><a href="{{route('front-download')}}">表格下載</a></li>
-              <li><a href="{{route('front-aboutus')}}">关于我们</a></li>
-              <li><a href="{{route('front-contactus')}}">联络我们</a></li>
+              <li><a href="{{route('front.homepage')}}">首页</a></li>
+              <li><a href="{{route('front.marketnews')}}">市场动态</a></li>
+              <li><a href="{{route('front.companystructure')}}">公司架构</a></li>
+              <li><a href="{{route('front.download')}}">表格下載</a></li>
+              <li><a href="{{route('front.aboutus')}}">关于我们</a></li>
+              <li><a href="{{route('front.contactus')}}">联络我们</a></li>
               <!-- <li><a href="/beijingsecgorup/cs">客户服务</a></li>  -->
 
               <!-- <li class="dropdown">
