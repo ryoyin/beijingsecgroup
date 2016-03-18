@@ -4,10 +4,10 @@
 ************ Start: Media Max Width 991 **********
 *************************************************/
 @media (max-width: 991px) {
-	.lang-bar {		position: absolute;		top: 0px;		right: 0px;	}
+	.lang-bar {		position: absolute;		top: 0;		right: 0;	}
 } 
 /*************************************************
-************* End: Media Max Width 991 ***********
+************* End: Media Max Width 991 *************
 *************************************************/
 
 
@@ -45,7 +45,7 @@
 		// End: Company Logo
 
 		// Start: Company Name
-		.company-name { float: left; margin: 0px; padding: 0px; list-style: none;
+		.company-name { float: left; margin: 0; padding: 0; list-style: none;
 
 			li { padding-left: 20px; padding-top: 10px; color: #FFFFFF;
 
@@ -65,8 +65,8 @@
 	.header-right { float: right;
 
 		// Start: Top Right Language Bar
-		.lang-bar { float: right; color: #FFFFFF; padding: 10px 16px 0px; list-style: none;
-			li { float: left; padding: 0px 5px; }
+		.lang-bar { float: right; color: #FFFFFF; padding: 10px 16px 0; list-style: none;
+			li { float: left; padding: 0 5px; }
 			a { color: #FFFFFF; }
 			a:hover { color: #fdff6c; text-decoration: none; }
 		} // End: Top Right Language Bar
@@ -79,10 +79,10 @@
 		background-color: #2d318a; color: #FFFFFF; font-size: 20px; font-weight: bold;
 
 		//Position
-		position: absolute; bottom: 0px; right: 0px;		
+		position: absolute; bottom: 0; right: 0;
 		
 		//Spacing
-		margin: 0px; margin-bottom: 0px; padding: 9px 25px 9px 44px;
+		margin: 0; margin-bottom: 0; padding: 9px 25px 9px 44px;
 		
 		//Style
 		list-style: none; -webkit-border-top-left-radius: 18px; -moz-border-radius-topleft: 18px; border-top-left-radius: 18px;
@@ -101,13 +101,13 @@
 .footer {
 
 	ul {
-		list-style: none; margin: 0px; padding: 0px;
+		list-style: none; margin: 0; padding: 0;
 	}
 
 	.app-block { text-align: center; padding-bottom: 25px;
 
 		.app-container { display: inline-block; 
-			.app-item { float: left; padding: 0px 10px;
+			.app-item { float: left; padding: 0 10px;
 				li:nth-child(2) {
 					font-weight: bold;
 				}
@@ -121,7 +121,7 @@
 
 		// disclaimer
 		ul { float: right;
-			li { float: left; padding: 0px 7px; }
+			li { float: left; padding: 0 7px; }
 		}
 	}	
 
@@ -135,7 +135,7 @@
 ***************** Start: Home Page ***************
 *************************************************/
 // Start: Navigation Bar
-.main_navbar { border: 0px; border-radius: 0; background-color: #2e4571; margin-bottom: 0px; min-height: 40px;
+.main_navbar { border: 0; border-radius: 0; background-color: #2e4571; margin-bottom: 0; min-height: 40px;
 
   li { font-weight: bold; font-size: 16px;
 
@@ -150,7 +150,7 @@
 // End: Banner
 
 // Start: Breadcrumb
-.breadcrumb { padding: 15px 0px 0px; background-color: #FFFFFF; } 
+.breadcrumb { padding: 15px 0 0; background-color: #FFFFFF; }
 // End: Breadcrumb
 
 // Start: Page Title
@@ -158,15 +158,15 @@
 // End: Page Title
 
 // Start: Trading Platform
-.trading-platform { padding: 0px 15px;
+.trading-platform { padding: 0 15px;
 
-	.row { margin: 0px 0px; }
+	.row { margin: 0 0; }
 	h3 { color: #3471a7; }
-	.title { padding: 25px 0px 0px; color: #3471a7; font-size: 25px; font-weight: bold; }
+	.title { padding: 25px 0 0; color: #3471a7; font-size: 25px; font-weight: bold; }
 	img { height: 200px; }
 
 	// Start: App Trading
-	.app-trading { padding: 25px 0px;
+	.app-trading { padding: 25px 0;
 
 		// Start: QR Code
 		.qr-code { text-align: center;
@@ -178,7 +178,7 @@
 
 		.left { 
 
-			ul { margin: 0px; padding: 0px; list-style: none;
+			ul { margin: 0; padding: 0; list-style: none;
 
 				li {
 					&:nth-child(1) { padding-bottom: 25px; }
@@ -192,14 +192,14 @@
 	} // End: App Trading
 
 	// Start: Online Trading
-	.online-trading { padding: 25px 0px;
+	.online-trading { padding: 25px 0;
 
 		.col-md-7 img { height: auto; width: 100%; }
 		.login-btn { font-size: 30px; }
 
 		.right { /*padding-top: 40px;*/
 
-			ul { margin: 0px; padding: 0px; list-style: none;
+			ul { margin: 0; padding: 0; list-style: none;
 				&:nth-child(1) { padding-bottom: 25px; }
 				&:nth-child(2) { text-align: right; }
 			}
@@ -225,24 +225,43 @@
 // Start: Stock Block
 .stock-block { padding-top: 25px;
 
+	//h4 { font-weight: bold; border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-bottom: 0;}
 	.glyphicon-arrow-up { color: green; }
 	.glyphicon-arrow-down { color: red; }
 	.index-table thead th { color: #3471a7; font-weight: bold; }
+
+	.news-block { height: 235px; overflow: scroll; overflow-x: hidden; margin-bottom: 25px;
+
+		.market-news {
+			tbody {	border: 0;
+				tr:nth-child(1) td { border: 0; }
+			}
+
+			thead th { color: #000000; font-weight: bold; }
+			.loading td { height: 190px; text-align: center; vertical-align: middle; }
+            .news-realtime { display: none; font-size: 12px;
+                td { cursor: pointer; }
+			}
+
+		}
+
+	}
+
 
 } // End: Stock Block
 
 /*About Us*/
 .about-us-block {
-	.page-title { padding-bottom: 0px; }
-	ul { list-style: none; margin: 0px; padding: 0px 15px; }
-	.stock-block { padding: 15px 15px 0px; }
+	.page-title { padding-bottom: 0; }
+	ul { list-style: none; margin: 0; padding: 0 15px; }
+	.stock-block { padding: 15px 15px 0; }
 }
 
 /*Contact US*/
 .contact-us-block {
 	.information {
-		.row { padding: 0px 15px; }
-		h2 { margin-top: 0px; }
+		.row { padding: 0 15px; }
+		h2 { margin-top: 0; }
 		input { width: 100%; font-size: 15px; padding: 2px 7px; }
 		textarea { font-size: 15px; width: 100%; height: 100px; padding: 5px 7px; }
 		.submit { width: auto; }
@@ -267,7 +286,7 @@
 .download-block {
 
 	h3 { font-weight: bold; color: #3471a7;	 }
-	li { padding: 10px 0px; }
+	li { padding: 10px 0; }
 
 	.download-table { margin-bottom: 30px; 
 		a { font-weight: bold; }
@@ -283,8 +302,92 @@
 /*************************************************
 ************** Start: Market News Page ***********
 *************************************************/
-.stock-block .index-temp {
-    display: none;
+// Start: Stock Block
+.stock-block { padding-top: 25px;
+
+  h4 { font-weight: bold; margin-bottom: 0;}
+  .glyphicon-arrow-up { color: green; }
+  .glyphicon-arrow-down { color: red; }
+  .index-table thead th { color: #3471a7; font-weight: bold; }
+
+  #news-block-header { list-style: none; margin: 0; padding: 0; border-bottom: 2px solid #ddd; padding-bottom: 10px; display: inline-block; width: 100%;
+
+    li {
+      &:nth-child(1) { float: left; }
+      &:nth-child(2) { float: right; padding-top: 10px;
+        a { text-decoration: none; }
+      }
+    }
+  }
+  .news-block { height: 235px; overflow: scroll; overflow-x: hidden; margin-bottom: 25px;
+
+    .market-news {
+
+      tbody {	border: 0;
+        tr:nth-child(1) td { border: 0; }
+      }
+
+      thead th { color: #000000; font-weight: bold; }
+      .loading td { height: 190px; text-align: center; vertical-align: middle; }
+      .news-realtime { display: none; font-size: 12px;
+        td { cursor: pointer;
+          span { color: deepskyblue; }
+        }
+      }
+
+    }
+
+  }
+
+  .marketnews-stock-nav {
+    a { padding: 5px 10px; }
+  }
+
+  #mostActive-block-header { list-style: none; margin: 0; padding: 0; /*border-bottom: 2px solid #ddd;*/ padding-bottom: 5px; display: inline-block; width: 100%;
+
+    li {
+      &:nth-child(1) { float: left; }
+      &:nth-child(2) { float: right; padding-top: 10px;
+        a { text-decoration: none; }
+      }
+    }
+  }
+  .mostActive-block { overflow: auto; overflow-x: hidden; margin-bottom: 25px;
+
+    .most-active {
+
+      tbody {	border: 0;
+        tr:nth-child(1) td { border: 0; }
+      }
+
+      thead th { color: #000000; font-weight: bold; border-top: 0 }
+      .mostActive-realtime-thead {
+        th { text-align: center;
+          &:nth-child(1), &:nth-child(2) {
+            text-align: left;
+          }
+        }
+      }
+      .mostActive-realtime { font-size: 12px;
+        td {
+          &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7) {
+            text-align: right;
+          }
+        }
+      }
+
+    }
+
+    .loading td { height: 377px; text-align: center; vertical-align: middle; }
+
+  }
+
+} // End: Stock Block
+
+#marketNewsModal {
+  p { margin-top: 15px;}
+  #marketNewsLabel { font-weight: bold; }
+  #marketNewsDatetime { font-size: 14px; }
 }
 /*************************************************
 ************** End: Market News Page ***********

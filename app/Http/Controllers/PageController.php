@@ -6,8 +6,14 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
+use Carbon\Carbon;
+
 class PageController extends Controller
 {
+
+	public function __construct() {
+		date_default_timezone_set('Asia/Hong_Kong'); 
+	}
 
 	public function homepage() {
 

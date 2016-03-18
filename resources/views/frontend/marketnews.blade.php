@@ -1,12 +1,14 @@
 @extends('frontend.template.layout')
 
 @section('content')
+<meta name="csrf-token" content="{{ csrf_token() }}">
+
 <!-- Banner -->
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Wrapper for slides -->
   <div class="carousel-inner main_banner" role="listbox">
     <div class="item active">
-      <img src="img/banner/activity_1_1140x200.jpg" alt="Contact Us">
+		<img src="img/banner/activity_1_1140x200.jpg" alt="Contact Us">
       <!-- <div class="carousel-caption"></div> -->
     </div>
   </div>
@@ -14,84 +16,47 @@
 </div>
 
 <!-- Content -->
-<div class="row about-us-block">
+<div class="row market-news-block">
 	<div class="col-md-12">
 		<ol class="breadcrumb">
-		  <li><a href="#">首頁</a></li>
-		  <li class="active">市場動態</li>
+			<li><a href="#">首頁</a></li>
+			<li class="active">市場動態</li>
 		</ol>
-	</div>	
+	</div>
 
 	<!-- Company Information -->
 	<div class="row">	
 		<div class="col-md-12 information">
 			<div class="col-md-12 page-title">市場動態</div>
 
-				<div class="col-md-7 stock-block">
+			{{--Right Board--}}
+			<div class="col-md-7 stock-block">
 
-					<!-- News from Infocast & Exchange -->
-					<table class="table table-hover index-table">
-			      <thead>
-			        <tr>
-			          <th colspan="5">即時新聞 - 由港滙資訊提供</th>
-			        </tr>
-			      </thead>
-			      <tbody class="index-tbody">
-			        <tr>
-			          <th scope="row"></th>
-			          <td></td>
-			          <td><span class="glyphicon" aria-hidden="true"></span> </td>
-			          <td></td>
-			          <td></td>
-			        </tr>
-			      </tbody>
-			    </table> <!-- // News from Infocast & Exchange -->
+				@include('frontend.block.marketnews')
 
+			</div>{{--Right Board--}}
 
-			  	<!-- Tab Panel -->
-			  	<div>
+			{{--Left Board--}}
+			<div class="col-md-5 stock-block">
 
-					  <!-- Nav tabs -->
-					  <ul class="nav nav-tabs" role="tablist">
-					    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
-					    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
-					    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
-					    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
-					  </ul>
+				@include('frontend.block.mostactive')
 
-					  <!-- Tab panes -->
-					  <div class="tab-content">
-					    <div role="tabpanel" class="tab-pane fade in active" id="home">
-						    <table class="table table-hover index-table">
-						      <thead>
-						        <tr>
-						          <th>指数名称</th>
-						          <th>收盘</th>
-						          <th>涨跌</th>
-						          <th>最高</th>
-						          <th>最低</th>
-						        </tr>
-						      </thead>
-						      <tbody class="index-tbody">
-						        <tr class="index-temp">
-						          <th scope="row"></th>
-						          <td></td>
-						          <td><span class="glyphicon" aria-hidden="true"></span> </td>
-						          <td></td>
-						          <td></td>
-						        </tr>
-						      </tbody>
-						    </table>
-					    </div>
-						  <div role="tabpanel" class="tab-pane fade" id="profile">...</div>
-						  <div role="tabpanel" class="tab-pane fade" id="messages">...</div>
-						  <div role="tabpanel" class="tab-pane fade" id="settings">...</div>
-					  </div>
+			</div>{{--Left Board--}}
 
-					</div> <!-- Tab Panel -->
+		</div>
+	</div>
+</div>
 
-			  </div>
-			  <div class="col-md-5"><img src="img/chart.jpg" style="width: 100%"></div>
+<!-- Market News Modal -->
+<div class="modal fade" id="marketNewsModal" tabindex="-1" role="dialog" aria-labelledby="marketNewsLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h3 class="modal-title" id="marketNewsLabel"></h3>
+				<div id="marketNewsDatetime"></div>
+			</div>
+			<div class="modal-body" id="marketNewsBody"></div>
 		</div>
 	</div>
 </div>

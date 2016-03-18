@@ -49,6 +49,12 @@ Route::get('/contact-us', array('as' => 'front-contactus', function () {
 */
 use Illuminate\Http\Request;
 
+/*Infocast API for Index*/
+Route::group(['domain' => 'dev.beijingsecgroup.com'], function () {
+    /*API CALL*/
+    Route::get('/schedule/requestmostactive', ['uses' => 'InfocastController@requestMostActive', 'as' => 'schedule.requestmostactive']);
+});
+
 Route::group(['domain' => 'dev.beijingsecgroup.com', 'middleware' => ['web']], function () {
 
 	/*Static Page inside controller*/
@@ -62,7 +68,13 @@ Route::group(['domain' => 'dev.beijingsecgroup.com', 'middleware' => ['web']], f
 	/*Route for sending enquiry to email*/
 	Route::post('/mail/send_enquiry', 'EmailController@send_web_enquiry')->name('email.send_web_enquiry');
 
+    /*Response for Market News*/
+    Route::post('/ajax/stock/marketnews', ['uses' => 'InfocastController@marketnews', 'as' => 'ajax.stock.marketnews']);
+
+
 });
+Route::post('/ajax/stock/mostactive', ['uses' => 'InfocastController@mostactive', 'as' => 'ajax.stock.mostactive']);
+
 
 Route::group(['domain' => 'admin.beijingsecgroup.com', 'middleware' => ['web']], function () {
 
@@ -75,7 +87,7 @@ Route::group(['domain' => 'admin.beijingsecgroup.com', 'middleware' => ['web']],
 
 	Route::get('/test', array('as' => 'admin-homepage', function () {
 	  return view('backend.test');
-	}));	
+	}));
 	Route::post('/server/checkconnectionbyip', 'ServerMonitorController@checkConnectionByIP');
 
 });
