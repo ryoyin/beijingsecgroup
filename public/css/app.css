@@ -430,6 +430,33 @@
 #marketNewsModal #marketNewsDatetime {
   font-size: 14px; }
 
+#stock-enquiry-block h4 {
+  padding-bottom: 10px; }
+
+#stock-enquiry-block #stock-enquiry input {
+  padding: 2px 10px;
+  width: 100%; }
+
+#stock-result-block {
+  padding: 10px 0 0; }
+  #stock-result-block .heading {
+    font-weight: bold;
+    font-size: 25px; }
+  #stock-result-block .row {
+    padding: 5px 0; }
+    #stock-result-block .row .last-price {
+      font-size: 30px;
+      font-weight: bold;
+      display: inline-block; }
+    #stock-result-block .row .open {
+      text-align: center;
+      font-size: 16px; }
+    #stock-result-block .row .small {
+      text-align: center; }
+    #stock-result-block .row .update-time {
+      text-align: right;
+      font-size: 12px; }
+
 /*************************************************
 ************** End: Market News Page ***********
 *************************************************/

@@ -11,34 +11,6 @@
 |
 */
 
-// Route::get('/', array('as' => 'under-maintenance', function () {
-//     return view('frontend.maintenance');
-// }));
-
-/*Route::get('/', array('as' => 'front-homepage', function () {
-  return view('frontend.index');
-}));
-
-Route::get('/market-news', array('as' => 'front-marketnews', function () {
-    return view('frontend.marketnews');
-}));
-
-Route::get('/company-structure', array('as' => 'front-structure', function () {
-    return view('frontend.structure');
-}));
-
-Route::get('/download', array('as' => 'front-download', function () {
-    return view('frontend.download');
-}));
-
-Route::get('/about-us', array('as' => 'front-aboutus', function () {
-    return view('frontend.aboutus');
-}));
-
-Route::get('/contact-us', array('as' => 'front-contactus', function () {
-    return view('frontend.contactus');
-}));*/
-
 /*
 |--------------------------------------------------------------------------
 | Sub Domain Routes
@@ -53,7 +25,10 @@ use Illuminate\Http\Request;
 Route::group(['domain' => 'dev.beijingsecgroup.com'], function () {
     /*API CALL*/
     Route::get('/schedule/requestmostactive', ['uses' => 'InfocastController@requestMostActive', 'as' => 'schedule.requestmostactive']);
+	Route::post('/ajax/stock/stockenquiry', ['uses' => 'InfocastController@stockEnquiry', 'as' => 'ajax.stock.stockenquiry']);
+	Route::post('/ajax/stock/mostactive', ['uses' => 'InfocastController@mostactive', 'as' => 'ajax.stock.mostactive']);
 });
+
 
 Route::group(['domain' => 'dev.beijingsecgroup.com', 'middleware' => ['web']], function () {
 
@@ -73,7 +48,6 @@ Route::group(['domain' => 'dev.beijingsecgroup.com', 'middleware' => ['web']], f
 
 
 });
-Route::post('/ajax/stock/mostactive', ['uses' => 'InfocastController@mostactive', 'as' => 'ajax.stock.mostactive']);
 
 
 Route::group(['domain' => 'admin.beijingsecgroup.com', 'middleware' => ['web']], function () {

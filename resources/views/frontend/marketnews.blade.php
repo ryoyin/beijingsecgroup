@@ -30,16 +30,18 @@
 			<div class="col-md-12 page-title">市場動態</div>
 
 			{{--Right Board--}}
-			<div class="col-md-7 stock-block">
+			<div class="col-md-8 stock-block">
 
 				@include('frontend.block.marketnews')
+
+				@include('frontend.block.mostactive')
 
 			</div>{{--Right Board--}}
 
 			{{--Left Board--}}
-			<div class="col-md-5 stock-block">
+			<div class="col-md-4 stock-block">
 
-				@include('frontend.block.mostactive')
+				@include('frontend.block.stockenquiry')
 
 			</div>{{--Left Board--}}
 

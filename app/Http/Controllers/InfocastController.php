@@ -251,6 +251,66 @@ class InfocastController extends Controller
         return $htmlOutput;
     }
 
+    public function stockEnquiry(Request $request) {
+
+        $code = trim($request->input('code'));
+
+        if(!is_numeric($code)) return 'failed';
+
+        $code = str_pad($code, 5, '0', STR_PAD_LEFT);
+        $api_url = 'https://iweb-demo.infocast.hk/bjsec/iportal-api/ajax/quote/hk/'.$code;
+        $api_response = file_get_contents($api_url);
+
+        $htmlOutput = $this->stockEnquiryHTMLOutput($api_response);
+
+        return $htmlOutput;
+
+    }
+
+    private function stockEnquiryHTMLOutput($api_response) {
+        $response = json_decode($api_response, TRUE);
+
+/*        {
+            "code": "00005",
+            "turnOver": 734024180,
+            "yearHigh": 78250,
+            "high": 50350,
+            "bidSprd": 50,
+            "low": 49900,
+            "currency": "HKD",
+            "turnover": 734024180,
+            "yearLow": 47650,
+            "lotSize": 400,
+            "divPS": 395.281,
+            "pvClose": 50450,
+            "updateTime": 1458288082000,
+            "askSprd": 50,
+            "volume": 14658126,
+            "timeStamp": 1458288065000,
+            "success": 1,
+            "name": {
+                    "zh_CN": "\u6c47\u4e30\u63a7\u80a1\u6709\u9650\u516c\u53f8",
+            "zh_TW": "\u532f\u8c50\u63a7\u80a1\u6709\u9650\u516c\u53f8",
+            "en_US": "HSBC HOLDINGS PLC"
+            },
+            "ask": 49950,
+            "shortName": {
+                    "zh_CN": "\u6c47\u4e30\u63a7\u80a1",
+            "zh_TW": "\u532f\u8c50\u63a7\u80a1",
+            "en_US": "HSBC HOLDINGS"
+            },
+            "bid": 49850,
+            "issueShares": 19744824264,
+            "open": 50200,
+            "earnPS": 502.77,
+            "lastPrice": 50000
+        }     */
+
+
+
+        return json_encode($response);
+    }
+
     private function timestampToDateTimeString($timestamp) {
         $timeToSecond = $timestamp / 1000;
         $newsTime = Carbon::now();
