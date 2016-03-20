@@ -19,7 +19,12 @@
 | This route is for admin.beijingsecgroup.com
 |
 */
-use Illuminate\Http\Request;
+
+use App\Classes\Test;
+
+Route::get('/call_me', function(Test $test) {
+	echo $test->call_me();
+});
 
 /*Infocast API for Index*/
 Route::group(['domain' => 'dev.beijingsecgroup.com'], function () {
