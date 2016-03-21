@@ -11,33 +11,65 @@
 |
 */
 
-// Route::get('/', array('as' => 'under-maintenance', function () {
-//     return view('frontend.maintenance');
-// }));
+/*
+|--------------------------------------------------------------------------
+| Sub Domain Routes
+|--------------------------------------------------------------------------
+|
+| This route is for admin.beijingsecgroup.com
+|
+*/
 
-Route::get('/', array('as' => 'front-homepage', function () {
-    return view('frontend.index');
-}));
+use App\Classes\Test;
 
-Route::get('/market-news', array('as' => 'front-marketnews', function () {
-    return view('frontend.marketnews');
-}));
+Route::get('/call_me', function(Test $test) {
+	echo $test->call_me();
+});
 
-Route::get('/company-structure', array('as' => 'front-structure', function () {
-    return view('frontend.structure');
-}));
+/*Infocast API for Index*/
+Route::group(['domain' => 'dev.beijingsecgroup.com'], function () {
+    /*API CALL*/
+    Route::get('/schedule/requestmostactive', ['uses' => 'InfocastController@requestMostActive', 'as' => 'schedule.requestmostactive']);
+	Route::post('/ajax/stock/stockenquiry', ['uses' => 'InfocastController@stockEnquiry', 'as' => 'ajax.stock.stockenquiry']);
+	Route::post('/ajax/stock/mostactive', ['uses' => 'InfocastController@mostactive', 'as' => 'ajax.stock.mostactive']);
+});
 
-Route::get('/download', array('as' => 'front-download', function () {
-    return view('frontend.download');
-}));
 
-Route::get('/about-us', array('as' => 'front-aboutus', function () {
-    return view('frontend.aboutus');
-}));
+Route::group(['domain' => 'dev.beijingsecgroup.com', 'middleware' => ['web']], function () {
 
-Route::get('/contact-us', array('as' => 'front-contactus', function () {
-    return view('frontend.contactus');
-}));
+	/*Static Page inside controller*/
+	Route::get('/', ['uses' => 'PageController@homepage', 'as' => 'front.homepage']);
+	Route::get('/market-news', ['uses' => 'PageController@marketnews', 'as' => 'front.marketnews']);
+	Route::get('/company-structure', ['uses' => 'PageController@companystructure', 'as' => 'front.companystructure']);
+	Route::get('/download', ['uses' => 'PageController@download', 'as' => 'front.download']);
+	Route::get('/about-us', ['uses' => 'PageController@aboutus', 'as' => 'front.aboutus']);
+	Route::get('/contact-us', ['uses' => 'PageController@contactus', 'as' => 'front.contactus']);
+
+	/*Route for sending enquiry to email*/
+	Route::post('/mail/send_enquiry', 'EmailController@send_web_enquiry')->name('email.send_web_enquiry');
+
+    /*Response for Market News*/
+    Route::post('/ajax/stock/marketnews', ['uses' => 'InfocastController@marketnews', 'as' => 'ajax.stock.marketnews']);
+
+
+});
+
+
+Route::group(['domain' => 'admin.beijingsecgroup.com', 'middleware' => ['web']], function () {
+
+  Route::get('/', array('as' => 'admin-homepage', function () {
+	  echo 'This is admin page';
+	}));
+
+	Route::get('/server/monitor', 'ServerMonitorController@index')->name('server-monitor');
+	Route::get('/server/checkserverstatus', 'ServerMonitorController@checkServerStatus')->name('server-status');
+
+	Route::get('/test', array('as' => 'admin-homepage', function () {
+	  return view('backend.test');
+	}));
+	Route::post('/server/checkconnectionbyip', 'ServerMonitorController@checkConnectionByIP');
+
+});
 
 /*
 |--------------------------------------------------------------------------

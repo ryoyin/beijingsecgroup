@@ -1,3 +1,5 @@
+var newsObject;
+
 $( document ).ready(function() {
 
 	//Generate Index Data
@@ -7,7 +9,7 @@ $( document ).ready(function() {
 
 		  $.each( indexJson, function( key1, val1 ) {
 		    var indexName = key1;
-		    var indexValue = val1
+		    var indexValue = val1;
 
 		    // console.log(indexName);
 		    var newIndexObj = $(".index-temp").clone().appendTo(".index-tbody");
@@ -38,5 +40,43 @@ $( document ).ready(function() {
 		  });
 		});
 	});
-	
+
+});
+
+
+
+/*Convert Timestamp to YYYY-MM-DD HH:MM*/
+/*
+function convertTimestamp(time) {
+
+	// Create a new JavaScript Date object based on the timestamp
+	var returnDate = new Date(time);
+	var year = returnDate.getFullYear();
+	var month = returnDate.getMonth();
+	var date = ("0" + returnDate.getDate()).slice(-2);
+	var hours = returnDate.getHours();
+	var minutes = "0" + returnDate.getMinutes();
+	//var seconds = "0" + returnDate.getSeconds();
+
+	// Will display time in YYYY-MM-DD HH:MM format
+	return year + '-' + month + '-'+ date + ' ' + hours + ':' + minutes.substr(-2);
+
+}*/
+
+$(function() {
+    function reposition() {
+        var modal = $(this),
+            dialog = modal.find('.modal-dialog');
+        modal.css('display', 'block');
+
+        // Dividing by two centers the modal exactly, but dividing by three
+        // or four works better for larger screens.
+        dialog.css("margin-top", Math.max(0, ($(window).height() - dialog.height()) / 4));
+    }
+    // Reposition when a modal is shown
+    $('.modal').on('show.bs.modal', reposition);
+    // Reposition when the window is resized
+    $(window).on('resize', function() {
+        $('.modal:visible').each(reposition);
+    });
 });

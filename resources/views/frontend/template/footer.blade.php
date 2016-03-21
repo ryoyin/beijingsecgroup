@@ -1,19 +1,41 @@
 		<!-- Site footer -->
 		<footer class="footer">
-			<ul class="weixin_qr">
-				<li><img src="img/weixin_qrcode.jpg" style="height: 78px"></li>
-				<li align="center">微信關注</li>
-			</ul>
+			<div class="app-block">
+				<div class="app-container">
+					<ul>
+						<li class="app-item">
+							<ul class="ios_icon">
+								<li><img src="img/app_store_download_icon.png" style="height: 78px; padding: 7px;"></li>
+								<li>iPhone 交易平台下載</li>
+							</ul>					
+						</li>
+						<li class="app-item">
+							<ul class="android_icon">
+								<li><img src="img/google-play-badge.png" style="height: 78px; padding: 7px;"></li>
+								<li>Android 交易平台下載</li>
+							</ul>					
+						</li>
+						<li class="app-item">
+							<ul class="weixin_qr">
+								<li><img src="img/weixin_qrcode.jpg" style="height: 78px"></li>
+								<li>微信關注</li>
+							</ul>					
+						</li>
+					</ul>
+				</div>
+			</div>
 			
 			<div class="clearfix"></div>
-			
-			<p><b>&copy; 2016 版权属北京证券集团有限公司所有 </b></p>
-						 
-			<ul>
-				<li><a href="#" data-toggle="modal" data-target="#myModal">免责声明</a></li>
-				<li>|</li>
-				<li><a href="#">私隐条款</a></p></li>
-			</ul>
+
+			<div class="bottom">
+				<p><b>&copy; 2016 版权属北京证券集团有限公司所有 </b></p>
+							 
+				<ul>
+					<li><a href="#" data-toggle="modal" data-target="#myModal">免责声明</a></li>
+					<li>|</li>
+					<li><a href="#">私隐条款</a></p></li>
+				</ul>
+			</div>
 		</footer>
 	      
 		<!-- Modal -->
