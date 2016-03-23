@@ -52,7 +52,7 @@
         <h3 class="text-muted">
           <img src="img/bsg_logo_500x500.png">
           <ul class="company-name">
-            <li>北京证券集团有限公司</li>
+            <li>{{ trans('web.company_name') }}</li>
             <li>Beijing Securities Group Limited</li>
           </ul>
         </h3>
@@ -61,22 +61,20 @@
         <div class="header-right">
           <!-- Language Bar -->
           <ul class="lang-bar">
-            <li><a href="#">首页</a></li>
+            <li><a href="#">{{ trans('web.home') }}</a></li>
             <li>|</li>
             <li><a href="#/?lang=sim">简体</a></li>
             <li>|</li>
             <li><a href="#/?lang=trad">繁體</a></li>
             <li>|</li>
-            <li><a href="#/?lang=eng">英文</a></li>
-            <li>|</li>
-            <li><a href="admin/index.html">後台管理</a></li>
+            <li><a href="#/?lang=eng">english</a></li>
           </ul>
 
           <div class="clearfix"></div>
 
           <!-- Login Block -->
           <ul class="login-block">
-            <li>登入交易系统 <span>&raquo;</span><span>&raquo;</span><span>&raquo;</span></li>
+            <li>{{ trans('web.login_to_trade') }} <span>&raquo;</span><span>&raquo;</span><span>&raquo;</span></li>
           </ul>
         </div>
 
@@ -101,12 +99,12 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
               <!-- <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li> -->
-              <li><a href="{{route('front.homepage')}}">首页</a></li>
-              <li><a href="{{route('front.marketnews')}}">市场动态</a></li>
-              <li><a href="{{route('front.companystructure')}}">公司架构</a></li>
-              <li><a href="{{route('front.download')}}">表格下載</a></li>
-              <li><a href="{{route('front.aboutus')}}">关于我们</a></li>
-              <li><a href="{{route('front.contactus')}}">联络我们</a></li>
+              <li><a href="{{route('front.homepage')}}">{{ trans('web.home') }}</a></li>
+              <li><a href="{{route('front.marketnews')}}">{{ trans('web.market_news') }}</a></li>
+              <li><a href="{{route('front.companystructure')}}">{{ trans('web.company_structure') }}</a></li>
+              <li><a href="{{route('front.download')}}">{{ trans('web.form_download') }}</a></li>
+              <li><a href="{{route('front.aboutus')}}">{{ trans('web.about_us') }}</a></li>
+              <li><a href="{{route('front.contactus')}}">{{ trans('web.contact_us') }}</a></li>
               <!-- <li><a href="/beijingsecgorup/cs">客户服务</a></li>  -->
 
               <!-- <li class="dropdown">
@@ -129,7 +127,7 @@
               <button type="submit" class="btn btn-default">Submit</button>
             </form> -->
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="#">客户热线 (852) 3899 1373</a></li>
+              <li><a href="#">{{ trans('web.customer_hot_line') }} (852) 3899 1373</a></li>
 
              <!--  <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>

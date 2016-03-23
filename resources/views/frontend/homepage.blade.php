@@ -1,6 +1,9 @@
 @extends('frontend.template.layout')
 
 @section('content')
+
+<meta name="csrf-token" content="{{ csrf_token() }}">
+
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -52,29 +55,34 @@
   <p><a class="btn btn-lg btn-success" href="#" role="button">立即開戶</a></p>
 </div> -->
 <div class="row stock-block">
-  <div class="col-md-7">
-    <table class="table table-hover index-table">
-      <thead>
-        <tr>
-          <th>指数名称</th>
-          <th>收盘</th>
-          <th>涨跌</th>
-          <th>最高</th>
-          <th>最低</th>
-        </tr>
-      </thead>
-      <tbody class="index-tbody">
-        <tr class="index-temp">
-          <th scope="row"></th>
-          <td></td>
-          <td><span class="glyphicon" aria-hidden="true"></span> </td>
-          <td></td>
-          <td></td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="col-md-9">
+    @include('frontend.block.marketnews')
+
+    @include('frontend.block.mostactive')
   </div>
-  <div class="col-md-5"><img src="img/chart.jpg" style="width: 100%"></div>
+  <div class="col-md-3">
+    @include('frontend.block.stockenquiry')
+
+    <div class="ad-app-block">
+      <div class="col-md-12"><h4>手机交易平台</h4></div>
+      <div class="col-md-12 app-image"><img src="img/app_trading_platform.png"></div>
+      <div class="col-md-12">
+        <ul>
+          <li class="app-item">
+            <ul class="ios_icon">
+              <li><img src="img/app_store_download_icon.png" style="height: 78px; padding: 7px;"></li>
+              <li>iPhone 交易平台下載</li>
+            </ul>
+          </li>
+          <li class="app-item">
+            <ul class="android_icon">
+              <li><img src="img/google-play-badge.png" style="height: 78px; padding: 7px;"></li>
+              <li>Android 交易平台下載</li>
+            </ul>
+          </li>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="row trading-platform">
@@ -110,28 +118,27 @@
           <h3>网上证券交易</h3>
           <p>一站式证券交易平台，使用方便，并提供其他先进功能，稳健及快速恢复的系统结构赋予最高性能、安全和稳健性的平台。</p>
         </li>
-        <li><a class="btn btn-primary login-btn" href="#" role="button">立即登入</a></li>
+        <li align="center"><a class="btn btn-primary login-btn" href="#" role="button">立即登入</a></li>
       </ul>
     </div>
   </div>
 </div>
 
-<!-- Example row of columns -->
 <div class="row service-block">
   <div class="col-lg-4">
     <h2>交易服务</h2>
     <p>北京证券集团有限公司一向致力为客户提供全面证券买卖服务，配合多元化交易渠道及全面交易信息，让客户全方位把握投资良机。</p>
-    <div class="img-block"><img src="img/trade-service.jpg"></div>
+    <div class="img-block"><img class="img-rounded" src="img/trade-service.jpg"></div>
   </div>
   <div class="col-lg-4">
     <h2>投资策略</h2>
     <p>我们有信心中国经济可在今年以约6.7%的幅度增长。当投资者在今年稍后意识到中国经济依然稳健，中国股票的表现便可望跑赢其他市场。</p>
-    <div class="img-block"><img src="img/invest-service.jpg"></div>
- </div>
+    <div class="img-block"><img class="img-rounded" src="img/invest-service.jpg"></div>
+  </div>
   <div class="col-lg-4">
     <h2>服務範圍</h2>
     <p>在香港开设投资证券帐户，并提供港股、美股等境外股票买卖服务。为投资者提供咨询、分析、参谋等服务，最大限度降低投资风险。为投资者提供孖展融资服务，最大限度放大投资者的投资规模，实现投资效益最大化。</p>
-    <div class="img-block"><img src="img/provided-service.jpg"></div>
+    <div class="img-block"><img class="img-rounded" src="img/provided-service.jpg"></div>
   </div>
 </div>
 

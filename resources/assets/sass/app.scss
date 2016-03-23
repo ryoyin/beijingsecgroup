@@ -273,6 +273,29 @@
 
 }
 
+.ad-app-block { text-align: center;
+
+  h4 { text-align: left; padding-bottom: 10px; }
+  .app-image img {
+    width: 210px;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      text-align: center;
+      img {
+        margin-top: 10px;
+        //width: 75%;
+      }
+    }
+  }
+
+}
+
 
 /*************************************************
 ****************** END: Home Page ****************
@@ -362,7 +385,7 @@
 
       thead th { color: #000000; font-weight: bold; border-top: 0 }
       .mostActive-realtime-thead {
-        th { text-align: center;
+        th { text-align: right;
           &:nth-child(1), &:nth-child(2) {
             text-align: left;
           }
@@ -420,6 +443,7 @@
 
     .small {
       text-align: center;
+      padding: 0 5px;
     }
 
     .update-time {

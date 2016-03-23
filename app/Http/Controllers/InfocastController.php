@@ -10,73 +10,76 @@ use Carbon\Carbon;
 class InfocastController extends Controller
 {
 
-	private $dateToTimestamp;
-	private $dateFromTimestamp;
+	private $dateTo;
+	private $dateFrom;
 
 	public function __construct() {
 
 		/*Get real time news*/
 		$today = Carbon::now()->addDay();
 
-		$dateTo         = Carbon::now();
-		$dateTo->year   = $today->year;
-		$dateTo->month  = $today->month;             
-		$dateTo->day    = $today->day;
-		$dateTo->hour   = 0;
-		$dateTo->minute = 0;
-		$dateTo->second = 0;
+		$this->dateTo         = Carbon::now();
+		$this->dateTo->year   = $today->year;
+		$this->dateTo->month  = $today->month;
+		$this->dateTo->day    = $today->day;
+		$this->dateTo->hour   = ($today->hour + 1);
+		$this->dateTo->minute = 0;
+		$this->dateTo->second = 0;
 
-		$this->dateToTimestamp = $dateTo->timestamp * 1000; // time 1000 for milliseconds
-
-		$dateFrom         = Carbon::now();
-		$dateFrom->year   = $today->year;
-		$dateFrom->month  = $today->month;           
-		$dateFrom->day    = ($today->day - 7);
-		$dateFrom->hour   = 0;
-		$dateFrom->minute = 0;
-		$dateFrom->second = 0;
-
-		$this->dateFromTimestamp = $dateFrom->timestamp * 1000; // time 1000 for milliseconds
+		$this->dateFrom         = Carbon::now();
+		$this->dateFrom->year   = $today->year;
+		$this->dateFrom->month  = $today->month;
+		$this->dateFrom->day    = $today->day;
+		$this->dateFrom->hour   = ($today->hour - 1);
+//		$this->dateFrom->hour   = 0;
+		$this->dateFrom->minute = 0;
+		$this->dateFrom->second = 0;
 
 	}
 
-	public function marketnews($returnJSON = FALSE, $dateFrom = NULL, $dateTo = NULL, $page = 0) {
+    public function requestMarketNews() {
+        $dateFrom = $this->dateFrom->timestamp * 1000;
+        $dateTo   = $this->dateTo->timestamp * 1000;
 
-		if(is_null($dateFrom)) $dateFrom = $this->dateFromTimestamp;
-		if(is_null($dateTo))	 $dateTo   = $this->dateToTimestamp;
+        $api_url = 'http://iweb-demo.infocast.hk/iportal-api/ajax/news/getNewsList?dateFrom='.$dateFrom.'&dateTo='.$dateTo.'&type=&locale=zh_TW&pageSize=300&curShowingPage=0';
+//        echo $api_url;
 
-		$api_url = 'http://iweb-demo.infocast.hk/iportal-api/ajax/news/getNewsList?dateFrom='.$dateFrom.'&dateTo='.$dateTo.'&type=&locale=zh_TW&pageSize=30&curShowingPage='.$page;
+        $result = json_decode(file_get_contents($api_url), true);
 
-		$result = json_decode(file_get_contents($api_url), true);
-//		return $result;
+        if($result['totalNewsSize'] == 0) return 'no news.';
 
-        $htmlOutput = '';
-        $i = 0;
+        foreach($result['newsData'] AS $key => $news) {
 
-		foreach($result['newsData'] AS $key => $news) {
-
-            $dateTimeString = $this->timestampToDateTimeString($news['time']);
-
-			// echo $newsTime->toDateTimeString();
-			$result['newsData'][$key]['dateTime'] = $dateTimeString;
-            /* End - Convert Time */
+            $times = $this->timestampToDateTimeString($news['time']);
 
             /* Start - Convert content */
-			$content = str_replace("\r\n", "<br>", $news['content']);
-			$content = str_replace(" ", "&nbsp;", $content);
-			$result['newsData'][$key]['contentHTML'] = $content;
-            /* End - Convert content */
+            $content = str_replace("\r\n", "<br>", $news['content']);
+            $content = str_replace(" ", "&nbsp;", $content);
 
-            if(!$returnJSON) {
-                $htmlOutput .= $this->newsHTMLOutput($result['newsData'][$key], $i);
-                $i ++;
-            }
+            $marketNews = New App\MarketNews;
+            $marketNews->times = $times;
+            $marketNews->infocastid = $news['id'];
+            $marketNews->type = $news['type'];
+            $marketNews->headline = $news['headline'];
+            $marketNews->content = $content;
+            $marketNews->stockcode = $news['stockCode'];
+            $marketNews->save();
+
+        }
+        echo 'done';
+    }
+
+	public function marketnews() {
+
+        $marketNews = App\MarketNews::take(30)->orderBy('times', 'desc')->get();
+
+        $htmlOutput = '';
+
+		foreach($marketNews AS $key => $news) {
+
+            $htmlOutput .= $this->newsHTMLOutput($news, $key);
 
 		}
-
-        if($returnJSON) {
-            return json_encode($result);
-        }
 
         return $htmlOutput;
 
@@ -95,7 +98,8 @@ class InfocastController extends Controller
 
         $htmlOutput = "
         <tr ".$onclickHTML.">
-            <td>".$news['dateTime']."</td>
+            <td>".$news['times']."</td>
+            <td>".$news['type']."</td>
             <td>
             ".$news['headline'].$moreHTML."
             <div class='marketnews-content' newsid='".$i."' style='display: none;'>
@@ -270,45 +274,74 @@ class InfocastController extends Controller
     private function stockEnquiryHTMLOutput($api_response) {
         $response = json_decode($api_response, TRUE);
 
-/*        {
-            "code": "00005",
-            "turnOver": 734024180,
-            "yearHigh": 78250,
-            "high": 50350,
-            "bidSprd": 50,
-            "low": 49900,
-            "currency": "HKD",
-            "turnover": 734024180,
-            "yearLow": 47650,
-            "lotSize": 400,
-            "divPS": 395.281,
-            "pvClose": 50450,
-            "updateTime": 1458288082000,
-            "askSprd": 50,
-            "volume": 14658126,
-            "timeStamp": 1458288065000,
-            "success": 1,
-            "name": {
-                    "zh_CN": "\u6c47\u4e30\u63a7\u80a1\u6709\u9650\u516c\u53f8",
-            "zh_TW": "\u532f\u8c50\u63a7\u80a1\u6709\u9650\u516c\u53f8",
-            "en_US": "HSBC HOLDINGS PLC"
-            },
-            "ask": 49950,
-            "shortName": {
-                    "zh_CN": "\u6c47\u4e30\u63a7\u80a1",
-            "zh_TW": "\u532f\u8c50\u63a7\u80a1",
-            "en_US": "HSBC HOLDINGS"
-            },
-            "bid": 49850,
-            "issueShares": 19744824264,
-            "open": 50200,
-            "earnPS": 502.77,
-            "lastPrice": 50000
-        }     */
+        $code = $response['code'];
+        $stockName = $response['name']['zh_CN'];
+        $lastPrice = $this->convertThousand($response['lastPrice']);
+        $different = '-0.200(0.65%)';
+        $open = $this->convertThousand($response['open']);
+        $pvClose = $this->convertThousand($response['pvClose']);
+        $high = $this->convertThousand($response['high']);
+        $low = $this->convertThousand($response['low']);
+        $yearHigh = $this->convertThousand($response['yearHigh']);
+        $yearLow = $this->convertThousand($response['yearLow']);
+        $bid = $this->convertThousand($response['bid']);
+        $ask = $this->convertThousand($response['ask']);
+        $turnover = $this->convertMilion($response['turnover']);
+        $volume = $this->convertMilion($response['volume']);
+        $currency = $response['currency'];
+        $lotSize = $response['lotSize'];
+        $bidSprd = $this->convertThousand($response['bidSprd']);
+        $askSprd = $this->convertThousand($response['askSprd']);
+        $issueShares = $this->convertMilion($response['issueShares']);
+        $updateTime = $this->timestampToDateTimeString($response['updateTime']);
 
+        $htmlOutput = '
+        <div class="row">
+            <div class="col-md-12 heading">'.$code.'<br>'.$stockName.'</div>
+        </div>
+        <div class="row">
+            <div class="col-md-5"><span class="last-price">'.$lastPrice.'</span><br>
+                <!--<span class="diff api_diff" style="color: red;">'.$different.'</span>-->
+            </div>
+            <div class="col-md-3 open">開市<br><span class="api_open">'.$open.'</span></div>
+            <div class="col-md-4 open">前收市<br><span class="api_pvClose">'.$pvClose.'</span></div>
+        </div>
 
+        <div class="row">
+            <div class="col-md-3 small">最高<br><span class="api_high">'.$high.'</span></div>
+            <div class="col-md-3 small">最低<br><span class="api_low">'.$low.'</span></div>
+            <div class="col-md-3 small">年最高<br><span class="api_yearHigh">'.$yearHigh.'</span></div>
+            <div class="col-md-3 small">年最低<br><span class="api_yearLow">'.$yearLow.'</span></div>
+        </div>
 
-        return json_encode($response);
+        <div class="row">
+            <div class="col-md-3 small">買入<br><span class="api_bid">'.$bid.'</span></div>
+            <div class="col-md-3 small">賣出<br><span class="api_ask">'.$ask.'</span></div>
+            <div class="col-md-3 small">成交額<br><span class="api_turnover">'.$turnover.'</span></div>
+            <div class="col-md-3 small">成交量<br><span class="api_volume">'.$volume.'</span></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3 small">貨幣<br><spa class="api_currency"n>'.$currency.'</span></div>
+            <div class="col-md-3 small">交易單位<br><span class="api_lotSize">'.$lotSize.'</span></div>
+            <div class="col-md-3 small">買賣差價<br><spa class="api_bidSprd">'.$bidSprd.'</span> / <span class="api_askSprd">'.$askSprd.'</span></div>
+            <div class="col-md-3 small">發行股本<br><span class="api_issueShares">'.$issueShares.'</span></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 update-time">最後更新時間: <span class="api_updateTime">'.$updateTime.'</span></div>
+        </div>
+        ';
+
+        return $htmlOutput;
+    }
+
+    private function convertThousand($value) {
+        return number_format(($value / 1000), 3);
+    }
+
+    private function convertMilion($value) {
+        return number_format(($value / 1000000), 3).'M';
     }
 
     private function timestampToDateTimeString($timestamp) {

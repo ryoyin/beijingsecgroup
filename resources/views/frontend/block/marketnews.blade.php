@@ -44,3 +44,17 @@ function popNews(i) {
         <tbody class="news-realtime"></tbody>
     </table>
 </div><!-- // News from Infocast & Exchange -->
+
+<!-- Market News Modal -->
+<div class="modal fade" id="marketNewsModal" tabindex="-1" role="dialog" aria-labelledby="marketNewsLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h3 class="modal-title" id="marketNewsLabel"></h3>
+                <div id="marketNewsDatetime"></div>
+            </div>
+            <div class="modal-body" id="marketNewsBody"></div>
+        </div>
+    </div>
+</div>
