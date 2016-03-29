@@ -38,6 +38,10 @@ Route::group(['domain' => 'dev.beijingsecgroup.com'], function () {
 
 	/*Response for Market News*/
 	Route::post('/ajax/stock/marketnews', ['uses' => 'InfocastController@marketnews', 'as' => 'ajax.stock.marketnews']);
+
+	//test mail
+    Route::get('/mail/test_mail_out', 'EmailController@test_mail_out')->name('email.test_mail_out');
+	Route::get('/mail/test_mail_in', 'EmailController@test_mail_in')->name('email.test_mail_in');
 });
 
 Route::group(['domain' => 'dev.beijingsecgroup.com', 'middleware' => ['web']], function () {
