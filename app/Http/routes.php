@@ -26,14 +26,23 @@ Route::get('/call_me', function(Test $test) {
 	echo $test->call_me();
 });
 
+
+
 /*Infocast API for Index*/
 Route::group(['domain' => 'dev.beijingsecgroup.com'], function () {
     /*API CALL*/
     Route::get('/schedule/requestmostactive', ['uses' => 'InfocastController@requestMostActive', 'as' => 'schedule.requestmostactive']);
+	Route::get('/schedule/requestmarketnews', ['uses' => 'InfocastController@requestMarketNews', 'as' => 'schedule.requestmarketnews']);
 	Route::post('/ajax/stock/stockenquiry', ['uses' => 'InfocastController@stockEnquiry', 'as' => 'ajax.stock.stockenquiry']);
 	Route::post('/ajax/stock/mostactive', ['uses' => 'InfocastController@mostactive', 'as' => 'ajax.stock.mostactive']);
-});
 
+	/*Response for Market News*/
+	Route::post('/ajax/stock/marketnews', ['uses' => 'InfocastController@marketnews', 'as' => 'ajax.stock.marketnews']);
+
+	//test mail
+    Route::get('/mail/test_mail_out', 'EmailController@test_mail_out')->name('email.test_mail_out');
+	Route::get('/mail/test_mail_in', 'EmailController@test_mail_in')->name('email.test_mail_in');
+});
 
 Route::group(['domain' => 'dev.beijingsecgroup.com', 'middleware' => ['web']], function () {
 
@@ -48,8 +57,6 @@ Route::group(['domain' => 'dev.beijingsecgroup.com', 'middleware' => ['web']], f
 	/*Route for sending enquiry to email*/
 	Route::post('/mail/send_enquiry', 'EmailController@send_web_enquiry')->name('email.send_web_enquiry');
 
-    /*Response for Market News*/
-    Route::post('/ajax/stock/marketnews', ['uses' => 'InfocastController@marketnews', 'as' => 'ajax.stock.marketnews']);
 
 
 });
