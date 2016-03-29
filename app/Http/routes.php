@@ -29,37 +29,37 @@ Route::get('/call_me', function(Test $test) {
 
 
 /*Infocast API for Index*/
-Route::group(['domain' => 'dev.beijingsecgroup.com'], function () {
-    /*API CALL*/
-    Route::get('/schedule/requestmostactive', ['uses' => 'InfocastController@requestMostActive', 'as' => 'schedule.requestmostactive']);
-	Route::get('/schedule/requestmarketnews', ['uses' => 'InfocastController@requestMarketNews', 'as' => 'schedule.requestmarketnews']);
-	Route::post('/ajax/stock/stockenquiry', ['uses' => 'InfocastController@stockEnquiry', 'as' => 'ajax.stock.stockenquiry']);
-	Route::post('/ajax/stock/mostactive', ['uses' => 'InfocastController@mostactive', 'as' => 'ajax.stock.mostactive']);
 
-	/*Response for Market News*/
-	Route::post('/ajax/stock/marketnews', ['uses' => 'InfocastController@marketnews', 'as' => 'ajax.stock.marketnews']);
+/*API CALL*/
+Route::get('/schedule/requestmostactive', ['uses' => 'InfocastController@requestMostActive', 'as' => 'schedule.requestmostactive']);
+Route::get('/schedule/requestmarketnews', ['uses' => 'InfocastController@requestMarketNews', 'as' => 'schedule.requestmarketnews']);
+Route::post('/ajax/stock/stockenquiry', ['uses' => 'InfocastController@stockEnquiry', 'as' => 'ajax.stock.stockenquiry']);
+Route::post('/ajax/stock/mostactive', ['uses' => 'InfocastController@mostactive', 'as' => 'ajax.stock.mostactive']);
 
-	//test mail
-    Route::get('/mail/test_mail_out', 'EmailController@test_mail_out')->name('email.test_mail_out');
-	Route::get('/mail/test_mail_in', 'EmailController@test_mail_in')->name('email.test_mail_in');
-});
+/*Response for Market News*/
+Route::post('/ajax/stock/marketnews', ['uses' => 'InfocastController@marketnews', 'as' => 'ajax.stock.marketnews']);
 
-Route::group(['domain' => 'dev.beijingsecgroup.com', 'middleware' => ['web']], function () {
-
-	/*Static Page inside controller*/
-	Route::get('/', ['uses' => 'PageController@homepage', 'as' => 'front.homepage']);
-	Route::get('/market-news', ['uses' => 'PageController@marketnews', 'as' => 'front.marketnews']);
-	Route::get('/company-structure', ['uses' => 'PageController@companystructure', 'as' => 'front.companystructure']);
-	Route::get('/download', ['uses' => 'PageController@download', 'as' => 'front.download']);
-	Route::get('/about-us', ['uses' => 'PageController@aboutus', 'as' => 'front.aboutus']);
-	Route::get('/contact-us', ['uses' => 'PageController@contactus', 'as' => 'front.contactus']);
-
-	/*Route for sending enquiry to email*/
-	Route::post('/mail/send_enquiry', 'EmailController@send_web_enquiry')->name('email.send_web_enquiry');
+//test mail
+Route::get('/mail/test_mail_out', 'EmailController@test_mail_out')->name('email.test_mail_out');
+Route::get('/mail/test_mail_in', 'EmailController@test_mail_in')->name('email.test_mail_in');
 
 
 
-});
+
+/*Static Page inside controller*/
+Route::get('/', ['uses' => 'PageController@homepage', 'as' => 'front.homepage']);
+Route::get('/market-news', ['uses' => 'PageController@marketnews', 'as' => 'front.marketnews']);
+Route::get('/company-structure', ['uses' => 'PageController@companystructure', 'as' => 'front.companystructure']);
+Route::get('/download', ['uses' => 'PageController@download', 'as' => 'front.download']);
+Route::get('/about-us', ['uses' => 'PageController@aboutus', 'as' => 'front.aboutus']);
+Route::get('/contact-us', ['uses' => 'PageController@contactus', 'as' => 'front.contactus']);
+
+/*Route for sending enquiry to email*/
+Route::post('/mail/send_enquiry', 'EmailController@send_web_enquiry')->name('email.send_web_enquiry');
+
+
+
+
 
 
 Route::group(['domain' => 'admin.beijingsecgroup.com', 'middleware' => ['web']], function () {
