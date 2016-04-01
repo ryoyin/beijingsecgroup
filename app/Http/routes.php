@@ -21,9 +21,14 @@
 */
 
 use App\Classes\Test;
+use App\Helpers\Helper;
 
 Route::get('/call_me', function(Test $test) {
     echo $test->call_me();
+});
+
+Route::get('/test', function() {
+    echo Helper::sayHi();
 });
 
 /*Infocast API for Index*/
@@ -58,9 +63,9 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/server/monitor', 'ServerMonitorController@index')->name('server-monitor');
     Route::get('/server/checkserverstatus', 'ServerMonitorController@checkServerStatus')->name('server-status');
 
-    Route::get('/test', array('as' => 'admin-homepage', function () {
+/*    Route::get('/test', array('as' => 'admin-homepage', function () {
         return view('backend.test');
-    }));
+    }));*/
     Route::post('/server/checkconnectionbyip', 'ServerMonitorController@checkConnectionByIP');
 
 });

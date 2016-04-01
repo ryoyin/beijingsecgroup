@@ -1,5 +1,43 @@
+<div class="row">
+
+    <div class="col-md-12">
+        <div class="col-md-6">
+            <!-- News from Infocast & Exchange -->
+            <ul id="news-block-header">
+                <li><h4>新聞資訊</h4></li>
+                <li><a href="#">更多新聞</a></li>
+            </ul>
+
+            <div class="clearfix"></div>
+
+            <div class="news-block">
+                <table class="table table-hover market-news">
+                    <tbody class="news-realtime">{!! $newsInfo !!}</tbody>
+                </table>
+            </div><!-- // News from Infocast & Exchange -->
+        </div>
+
+        <div class="col-md-6">
+            <!-- News from Infocast & Exchange -->
+            <ul id="news-block-header">
+                <li><h4>投資錦囊</h4></li>
+                <li><a href="#">更多新聞</a></li>
+            </ul>
+
+            <div class="clearfix"></div>
+
+            <div class="news-block">
+                <table class="table table-hover market-news">
+                    <tbody class="news-realtime">{!! $investInfo !!}</tbody>
+                </table>
+            </div><!-- // News from Infocast & Exchange -->
+        </div>
+    </div>
+
+</div>
+
 <script>
-$( document ).ready(function() {
+/*$( document ).ready(function() {
     $.ajax({
         headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
         method: "POST",
@@ -9,7 +47,7 @@ $( document ).ready(function() {
         $(".news-realtime").append(data).show();
         $(".market-news .loading").hide();
     });
-});
+});*/
 
 function popNews(i) {
 
@@ -25,25 +63,6 @@ function popNews(i) {
     $("#marketNewsModal").modal();
 }
 </script>
-
-<!-- News from Infocast & Exchange -->
-<ul id="news-block-header">
-    <li><h4>即時新聞 - 由港滙資訊提供</h4></li>
-    <li><a href="#">更多新聞</a></li>
-</ul>
-
-<div class="clearfix"></div>
-
-<div class="news-block">
-    <table class="table table-hover market-news">
-        <tbody class="loading">
-        <tr>
-            <td>正在載入資料...</td>
-        </tr>
-        </tbody>
-        <tbody class="news-realtime"></tbody>
-    </table>
-</div><!-- // News from Infocast & Exchange -->
 
 <!-- Market News Modal -->
 <div class="modal fade" id="marketNewsModal" tabindex="-1" role="dialog" aria-labelledby="marketNewsLabel">

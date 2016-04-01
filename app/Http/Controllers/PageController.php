@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App;
 use App\Http\Requests;
 
 use Carbon\Carbon;
@@ -12,18 +13,38 @@ class PageController extends Controller
 {
 
 	public function __construct() {
-		date_default_timezone_set('Asia/Hong_Kong'); 
+
+		date_default_timezone_set('Asia/Hong_Kong');
+
 	}
 
 	public function homepage() {
 
-		return view('frontend.homepage');
+		$marketNews = New App\Classes\Marketnews();
+
+		$data = array(
+			'newsInfo' => $marketNews->getMarketNewsByGroup('A'), //新聞資訊
+			'investInfo' => $marketNews->getMarketNewsByGroup('B'), //投資錦囊
+			'companyInfo' => $marketNews->getMarketNewsByGroup('C'), //公司資料
+			'marketInfo' => $marketNews->getMarketNewsByGroup('D') //市場資訊
+		);
+
+		return view('frontend.homepage', $data);
 
 	}
 
 	public function marketnews() {
 
-		return view('frontend.marketnews');
+		$marketNews = New App\Classes\Marketnews();
+
+		$data = array(
+			'newsInfo' => $marketNews->getMarketNewsByGroup('A'), //新聞資訊
+			'investInfo' => $marketNews->getMarketNewsByGroup('B'), //投資錦囊
+			'companyInfo' => $marketNews->getMarketNewsByGroup('C'), //公司資料
+			'marketInfo' => $marketNews->getMarketNewsByGroup('D') //市場資訊
+		);
+
+		return view('frontend.marketnews', $data);
 
 	}
 
