@@ -59,7 +59,7 @@ class Marketnews
         return TRUE;
     }
 
-    public function getMarketNewsByGroup($group) {
+    public function getMarketNewsByGroup($group, $type = NULL, $page = 0, $show = 30) {
         switch($group) {
             case 'A': //新聞資訊
                 $member = array('FIN', 'CNSC', 'OSN', 'WNC', 'VHB', 'DLV', 'LCN');
@@ -78,10 +78,12 @@ class Marketnews
                 break;
         }
 
-        return $this->marketnews($member);
+        return $this->marketnews($member, $type, $page, $show);
     }
 
-    public function marketnews($member) {
+    public function marketnews($member, $type, $page, $show) {
+
+        $init = $page * $show;
 
         $marketNews = App\MarketNews::
             where(function($query) use ($member) {
@@ -93,46 +95,21 @@ class Marketnews
                     }
                 }
             })
-            ->take(30)->orderBy('times', 'desc')->get();
+            ->skip($init)->take($show)->orderBy('times', 'desc')->get();
 //        exit;
 
-        $htmlOutput = '';
+        $data = array('marketnews' => $marketNews);
 
-        foreach($marketNews AS $news) {
-
-            $htmlOutput .= $this->newsHTMLOutput($news);
-
+        switch($type) {
+            case 'main':
+                $return = view('frontend.block.htmloutput.marketnews_content_main', $data);
+                break;
+            default:
+                $return = view('frontend.block.htmloutput.marketnews_content', $data);
         }
 
-        return $htmlOutput;
+        return $return;
 
-    }
-
-    /*Create HTML Output for News*/
-    private function newsHTMLOutput($news) {
-
-        $onclickHTML = "";
-        $moreHTML = "";
-
-        if( $news['content'] != "") {
-            $onclickHTML = "onclick='popNews(".$news['infocastid'].");'";
-            $moreHTML = " <span>- 更多</span>";
-        }
-
-        $htmlOutput = "
-        <tr ".$onclickHTML.">
-            <td>".$news['times']."</td>
-            <td>
-            ".$news['headline'].$moreHTML."
-            <div class='marketnews-content' newsid='".$news['infocastid']."' style='display: none;'>
-                <div class='headline'>".$news['headline']."</div>
-                <div class='dateTime'>".$news['dateTime']."</div>
-                <div class='contentHTML'>".$news['content']."</div>
-            </div>
-            </td>
-        </tr>";
-
-        return $htmlOutput;
     }
 
     public static function getPreviousHour() {

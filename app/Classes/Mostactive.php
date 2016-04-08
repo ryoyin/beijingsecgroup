@@ -97,7 +97,18 @@ class Mostactive
 
         $dateTimeString = Helper::timestampToDateTimeString($result['updateTime']);
 
-        $htmlOutput = "
+        $data = array(
+            'mathSymbol' => $mathSymbol,
+            'headCol4' => $headCol4,
+            'headCol5' => $headCol5,
+            'color' => $color,
+            'dateTimeString' => $dateTimeString,
+            'result' => $result
+        );
+
+        return view('frontend.block.htmloutput.mostactive_content', $data);
+
+        /*$htmlOutput = "
         <thead class='mostActive-realtime-thead' datetime='".$dateTimeString."'>
             <tr>
                 <th>號碼</th>
@@ -111,8 +122,6 @@ class Mostactive
         ";
 
         $htmlOutput .= "<tbody class='mostActive-realtime'>";
-
-        $validData = 0;
 
         foreach($result['entryList'] AS $stock) {
 
@@ -139,17 +148,13 @@ class Mostactive
                 <td>".$stock['trades']."</td>
             </tr>";
 
-            $validData ++;
-
         }
 
-        if($validData == 0) {
-            $htmlOutput .= "<tr><td colspan='5'></td></tr>";
-        }
+        $htmlOutput .= "<tr><td colspan='6' align='right'>最后更新日期: ".$dateTimeString."</td></tr>";
 
         $htmlOutput .= "</tbody>";
 
-        return $htmlOutput;
+        return $htmlOutput;*/
     }
 
 }
