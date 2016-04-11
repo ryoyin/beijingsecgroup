@@ -51,14 +51,14 @@ class Kernel extends ConsoleKernel
             $marketNews = New App\Classes\Marketnews();
             if(!$marketNews->requestMarketNews()) {
                 $request_marketnews_result =  "no news retrieved.";
+            } else {
+                $request_marketnews_result =  "retrieve news done.";
             }
-
-            $request_marketnews_result =  "retrieve news done.";
 
             Mail::raw($request_marketnews_result, function ($message) {
                 $message->from('royho@beijingsecgroup.com');
                 $message->to('royho@beijingsecgroup.com')->subject('Most Active');
             });
-        })->everyMinute();
+        })->everyFiveMinutes();
     }
 }
