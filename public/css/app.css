@@ -32,6 +32,14 @@
 .bg-success, .bg-danger {
   padding: 10px 20px; }
 
+.rm-margin div {
+  margin: 0;
+  padding: 0; }
+  .rm-margin div:nth-child(1) {
+    padding-right: 10px; }
+  .rm-margin div:nth-child(2) {
+    padding-left: 10px; }
+
 /*************************************************
 *************** Start: Master Header *************
 *************************************************/
@@ -129,6 +137,14 @@
     float: left;
     padding: 0 7px; }
 
+.overlay-loading .modal-content {
+  padding: 20px 100px;
+  text-align: center;
+  font-size: 24px;
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4; }
+
 /*************************************************
 *************** END: Master Footer *************
 *************************************************/
@@ -191,10 +207,11 @@
       margin: 0;
       padding: 0;
       list-style: none; }
-      .trading-platform .app-trading .left ul li:nth-child(1) {
-        padding-bottom: 25px; }
-      .trading-platform .app-trading .left ul li:nth-child(2) {
-        text-align: right; }
+    .trading-platform .app-trading ul .app-item {
+      float: left;
+      text-align: center; }
+      .trading-platform .app-trading ul .app-item img {
+        height: 56px; }
   .trading-platform .online-trading {
     padding: 25px 0; }
     .trading-platform .online-trading .col-md-7 img {
@@ -293,6 +310,9 @@
 .contact-us-block .information i {
   width: 25px;
   padding-right: 10px; }
+
+.contact-us-block .information .rm-margin {
+  padding: 0; }
 
 .contact-us-block .title {
   font-weight: bold; }
@@ -457,7 +477,8 @@
     font-weight: bold;
     font-size: 25px; }
   #stock-result-block .row {
-    padding: 5px 0; }
+    padding: 5px 0;
+    font-weight: bold; }
     #stock-result-block .row .last-price {
       font-size: 30px;
       font-weight: bold;
@@ -468,6 +489,8 @@
     #stock-result-block .row .small {
       text-align: center;
       padding: 0 5px; }
+      #stock-result-block .row .small span {
+        font-weight: 100; }
     #stock-result-block .row .update-time {
       text-align: right;
       font-size: 12px; }
@@ -475,5 +498,8 @@
 /*************************************************
 ************** End: Market News Page ***********
 *************************************************/
+.structure-coming {
+  text-align: center;
+  padding: 100px 0px; }
 
 /*# sourceMappingURL=app.css.map */

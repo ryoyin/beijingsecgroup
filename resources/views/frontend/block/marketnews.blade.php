@@ -1,11 +1,11 @@
 <div class="row">
 
-    <div class="col-md-12">
+    <div class="col-md-12 rm-margin">
         <div class="col-md-6">
             <!-- News from Infocast & Exchange -->
             <ul id="news-block-header">
-                <li><h4>新聞資訊</h4></li>
-                <li><a href="#">更多新聞</a></li>
+                <li><h4>新闻资讯</h4></li>
+                {{--<li><a href="#">更多新聞</a></li>--}}
             </ul>
 
             <div class="clearfix"></div>
@@ -20,8 +20,8 @@
         <div class="col-md-6">
             <!-- News from Infocast & Exchange -->
             <ul id="news-block-header">
-                <li><h4>投資錦囊</h4></li>
-                <li><a href="#">更多新聞</a></li>
+                <li><h4>投资锦囊</h4></li>
+                {{--<li><a href="#">更多新聞</a></li>--}}
             </ul>
 
             <div class="clearfix"></div>
@@ -32,6 +32,8 @@
                 </table>
             </div><!-- // News from Infocast & Exchange -->
         </div>
+
+        <div class="col-md-12 text-right">资料由港汇资讯提供</div>
     </div>
 
 </div>

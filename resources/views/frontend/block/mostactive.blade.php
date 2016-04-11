@@ -29,7 +29,7 @@ function mostActive(type) {
 
 <!-- Most Active from Infocast & Exchange -->
 <ul id="mostActive-block-header">
-    <li><h4>10大最活躍股票</h4></li>
+    <li><h4>10大最活跃股票</h4></li>
     {{--<li><a href="#">更多新聞</a></li>--}}
 </ul>
 
@@ -42,72 +42,33 @@ function mostActive(type) {
     <ul class="nav nav-tabs nav-justified marketnews-stock-nav" role="tablist">
         <li role="presentation" class="active"><a href="#stock-rise" type="rise" aria-controls="stock-rise" role="tab" data-toggle="tab" class="mostActivePanel">最高升幅</a></li>
         <li role="presentation"><a href="#stock-fall" type="fall" aria-controls="stock-fall" role="tab" data-toggle="tab" class="mostActivePanel">最高跌幅</a></li>
-        <li role="presentation"><a href="#stock-turnover" type="turnover" aria-controls="stock-turnover" role="tab" data-toggle="tab" class="mostActivePanel">成交額</a></li>
+        <li role="presentation"><a href="#stock-turnover" type="turnover" aria-controls="stock-turnover" role="tab" data-toggle="tab" class="mostActivePanel">成交额</a></li>
         <li role="presentation"><a href="#stock-volume" type="volume" aria-controls="stock-volume" role="tab" data-toggle="tab" class="mostActivePanel">成交量</a></li>
     </ul>
 
     <!-- Tab panes -->
     <div class="tab-content">
 
-        {{-- Most Rise --}}
-        <div role="tabpanel" class="tab-pane fade in active" id="stock-rise">
-            <div class="mostActive-block">
-                <table class="table table-hover most-active">
-                </table>
-                <table class="table table-hover loading">
-                    <tbody>
-                    <tr>
-                        <td colspan="6">正在載入資料...</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div> {{-- // Most Rise --}}
+        <?php $active = 'active' ?>
+        @foreach($mostactive AS $type)
 
-        {{-- Most Fall --}}
-        <div role="tabpanel" class="tab-pane fade" id="stock-fall">
-            <div class="mostActive-block">
-                <table class="table table-hover most-active">
-                </table>
-                <table class="table table-hover loading">
-                    <tbody>
-                    <tr>
-                        <td colspan="6">正在載入資料...</td>
-                    </tr>
-                    </tbody>
-                </table>
+            <div role="tabpanel" class="tab-pane fade in {{ $active }}" id="stock-{{ $type }}">
+                <div class="mostActive-block">
+                    <table class="table table-hover most-active">
+                    </table>
+                    <table class="table table-hover loading">
+                        <tbody>
+                        <tr>
+                            <td colspan="6">正在载入资料...</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-        </div>{{-- // Most Fall --}}
 
-        {{-- Most Turnover --}}
-        <div role="tabpanel" class="tab-pane fade" id="stock-turnover">
-            <div class="mostActive-block">
-                <table class="table table-hover most-active">
-                </table>
-                <table class="table table-hover loading">
-                    <tbody>
-                    <tr>
-                        <td colspan="6">正在載入資料...</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>{{-- // Most Turnover --}}
+            <?php if($active != '') $active = '' ?>
 
-        {{--Most Volume--}}
-        <div role="tabpanel" class="tab-pane fade" id="stock-volume">
-            <div class="mostActive-block">
-                <table class="table table-hover most-active">
-                </table>
-                <table class="table table-hover loading">
-                    <tbody>
-                    <tr>
-                        <td colspan="6">正在載入資料...</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>{{-- // Most Volume--}}
+        @endforeach
 
     </div>
 

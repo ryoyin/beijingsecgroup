@@ -26,7 +26,8 @@ class PageController extends Controller
 			'newsInfo' => $marketNews->getMarketNewsByGroup('A'), //新聞資訊
 			'investInfo' => $marketNews->getMarketNewsByGroup('B'), //投資錦囊
 			'companyInfo' => $marketNews->getMarketNewsByGroup('C'), //公司資料
-			'marketInfo' => $marketNews->getMarketNewsByGroup('D') //市場資訊
+			'marketInfo' => $marketNews->getMarketNewsByGroup('D'), //市場資訊
+			'mostactive' => array('rise', 'fall', 'turnover', 'volume') //活跃股票
 		);
 
 		return view('frontend.homepage', $data);
@@ -37,11 +38,8 @@ class PageController extends Controller
 
 		$marketNews = New App\Classes\Marketnews();
 
-		$data = array(
-			'newsInfo' => $marketNews->getMarketNewsByGroup('A'), //新聞資訊
-			'investInfo' => $marketNews->getMarketNewsByGroup('B'), //投資錦囊
-			'companyInfo' => $marketNews->getMarketNewsByGroup('C'), //公司資料
-			'marketInfo' => $marketNews->getMarketNewsByGroup('D') //市場資訊
+		$data = array (
+			'newsInfo' => $marketNews->getMarketNewsByGroup('A', 'main', 0, 10) //新聞資訊
 		);
 
 		return view('frontend.marketnews', $data);

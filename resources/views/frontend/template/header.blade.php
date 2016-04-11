@@ -7,25 +7,25 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="img/favicon.ico">
+    <link rel="icon" href="{{ asset('img/favicon.ico') }}">
 
-    <title>北京证券集团有限公司</title>
+    <title>{{ trans('web.site_title') }}</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('dist/css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="{{ asset('assets/css/ie10-viewport-bug-workaround.css') }}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="assets/css/justified-nav.css" rel="stylesheet">
+    <link href="{{ asset('assets/css/justified-nav.css') }}" rel="stylesheet">
 
     <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
-    <script src="dist/js/bootstrap.js"></script>
+    <script src="{{ asset('dist/js/bootstrap.js') }}"></script>
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="assets/js/ie-emulation-modes-warning.js"></script>
+    <!--[if lt IE 9]><script src="{{ asset('assets/js/ie8-responsive-file-warning.js')}}"></script><![endif]-->
+    <script src="{{ asset('assets/js/ie-emulation-modes-warning.js') }}"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -33,11 +33,11 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <script src="js/site.js?time=20160303"></script>
+    <script src="{{ asset('js/site.js?time=20160303') }}"></script>
 
     <!-- Custom CSS -->
     <!-- <link href="dist/css/site.css?time=20160303" rel="stylesheet"> -->
-    <link href="css/app.css" rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   </head>
@@ -45,12 +45,12 @@
 	<div class="container">
 	<!-- The justified navigation menu is meant for single line per list item.
            Multiple lines will require custom code not provided by Bootstrap. -->
-      <div class="masthead" style="background-image: url('img/header_background.jpg');">
+      <div class="masthead" style="background-image: url('{{ asset('img/header_background.jpg') }}');">
 
         <!-- Header Left -->
         <!-- Logo & Title -->
         <h3 class="text-muted">
-          <img src="img/bsg_logo_500x500.png">
+          <img src="{{ asset('img/bsg_logo_500x500.png') }}">
           <ul class="company-name">
             <li>{{ trans('web.company_name') }}</li>
             <li>Beijing Securities Group Limited</li>
@@ -59,7 +59,7 @@
 
         <!-- Header Right  -->
         <div class="header-right">
-          <!-- Language Bar -->
+          {{--<!-- Language Bar -->
           <ul class="lang-bar">
             <li><a href="#">{{ trans('web.home') }}</a></li>
             <li>|</li>
@@ -70,7 +70,7 @@
             <li><a href="#/?lang=eng">english</a></li>
           </ul>
 
-          <div class="clearfix"></div>
+          <div class="clearfix"></div>--}}
 
           <!-- Login Block -->
           <ul class="login-block">
@@ -100,10 +100,10 @@
             <ul class="nav navbar-nav">
               <!-- <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li> -->
               <li><a href="{{route('front.homepage')}}">{{ trans('web.home') }}</a></li>
+              <li><a href="{{route('front.aboutus')}}">{{ trans('web.about_us') }}</a></li>
               <li><a href="{{route('front.marketnews')}}">{{ trans('web.market_news') }}</a></li>
               <li><a href="{{route('front.companystructure')}}">{{ trans('web.company_structure') }}</a></li>
               <li><a href="{{route('front.download')}}">{{ trans('web.form_download') }}</a></li>
-              <li><a href="{{route('front.aboutus')}}">{{ trans('web.about_us') }}</a></li>
               <li><a href="{{route('front.contactus')}}">{{ trans('web.contact_us') }}</a></li>
               <!-- <li><a href="/beijingsecgorup/cs">客户服务</a></li>  -->
 
