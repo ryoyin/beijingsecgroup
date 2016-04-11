@@ -18,7 +18,7 @@
 
 	<div class="col-md-12">
 		<ol class="breadcrumb">
-		  <li><a href="#">首页</a></li>
+		  <li><a href="{{ route('front.homepage') }}">首页</a></li>
 		  <li class="active">企业架构</li>
 		</ol>
 	</div>		

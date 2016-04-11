@@ -39,7 +39,7 @@ class PageController extends Controller
 		$marketNews = New App\Classes\Marketnews();
 
 		$data = array (
-			'newsInfo' => $marketNews->getMarketNewsByGroup('A', 'main', 0, 30) //新聞資訊
+			'newsInfo' => $marketNews->getMarketNewsByGroup('A', 'main', 0, 10) //新聞資訊
 		);
 
 		return view('frontend.marketnews', $data);

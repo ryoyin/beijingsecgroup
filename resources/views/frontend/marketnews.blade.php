@@ -8,7 +8,7 @@ function getNews(group) {
         headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
         method: "POST",
         url: "/ajax/stock/marketnews",
-        data: {group: group, type: 'main', page: 0, show: 30}
+        data: {group: group, type: 'main', page: 0, show: 10}
     })
     .done(function (data) {
         $('#news-content').html(data);
@@ -32,7 +32,7 @@ function slideNews(infocastid) {
     <!-- Wrapper for slides -->
     <div class="carousel-inner main_banner" role="listbox">
         <div class="item active">
-            <img src="img/banner/activity_1_1140x200.jpg" alt="Contact Us">
+            <img src="img/banner/news_1_1140x350.jpg" alt="Contact Us">
             <!-- <div class="carousel-caption"></div> -->
         </div>
     </div>
@@ -44,7 +44,7 @@ function slideNews(infocastid) {
 
     <div class="col-md-12">
         <ol class="breadcrumb">
-            <li><a href="#">首页</a></li>
+            <li><a href="{{ route('front.homepage') }}">首页</a></li>
             <li class="active">{{ trans('web.form_download') }}</li>
         </ol>
     </div>

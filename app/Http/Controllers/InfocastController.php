@@ -23,7 +23,7 @@ class InfocastController extends Controller
         $group = 'A';
         $type = 'main';
         $page = 0;
-        $show = 30;
+        $show = 10;
 
         if($request->has('group') && $request->has('type') && $request->has('page') && $request->has('show')) {
             $group = $request->input('group');

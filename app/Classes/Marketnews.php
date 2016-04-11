@@ -95,7 +95,7 @@ class Marketnews
                     }
                 }
             })
-            ->skip($init)->take($show)->orderBy('times', 'desc')->get();
+            ->orderBy('times', 'desc')->paginate($show);
 //        exit;
 
         $data = array('marketnews' => $marketNews);

@@ -22,3 +22,7 @@
         </td>
     </tr>
 @endforeach
+
+<tr>
+    <td align="right" colspan="2">{!! $marketnews->render() !!}</td>
+</tr>
