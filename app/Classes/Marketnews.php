@@ -31,7 +31,7 @@ class Marketnews
         $dateFrom = (string) ($dateFrom * 1000);
         $dateTo   = (string) ($this->getNextHour()->timestamp * 1000);
 
-        $api_url = 'http://iweb-demo.infocast.hk/iportal-api/ajax/news/getNewsList?dateFrom='.$dateFrom.'&dateTo='.$dateTo.'&type=&locale=zh_CN&pageSize=300&curShowingPage=0';
+        $api_url = 'http://iportal4.infocast.hk/bjsec/iportal-api/ajax/news/getNewsList?dateFrom='.$dateFrom.'&dateTo='.$dateTo.'&type=&locale=zh_CN&pageSize=300&curShowingPage=0';
 
         $result = json_decode(file_get_contents($api_url), true);
 

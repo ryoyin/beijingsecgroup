@@ -58,7 +58,7 @@ class InfocastController extends Controller
         if(!is_numeric($code)) return 'failed';
 
         $code = str_pad($code, 5, '0', STR_PAD_LEFT);
-        $api_url = 'https://iweb-demo.infocast.hk/bjsec/iportal-api/ajax/quote/hk/'.$code;
+        $api_url = 'http://iportal4.infocast.hk/bjsec/iportal-api/ajax/quote/hk/'.$code;
         $api_response = file_get_contents($api_url);
 
         $htmlOutput = $this->stockEnquiryHTMLOutput($api_response);

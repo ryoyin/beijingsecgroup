@@ -36,7 +36,7 @@ class Mostactive
 
         $valid = TRUE;
 
-        $api_url = 'https://iweb-demo.infocast.hk/bjsec/iportal-api/ws/mostActive/eqty/'.$rankby;
+        $api_url = 'http://iportal4.infocast.hk/bjsec/iportal-api/ws/mostActive/eqty/'.$rankby;
 
         $api_response = file_get_contents($api_url);
         $returnResult = json_decode($api_response, true);
