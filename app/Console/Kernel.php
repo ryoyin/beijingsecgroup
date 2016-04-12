@@ -53,6 +53,6 @@ class Kernel extends ConsoleKernel
                 $message->to('royho@beijingsecgroup.com')->subject('Most Active');
             });
 
-        })->everyMinute();
+        })->everyFiveMinutes();
     }
 }
