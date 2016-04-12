@@ -1,4 +1,6 @@
 <p>
+Sexual: {{ $sexual }}
+<p>
 Name: {{ $name }}
 <p>
 Tele: {{ $tel }}

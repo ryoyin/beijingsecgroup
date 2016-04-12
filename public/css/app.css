@@ -293,6 +293,11 @@
 .contact-us-block .information h2 {
   margin-top: 0; }
 
+.contact-us-block .information select {
+  width: 100%;
+  font-size: 15px;
+  padding: 2px 7px; }
+
 .contact-us-block .information input {
   width: 100%;
   font-size: 15px;
@@ -494,6 +499,9 @@
     #stock-result-block .row .update-time {
       text-align: right;
       font-size: 12px; }
+
+.market-news-menu .active {
+  border-bottom: double; }
 
 /*************************************************
 ************** End: Market News Page ***********

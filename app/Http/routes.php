@@ -42,8 +42,9 @@ Route::post('/ajax/stock/mostactive', ['uses' => 'InfocastController@mostactive'
 Route::post('/ajax/stock/marketnews', ['uses' => 'InfocastController@marketnews', 'as' => 'ajax.stock.marketnews']);
 
 //test mail
-Route::get('/mail/test_mail_out', 'EmailController@test_mail_out')->name('email.test_mail_out');
-Route::get('/mail/test_mail_in', 'EmailController@test_mail_in')->name('email.test_mail_in');
+//Route::get('/mail/test_mail_out', 'EmailController@test_mail_out')->name('email.test_mail_out');
+//Route::get('/mail/test_mail_in', 'EmailController@test_mail_in')->name('email.test_mail_in');
+Route::post('/mail/send_enquiry', 'EmailController@send_web_enquiry')->name('email.send_web_enquiry');
 
 
 Route::group(['middleware' => ['web']], function () {
@@ -57,7 +58,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/contact-us', ['uses' => 'PageController@contactus', 'as' => 'front.contactus']);
 
     /*Route for sending enquiry to email*/
-    Route::post('/mail/send_enquiry', 'EmailController@send_web_enquiry')->name('email.send_web_enquiry');
+//    Route::post('/mail/send_enquiry', 'EmailController@send_web_enquiry')->name('email.send_web_enquiry');
 
     /*Admin Page*/
     Route::get('/server/monitor', 'ServerMonitorController@index')->name('server-monitor');

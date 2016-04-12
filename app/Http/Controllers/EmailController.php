@@ -15,6 +15,7 @@ class EmailController extends Controller
 
         // 傳送給郵件view的變數資料
         $template_data = array(
+            'sexual'    => $request->input('enquiry_sexual'),
             'name'    => $request->input('enquiry_name'),
             'tel'     => $request->input('enquiry_tel'),
             'email'   => $request->input('enquiry_email'),
@@ -23,12 +24,13 @@ class EmailController extends Controller
 
         // 收件者資料
         $userinfo = array(
-            'email'=>'royho@beijingsecgroup.com',
+            'email'=>'cs@beijingsecgroup.com',
             'subject'=>'Enquiry from BSG Web Site.'
         );
 
         // 寄送郵件，使用use方法將資料從外部傳送給匿名函式使用
         Mail::send('email.contactus', $template_data, function($message) use ($userinfo) {
+            $message->from('web@beijingsecgroup.com');
             $message->to($userinfo['email'])->subject($userinfo['subject']);
         });
 	  
