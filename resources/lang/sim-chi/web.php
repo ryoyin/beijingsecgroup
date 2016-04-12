@@ -6,7 +6,7 @@ return [
     'home' => '首页',
     'login_to_trade' => '登入交易系统',
     'market_news' => '新闻资讯',
-    'company_structure' => '公司架构',
+    'company_structure' => '企业架构',
     'form_download' => '下载专区',
     'about_us' => '关于我们',
     'contact_us' => '联络我们',
