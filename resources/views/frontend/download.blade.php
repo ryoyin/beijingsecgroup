@@ -51,38 +51,38 @@
 					<tbody>
 						<tr>
 							<th scope="row" style="vertical-align: middle;">客户开户程序</th>
-							<td><a href="document/pdf/客户开户程序.pdf" target="_blank"><img src="{{asset('img/Adobe_PDF_file_icon_32x32.png')}}"> 客户开户程序.pdf</a></td>
-							<td style="text-align: center"><a href="document/pdf/客户开户程序.pdf" target="_blank"><button class="btn btn-primary">下载档案</button></a>	</td>
+							<td><a href="{{ asset('document/pdf/chi/客户开户程序.pdf') }}" target="_blank"><img src="{{asset('img/Adobe_PDF_file_icon_32x32.png')}}"> 客户开户程序.pdf</a></td>
+							<td style="text-align: center"><a href="{{ asset('document/pdf/chi/客户开户程序.pdf') }}" target="_blank"><button class="btn btn-primary">下载档案</button></a>	</td>
 						</tr>
 						<tr>
 							<th scope="row" style="vertical-align: middle;">个人或联名帐戸表格</th>
-							<td><a href="document/pdf/北京证券集团开戸文件（个人或联名帐戸)表格.pdf" target="_blank"><img src="{{asset('img/Adobe_PDF_file_icon_32x32.png')}}"> 北京证券集团开戸文件（个人或联名帐戸)表格.pdf</a></td>
-							<td style="text-align: center"><a href="document/pdf/北京证券集团开戸文件（个人或联名帐戸)表格.pdf" target="_blank"><button class="btn btn-primary">下载档案</button></a>	</td>
+							<td><a href="{{ asset('document/pdf/chi/北京证券集团开戸文件（个人或联名帐戸)表格.pdf') }}" target="_blank"><img src="{{asset('img/Adobe_PDF_file_icon_32x32.png')}}"> 北京证券集团开戸文件（个人或联名帐戸)表格.pdf</a></td>
+							<td style="text-align: center"><a href="{{ asset('document/pdf/chi/北京证券集团开戸文件（个人或联名帐戸)表格.pdf') }}" target="_blank"><button class="btn btn-primary">下载档案</button></a>	</td>
 						</tr>
 						<tr>
 							<th scope="row" style="vertical-align: middle;">公司帐戸表格</th>
-							<td><a href="document/pdf/北京证券集团开戸文件（公司帐戸)表格.pdf" target="_blank"><img src="{{asset('img/Adobe_PDF_file_icon_32x32.png')}}"> 北京证券集团开戸文件（公司帐戸)表格.pdf</a></td>
-							<td style="text-align: center"><a href="document/pdf/北京证券集团开戸文件（公司帐戸)表格.pdf" target="_blank"><button class="btn btn-primary">下载档案</button></a></td>
+							<td><a href="{{ asset('document/pdf/chi/北京证券集团开戸文件（公司帐戸)表格.pdf') }}" target="_blank"><img src="{{asset('img/Adobe_PDF_file_icon_32x32.png')}}"> 北京证券集团开戸文件（公司帐戸)表格.pdf</a></td>
+							<td style="text-align: center"><a href="{{ asset('document/pdf/chi/北京证券集团开戸文件（公司帐戸)表格.pdf') }}" target="_blank"><button class="btn btn-primary">下载档案</button></a></td>
 						</tr>
 						<tr>
 							<th scope="row" style="vertical-align: middle;">W-8BEN 表格简要说明</th>
-							<td><a href="document/pdf/W-8BEN 表格簡要說明.pdf" target="_blank"><img src="{{asset('img/Adobe_PDF_file_icon_32x32.png')}}"> W-8BEN  表格简要说明.pdf</a></td>
-							<td style="text-align: center"><a href="document/pdf/W-8BEN 表格簡要說明.pdf" target="_blank"><button class="btn btn-primary">下载档案</button></a></td>
+							<td><a href="{{ asset('document/pdf/chi/W-8BEN 表格簡要說明.pdf') }}" target="_blank"><img src="{{asset('img/Adobe_PDF_file_icon_32x32.png')}}"> W-8BEN  表格简要说明.pdf</a></td>
+							<td style="text-align: center"><a href="{{ asset('document/pdf/chi/W-8BEN 表格簡要說明.pdf') }}" target="_blank"><button class="btn btn-primary">下载档案</button></a></td>
 						</tr>
 						<tr>
 							<th scope="row" style="vertical-align: middle;">W8-BEN外国账户税收遵从法</th>
-							<td><a href="document/pdf/W8-BEN外國帐户税收遵重法.pdf" target="_blank"><img src="{{asset('img/Adobe_PDF_file_icon_32x32.png')}}"> W8-BEN外国账户税收遵从法.pdf</a></td>
-							<td style="text-align: center"><a href="document/pdf/W8-BEN外國帐户税收遵重法.pdf" target="_blank"><button class="btn btn-primary">下载档案</button></a></td>
+							<td><a href="{{ asset('document/pdf/chi/W8-BEN外國帐户税收遵重法.pdf') }}" target="_blank"><img src="{{asset('img/Adobe_PDF_file_icon_32x32.png')}}"> W8-BEN外国账户税收遵从法.pdf</a></td>
+							<td style="text-align: center"><a href="{{ asset('document/pdf/chi/W8-BEN外國帐户税收遵重法.pdf') }}" target="_blank"><button class="btn btn-primary">下载档案</button></a></td>
 						</tr>
 						<tr>
 							<th scope="row" style="vertical-align: middle;">客戸存款确认</th>
-							<td><a href="document/pdf/客戸存款确认.pdf" target="_blank"><img src="{{asset('img/Adobe_PDF_file_icon_32x32.png')}}"> 客戸存款确认.pdf</a></td>
-							<td style="text-align: center"><a href="document/pdf/客戸存款确认.pdf" target="_blank"><button class="btn btn-primary">下载档案</button></a></td>
+							<td><a href="{{ asset('document/pdf/chi/客戸存款确认.pdf') }}" target="_blank"><img src="{{asset('img/Adobe_PDF_file_icon_32x32.png')}}"> 客戸存款确认.pdf</a></td>
+							<td style="text-align: center"><a href="{{ asset('document/pdf/chi/客戸存款确认.pdf') }}" target="_blank"><button class="btn btn-primary">下载档案</button></a></td>
 						</tr>
 						<tr>
 							<th scope="row" style="vertical-align: middle;">客户提款指示</th>
-							<td><a href="document/pdf/客戶提款指示.pdf" target="_blank"><img src="{{asset('img/Adobe_PDF_file_icon_32x32.png')}}"> 客户提款指示.pdf</a></td>
-							<td style="text-align: center"><a href="document/pdf/客戶提款指示.pdf" target="_blank"><button class="btn btn-primary">下载档案</button></a></td>
+							<td><a href="{{ asset('document/pdf/chi/客戶提款指示.pdf') }}" target="_blank"><img src="{{asset('img/Adobe_PDF_file_icon_32x32.png')}}"> 客户提款指示.pdf</a></td>
+							<td style="text-align: center"><a href="{{ asset('document/pdf/chi/客戶提款指示.pdf') }}" target="_blank"><button class="btn btn-primary">下载档案</button></a></td>
 						</tr>
 					</tbody>
 					<thead>
@@ -98,18 +98,18 @@
 					<tbody>
 						<tr>
 							<th scope="row" style="vertical-align: middle;">北京证券集团协议书及附件</th>
-							<td><a href="document/pdf/北京证券集团協議書及附件.pdf" target="_blank"><img src="{{asset('img/Adobe_PDF_file_icon_32x32.png')}}"> 北京证券集团协议书及附件.pdf</a></td>
-							<td style="text-align: center"><a href="document/pdf/北京证券集团協議書及附件.pdf" target="_blank"><button class="btn btn-primary">下载档案</button></a></td>
+							<td><a href="{{ asset('document/pdf/chi/北京证券集团協議書及附件.pdf') }}" target="_blank"><img src="{{asset('img/Adobe_PDF_file_icon_32x32.png')}}"> 北京证券集团协议书及附件.pdf</a></td>
+							<td style="text-align: center"><a href="{{ asset('document/pdf/chi/北京证券集团協議書及附件.pdf') }}" target="_blank"><button class="btn btn-primary">下载档案</button></a></td>
 						</tr>
 						<tr>
 							<th scope="row" style="vertical-align: middle;">资本投资者入境计划协议</th>
-							<td><a href="document/pdf/資本投資者入境計劃協議.pdf" target="_blank"><img src="{{asset('img/Adobe_PDF_file_icon_32x32.png')}}"> 资本投资者入境计划协议.pdf</a></td>
-							<td style="text-align: center"><a href="document/pdf/資本投資者入境計劃協議.pdf" target="_blank"><button class="btn btn-primary">下载档案</button></a></td>
+							<td><a href="{{ asset('document/pdf/chi/資本投資者入境計劃協議.pdf') }}" target="_blank"><img src="{{asset('img/Adobe_PDF_file_icon_32x32.png')}}"> 资本投资者入境计划协议.pdf</a></td>
+							<td style="text-align: center"><a href="{{ asset('document/pdf/chi/資本投資者入境計劃協議.pdf') }}" target="_blank"><button class="btn btn-primary">下载档案</button></a></td>
 						</tr>
 						<tr>
 							<th scope="row" style="vertical-align: middle;">资本投资者入境计划规则</th>
-							<td><a href="document/pdf/資本投資者入境計劃規則.pdf" target="_blank"><img src="{{asset('img/Adobe_PDF_file_icon_32x32.png')}}"> 资本投资者入境计划规则.pdf</a></td>
-							<td style="text-align: center"><a href="document/pdf/資本投資者入境計劃規則.pdf" target="_blank"><button class="btn btn-primary">下载档案</button></a></td>
+							<td><a href="{{ asset('document/pdf/chi/資本投資者入境計劃規則.pdf') }}" target="_blank"><img src="{{asset('img/Adobe_PDF_file_icon_32x32.png')}}"> 资本投资者入境计划规则.pdf</a></td>
+							<td style="text-align: center"><a href="{{ asset('document/pdf/chi/資本投資者入境計劃規則.pdf') }}" target="_blank"><button class="btn btn-primary">下载档案</button></a></td>
 						</tr>
 					</tbody>
 					<thead>
@@ -125,8 +125,8 @@
 					<tbody>
 						<tr>
 							<th scope="row" style="vertical-align: middle;">2016收费表</th>
-							<td><a href="document/pdf/2016收費表.pdf" target="_blank"><img src="{{asset('img/Adobe_PDF_file_icon_32x32.png')}}"> 2016收费表.pdf</a></td>
-							<td style="text-align: center"><a href="document/pdf/2016收費表.pdf" target="_blank"><button class="btn btn-primary">下载档案</button></a></td>
+							<td><a href="{{ asset('document/pdf/chi/2016收費表.pdf') }}" target="_blank"><img src="{{asset('img/Adobe_PDF_file_icon_32x32.png')}}"> 2016收费表.pdf</a></td>
+							<td style="text-align: center"><a href="{{ asset('document/pdf/chi/2016收費表.pdf') }}" target="_blank"><button class="btn btn-primary">下载档案</button></a></td>
 						</tr>
 					</tbody>
 				</table>
