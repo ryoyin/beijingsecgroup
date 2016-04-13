@@ -7,7 +7,7 @@ function getNews(group) {
     $.ajax({
         headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
         method: "POST",
-        url: "/ajax/stock/marketnews",
+        url: "{{ route('ajax.stock.marketnews') }}",
         data: {group: group, type: 'main', page: 0, show: 10}
     })
     .done(function (data) {

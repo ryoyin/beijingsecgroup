@@ -35,7 +35,7 @@ function stockEnquiry($code) {
     $.ajax({
         headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
         method: "POST",
-        url: "/ajax/stock/stockenquiry",
+        url: "{{ route('ajax.stock.stockenquiry') }}",
         data: {code: $code}
     }).done(function (data) {
         if(data == 'failed') {
