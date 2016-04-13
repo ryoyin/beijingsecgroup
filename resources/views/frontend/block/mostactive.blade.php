@@ -17,7 +17,7 @@ function mostActive(type) {
     $.ajax({
         headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
         method: "POST",
-        url: "/ajax/stock/mostactive",
+        url: "{{ route('ajax.stock.mostactive') }}",
         data: {returnJson: false, rankby: type}
     })
     .done(function (data) {
