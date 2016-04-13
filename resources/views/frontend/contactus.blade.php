@@ -133,7 +133,7 @@
 				'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
 			},
 			method: "POST",
-			url: "{{ route('email.send_web_enquiry') }}}",
+			url: "{{ route('email.send_web_enquiry') }}",
 			data: postData
 	  	})
 		.done(function( data ) {
