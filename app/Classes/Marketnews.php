@@ -98,6 +98,8 @@ class Marketnews
             ->orderBy('times', 'desc')->paginate($show);
 //        exit;
 
+        if($type == 'main') $marketNews->setPath('market-news');
+
         $data = array('marketnews' => $marketNews);
 
         switch($type) {
