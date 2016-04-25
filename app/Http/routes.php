@@ -24,12 +24,12 @@ use App\Classes\Test;
 use App\Helpers\Helper;
 
 Route::post('/ajax/stock/stockenquiry', ['uses' => 'InfocastController@stockEnquiry', 'as' => 'ajax.stock.stockenquiry']);
+Route::get('/schedule/requestmostactive', ['uses' => 'InfocastController@requestMostActive', 'as' => 'schedule.requestmostactive']);
+Route::get('/schedule/requestmarketnews', ['uses' => 'InfocastController@requestMarketNews', 'as' => 'schedule.requestmarketnews']);
 
 Route::group(['middleware' => ['web']], function () {
     /*Infocast API for Index*/
     /*API CALL*/
-    Route::get('/schedule/requestmostactive', ['uses' => 'InfocastController@requestMostActive', 'as' => 'schedule.requestmostactive']);
-    Route::get('/schedule/requestmarketnews', ['uses' => 'InfocastController@requestMarketNews', 'as' => 'schedule.requestmarketnews']);
 
     Route::post('/ajax/stock/mostactive', ['uses' => 'InfocastController@mostactive', 'as' => 'ajax.stock.mostactive']);
 
