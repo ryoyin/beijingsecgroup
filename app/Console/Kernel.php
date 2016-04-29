@@ -54,5 +54,32 @@ class Kernel extends ConsoleKernel
             });*/
 
         })->everyTenMinutes();
+
+        $schedule->call(function () {
+
+            $server_list = array(
+                "vm_server" => array("fullname" => "虚拟伺服器", "ip" => "192.168.10.10", "status" => "pending"),
+                "domain_server" => array("fullname" => "域和文件服务器", "ip" => "192.168.10.11", "status" => "pending"),
+                "mail_server" => array("fullname" => "邮件服务器", "ip" => "192.168.10.12", "status" => "pending"),
+                "ricoh_printer" => array("fullname" => "Ricoh 打印机", "ip" => "192.168.10.254", "status" => "pending"),
+                "test_fail" => array("fullname" => "演示测试失败 (忽视  )", "ip" => "192.168.10.200", "status" => "pending")
+            );
+
+            foreach($server_list AS $server) {
+
+                exec("ping ".$server['ip']." -n 1", $output, $return_var);
+
+                $output2 = explode("=", $output[2]); //回覆自 192.168.10.125: 目的地主機無法連線。
+
+                if(!is_numeric(end($output2))) {
+                    Mail::raw('Ping fail to server: '.$server['fullname'], function ($message) {
+                        $message->from('royho@beijingsecgroup.com');
+                        $message->to('royho@beijingsecgroup.com')->subject('Ping Fail!');
+                    });
+                }
+
+            }
+
+        })->everyMinute();
     }
 }
