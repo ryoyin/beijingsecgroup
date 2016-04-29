@@ -160,7 +160,6 @@
         </p>
     </div>
 
-
     <div align="center">
         <div class="checkbox">
             <label><input type="checkbox" value="agree" class="accept_agreement"><b>I agree to be bound by these terms and conditions.</b></label>

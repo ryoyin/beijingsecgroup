@@ -33,6 +33,9 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <!-- https://github.com/js-cookie/js-cookie -->
+    <script src="{{ asset('js/js.cookie.js') }}"></script>
+
     <script src="{{ asset('js/site.js?time=20160303') }}"></script>
 
     <!-- Custom CSS -->

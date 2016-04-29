@@ -63,12 +63,18 @@
         <script>
             $('#myModal').modal({
                 backdrop: 'static',
-                keyboard: false
+                keyboard: false,
+                show: false
             })
+
+            if(Cookies.get('accept_agreement') != 1) {
+                $('#myModal').modal('toggle');
+            }
 
             function accept_agreement() {
                 if($('.accept_agreement').is(":checked")) {
                     $('#myModal').modal('toggle');
+                    Cookies.set('accept_agreement', 1, { expires: 30 });
                 }
             }
         </script>
