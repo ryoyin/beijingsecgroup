@@ -8,6 +8,7 @@
 
     <div class="agreement_content" style="padding: 0 15px; height:500px; overflow-y: scroll;">
         <p>
+            <div style="font-size: 22px; padding-bottom: 10px; font-weight: bold; text-decoration: underline;">免責聲明</div>
             <b>重要通知</b><br>
             閣下使用本網站即表示同意當中所列出之責任及政策聲明。如閣下于該等條款作出修訂後，仍繼續使用本網站，即視為閣下已接受有關修訂。
         </p>
@@ -91,7 +92,7 @@
         <div style="height: 20px;"></div>
 
         <p>
-            <b><u>提供個人資料及有關個人資料 (私隱) 條例條文</u></b><br>
+            <div style="font-size: 22px; padding-bottom: 10px; font-weight: bold; text-decoration: underline;">提供個人資料及有關個人資料 (私隱) 條例條文</div>
         <p>客戶于提供任何個人資料給我們前，請詳閱下列要點。</p>
         <p>客戶在申請開立戶口、延續戶口及建立或延續信貸便利或要求本公司提供金融投資服務及／或其他服務時，須要不時向本公司提供資料。</p>
         <p>若客戶未能向本公司提供有關資料，可能會導致本公司無法為閣下開立或延續戶口、或建立或延續信貸便利、或提供金融投資服務或其他服務。</p>

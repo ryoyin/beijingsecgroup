@@ -8,6 +8,7 @@
 
         <div class="agreement_content" style="padding: 0 15px; height:500px; overflow-y: scroll;">
             <p>
+                <div style="font-size: 22px; padding-bottom: 10px; font-weight: bold; text-decoration: underline;">免责声明</div>
                 <b>重要通知</b><br>
                 阁下使用本网站即表示同意当中所列出之责任及政策声明。如阁下于该等条款作出修订后，仍继续使用本网站，即视​​为阁下已接受有关修订。
             </p>
@@ -91,7 +92,7 @@
             <div style="height: 20px;"></div>
 
             <p>
-                <b><u>提供个人资料及有关个人资料 (私隐) 条例条文</u></b><br>
+                <div style="font-size: 22px; padding-bottom: 10px; font-weight: bold; text-decoration: underline;">提供个人资料及有关个人资料 (私隐) 条例条文</div>
                 <p>客户不提供任何个人资料给我们前,请详阅下列要点。</p>
                 <p>客户在申请开立户口、延续户口及建立或延续信贷便利或要求本公司提供金融投资服务及／或其他服务时，须要不时向本公司提供资料。</p>
                 <p>若客户未能向本公司提供有关资料，可能会导致本公司无法为阁下开立或延续户口、或建立或延续信贷便利、或提供金融投资服务或其他服务。</p>

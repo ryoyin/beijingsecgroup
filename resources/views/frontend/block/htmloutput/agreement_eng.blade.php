@@ -8,7 +8,7 @@
 
     <div class="agreement_content" style="padding: 0 15px; height:500px; overflow-y: scroll;">
         <p>
-            <u><b>Disclaimers</b></u><br>
+            <div style="font-size: 22px; padding-bottom: 10px; font-weight: bold; text-decoration: underline;">Disclaimers</div>
             <b>Important Notice</b><br>
             By accessing this Website and any of its pages, you accept the terms set out below, and by continuing to use this Website following the posting of any changes to these terms, you will signify your consent to the changes made.
         </p>
@@ -91,7 +91,7 @@
         <div style="height: 20px;"></div>
 
         <p>
-            <b><u>Personal Information Collection And Privacy Policy Statements</u></b><br>
+            <div style="font-size: 22px; padding-bottom: 10px; font-weight: bold; text-decoration: underline;">Personal Information Collection And Privacy Policy Statements</div>
             <p>Please read the following before you send us any Personal Data.</p>
             <p>From time to time, it is necessary for customers to supply the Company with data in connection with the opening or continuation of accounts and the establishment or continuation of credit facilities or provision of financial and/or other services.</p>
             <p>Failure to supply such data may result in the Company being unable to open or continue accounts or establish or continue credit facilities or provide financial or other services.</p>
