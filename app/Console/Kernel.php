@@ -58,11 +58,11 @@ class Kernel extends ConsoleKernel
         $schedule->call(function () {
 
             $server_list = array(
-                "vm_server" => array("fullname" => "虚拟伺服器", "ip" => "192.168.10.10", "status" => "pending"),
-                "domain_server" => array("fullname" => "域和文件服务器", "ip" => "192.168.10.11", "status" => "pending"),
-                "mail_server" => array("fullname" => "邮件服务器", "ip" => "192.168.10.12", "status" => "pending"),
-                "ricoh_printer" => array("fullname" => "Ricoh 打印机", "ip" => "192.168.10.254", "status" => "pending"),
-                "test_fail" => array("fullname" => "演示测试失败 (忽视  )", "ip" => "192.168.10.200", "status" => "pending")
+                "vm_server" => array("fullname" => "虚拟伺服器", "ip" => "192.168.10.10"),
+                "domain_server" => array("fullname" => "域和文件服务器", "ip" => "192.168.10.11"),
+                "mail_server" => array("fullname" => "邮件服务器", "ip" => "192.168.10.12"),
+                "ricoh_printer" => array("fullname" => "Ricoh 打印机", "ip" => "192.168.10.254"),
+                "cctv" => array("fullname" => "CCTV 閉路電視", "ip" => "192.168.10.31")
             );
 
             foreach($server_list AS $server) {
