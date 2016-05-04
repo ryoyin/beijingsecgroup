@@ -67,22 +67,20 @@ class Kernel extends ConsoleKernel
 
             foreach($server_list AS $server) {
 
-                $command = "ping ".$server['ip']." -n 1";
-                echo $command;
-                echo "##### Ping start #####";
+                $command = "ping ".$server['ip']." -c 1";
+//                echo $command;
+//                echo "##### Ping start #####";
                 exec($command, $output, $return_var);
-                print_r($output);
-                echo "##### Ping end #####";
-                exit;
-
-                $output2 = explode("=", $output[2]); //回覆自 192.168.10.125: 目的地主機無法連線。
-
-                if(!is_numeric(end($output2))) {
-                    Mail::raw('Ping fail to server: '.$server['fullname'], function ($message) {
+                if(strstr($output[4], '1 received') === FALSE) {
+                    /*Mail::raw('Ping fail to server: '.$server['fullname'], function ($message) {
                         $message->from('royho@beijingsecgroup.com');
                         $message->to('royho@beijingsecgroup.com')->subject('Ping Fail!');
-                    });
+                    });*/
+                    echo 'fail';
+                } else {
+                    echo 'success';
                 }
+//                echo "##### Ping end #####";
 
                 unset($output);
 
