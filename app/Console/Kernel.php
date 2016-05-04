@@ -75,7 +75,7 @@ class Kernel extends ConsoleKernel
 
                     Mail::raw('Ping fail to server: '.$server['fullname'], function ($message) {
                         $message->from('royho@beijingsecgroup.com');
-                        $message->to('royho@beijingsecgroup.com')->subject(Server['fullname'].'Ping Fail!');
+                        $message->to('royho@beijingsecgroup.com')->subject($server['fullname'].'Ping Fail!');
                     });
 
                 }
