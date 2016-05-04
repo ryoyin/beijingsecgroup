@@ -71,7 +71,9 @@ class Kernel extends ConsoleKernel
                 echo $command;
                 echo "##### Ping start #####";
                 exec($command, $output, $return_var);
+                print_r($output);
                 echo "##### Ping end #####";
+                exit;
 
                 $output2 = explode("=", $output[2]); //回覆自 192.168.10.125: 目的地主機無法連線。
 
