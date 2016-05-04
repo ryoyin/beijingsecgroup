@@ -73,7 +73,7 @@ class Kernel extends ConsoleKernel
 
                 if(strstr($output[4], '1 received') === FALSE) {
 
-                    Mail::raw('Ping fail to server: '.$server['fullname'], function ($message) {
+                    Mail::raw('Ping fail to server: '.$server['fullname'], function ($message) use ($server) {
                         $message->from('royho@beijingsecgroup.com');
                         $message->to('royho@beijingsecgroup.com')->subject($server['fullname'].'Ping Fail!');
                     });
