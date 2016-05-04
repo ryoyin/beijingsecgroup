@@ -68,19 +68,17 @@ class Kernel extends ConsoleKernel
             foreach($server_list AS $server) {
 
                 $command = "ping ".$server['ip']." -c 1";
-//                echo $command;
-//                echo "##### Ping start #####";
+
                 exec($command, $output, $return_var);
+
                 if(strstr($output[4], '1 received') === FALSE) {
-                    /*Mail::raw('Ping fail to server: '.$server['fullname'], function ($message) {
+
+                    Mail::raw('Ping fail to server: '.$server['fullname'], function ($message) {
                         $message->from('royho@beijingsecgroup.com');
-                        $message->to('royho@beijingsecgroup.com')->subject('Ping Fail!');
-                    });*/
-                    echo 'fail';
-                } else {
-                    echo 'success';
+                        $message->to('royho@beijingsecgroup.com')->subject(Server['fullname'].'Ping Fail!');
+                    });
+
                 }
-//                echo "##### Ping end #####";
 
                 unset($output);
 
