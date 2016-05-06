@@ -67,13 +67,16 @@
   </div>
   <div class="col-md-3">
     @include('frontend.block.stockenquiry')
+    <script>
+      stockEnquiry(5);
+    </script>
 
-    <div class="ad-app-block">
+    {{--<div class="ad-app-block">
       <div class="col-md-12" style="padding-bottom: 10px;"><h4>电脑交易平台</h4></div>
       <div class="col-md-12" style="padding-bottom: 10px;"><img src="{{ asset('img/infocast_logo_sim.png') }}" style="height:130px"></div>
       <div class="col-md-12" style="padding-bottom: 20px;"><a class="btn btn-primary login-btn" href="https://bjsginv.infocast.hk/cas/login" role="button" style=" font-size: 27px;" target="_blank">立即登入</a></div>
       <div class="col-md-12"><h4>{{ trans('web.mobile_trade_platform') }}</h4></div>
-      {{--<div class="col-md-12 app-image"><img src="{{ asset('img/app_trading_platform.png') }}"></div>--}}
+      --}}{{--<div class="col-md-12 app-image"><img src="{{ asset('img/app_trading_platform.png') }}"></div>--}}{{--
       <div class="col-md-12">
         <ul>
           <li class="app-item">
@@ -90,7 +93,7 @@
           </li>
         </ul>
       </div>
-    </div>
+    </div>--}}
   </div>
 </div>
 

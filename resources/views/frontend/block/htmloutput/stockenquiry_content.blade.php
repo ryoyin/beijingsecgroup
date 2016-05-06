@@ -1,3 +1,8 @@
+<div class="row" style="font-size:30px;">
+    <div class="col-md-12"><span class="api-stockname">{{ $code }}</span></div>
+    <div class="col-md-12"><span class="api-stockname">{{ $stockName }}</span></div>
+</div>
+
 <div class="row">
     <div class="col-md-5"><span class="last-price">{{ $lastPrice }}</span>
         <span class="diff api_diff" style="color: red;">{{ $different }}</span>
@@ -28,5 +33,5 @@
 </div>
 
 <div class="row">
-    <div class="col-md-12 update-time">最后更新时间: <span class="api_updateTime">{{ $updateTime }}</span></div>
+    <div class="col-md-12 update-time">最少延迟15分钟</div>
 </div>

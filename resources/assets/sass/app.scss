@@ -96,7 +96,7 @@
 	// Start: Login Block
 	.login-block {
 		//General
-		background-color: #2d318a; color: #FFFFFF; font-size: 20px; font-weight: bold;
+		background-color: #2d318a; color: #FFFFFF; font-size: 27px; font-weight: bold; height: 56px;
 
 		//Position
 		position: absolute; bottom: 0; right: 0;
@@ -106,6 +106,20 @@
 		
 		//Style
 		list-style: none; -webkit-border-top-left-radius: 18px; -moz-border-radius-topleft: 18px; border-top-left-radius: 18px;
+
+		ul {
+			padding: 0 0 0 10px;
+			margin: 0;
+			list-style: none;
+			float: right;
+			font-size: 46px;
+			position: relative;
+			top: -14px;
+
+			li {
+				float:right;
+			}
+		}
 	} // End: Login Block
 
 } // End: Master Header

@@ -15,12 +15,12 @@
 								<li>{{ trans('web.android_trade_download') }}</li>
 							</ul>					
 						</li>
-						<li class="app-item">
-							<ul class="weixin_qr">
-								<li><img src="{{ asset('img/weixin_qrcode.jpg') }}" style="height: 78px"></li>
-								<li>微信關注</li>
-							</ul>
-						</li>
+						{{--<li class="app-item">--}}
+							{{--<ul class="weixin_qr">--}}
+								{{--<li><img src="{{ asset('img/weixin_qrcode.jpg') }}" style="height: 78px"></li>--}}
+								{{--<li>微信關注</li>--}}
+							{{--</ul>--}}
+						{{--</li>--}}
 					</ul>
 				</div>
 			</div>

@@ -53,13 +53,13 @@ Route::group(['middleware' => ['web']], function () {
 //    Route::post('/mail/send_enquiry', 'EmailController@send_web_enquiry')->name('email.send_web_enquiry');
 
     /*Admin Page*/
-    Route::get('/server/monitor', 'ServerMonitorController@index')->name('server-monitor');
-    Route::get('/server/checkserverstatus', 'ServerMonitorController@checkServerStatus')->name('server-status');
+//    Route::get('/server/monitor', 'ServerMonitorController@index')->name('server-monitor');
+//    Route::get('/server/checkserverstatus', 'ServerMonitorController@checkServerStatus')->name('server-status');
 
 /*    Route::get('/test', array('as' => 'admin-homepage', function () {
         return view('backend.test');
     }));*/
-    Route::post('/server/checkconnectionbyip', 'ServerMonitorController@checkConnectionByIP');
+//    Route::post('/server/checkconnectionbyip', 'ServerMonitorController@checkConnectionByIP');
 
 });
 

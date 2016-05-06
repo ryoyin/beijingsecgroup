@@ -77,8 +77,42 @@
 
           <!-- Login Block -->
           <ul class="login-block">
-            <li>{{ trans('web.login_to_trade') }} <span>&raquo;</span><span>&raquo;</span><span>&raquo;</span></li>
+            <li>
+              {{ trans('web.login_to_trade') }}
+              <ul>
+                <li>&raquo;</li>
+                <li>&raquo;</li>
+                <li>&raquo;</li>
+              </ul>
+            </li>
           </ul>
+
+          <script>
+//            var flash_arrow = 3;
+
+            function flashArrow() {
+
+              /*$('.login-block ul li').css('color', 'white');
+
+              $('.login-block ul li:nth-child(' + flash_arrow + ')').css('color', 'yellow');
+
+              if(flash_arrow ==1 ) {
+                flash_arrow = 3;
+                return;
+              }
+
+              flash_arrow --;*/
+
+              $('.login-block ul li').css('color', '#F7FE2E');
+              setTimeout(function() {$('.login-block ul li').css('color', 'white')}, 1000)
+
+            }
+
+
+            setInterval(function(){ flashArrow(); }, 2000);
+
+          </script>
+
         </div>
 
       </div>
