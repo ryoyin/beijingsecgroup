@@ -33,7 +33,7 @@
             </div><!-- // News from Infocast & Exchange -->
         </div>
 
-        <div class="col-md-12 text-right">资料由港汇资讯提供</div>
+        <div class="col-md-12 text-right" style="font-size: 12px;">资料由港汇资讯提供 最少延迟15分钟</div>
     </div>
 
 </div>

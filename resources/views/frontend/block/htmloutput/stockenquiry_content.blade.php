@@ -33,5 +33,5 @@
 </div>
 
 <div class="row">
-    <div class="col-md-12 update-time">最少延迟15分钟</div>
+    <div class="col-md-12 update-time">资料由港汇资讯提供 最少延迟15分钟</div>
 </div>
