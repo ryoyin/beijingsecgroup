@@ -54,22 +54,22 @@
 							<p class="bg-success" style="display: none;">已成功送出你的查询，我们会尽快联络阁下。</p>
 							<p class="bg-danger" style="display: none;">对不起，你都查询未能送出。</p>
 						</div>
-						<div class="col-md-2 col-xs-2 title">性別</div>
-						<div class="col-md-10 col-xs-10 content">
+						<div class="col-md-2 col-xs-12 title">性別</div>
+						<div class="col-md-10 col-xs-12 content">
 							<select name="enquiry_sexual">
 								<option value="-"> -- </option>
 								<option value="Male">先生</option>
 								<option value="Female">女仕</option>
 							</select>
 						</div>
-						<div class="col-md-2 col-xs-2 title">名称</div>
-						<div class="col-md-10 col-xs-10 content"><input type="text" name="enquiry_name"></div>
-						<div class="col-md-2 col-xs-2 title">电话</div>
-						<div class="col-md-10 col-xs-10 content"><input type="text" name="enquiry_tel"></div>
-						<div class="col-md-2 col-xs-2 title">电邮</div>
-						<div class="col-md-10 col-xs-10 content"><input type="text" name="enquiry_email"></div>
-						<div class="col-md-2 col-xs-2 title">內容</div>
-						<div class="col-md-10 col-xs-10 content"><textarea name="enquiry_content"></textarea></div>
+						<div class="col-md-2 col-xs-12 title">名称</div>
+						<div class="col-md-10 col-xs-12 content"><input type="text" name="enquiry_name"></div>
+						<div class="col-md-2 col-xs-12 title">电话</div>
+						<div class="col-md-10 col-xs-12 content"><input type="text" name="enquiry_tel"></div>
+						<div class="col-md-2 col-xs-12 title">电邮</div>
+						<div class="col-md-10 col-xs-12 content"><input type="text" name="enquiry_email"></div>
+						<div class="col-md-2 col-xs-12 title">內容</div>
+						<div class="col-md-10 col-xs-12 content"><textarea name="enquiry_content"></textarea></div>
 						<div class="col-md-12" align="right"><button type="submit" class="btn btn-info btn-lg">提交查询</button></div>
 					</form>
 				</div>
