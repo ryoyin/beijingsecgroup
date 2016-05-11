@@ -29,12 +29,18 @@
 			<div class="col-md-2 page-content">
 				<div class="col-md-12 page-title">{{ trans('web.form_download') }}</div>
 				<div class="col-md-12">
-				<ul>
-					<li><a href="#account" style="font-weight: bold;">开户文件</a></li>
-					<li><a href="#agreement" style="font-weight: bold;">协议书及附件</a></li>
-					<li><a href="#charge" style="font-weight: bold;">收费表</a></li>
-					<li><a href="#others" style="font-weight: bold;">其他下载</a></li>
-				</ul>
+					<div class="list-group">
+						<a href="#account" class="list-group-item active">开户文件</a>
+						<a href="#agreement" class="list-group-item">协议书及附件</a>
+						<a href="#charge" class="list-group-item">收费表</a>
+						<a href="#others" class="list-group-item">其他下载</a>
+					</div>
+					<script>
+						$('.list-group-item').click(function() {
+							$('.list-group-item').removeClass('active');
+							$(this).addClass('active');
+						});
+					</script>
 				</div>
 			</div>
 			<div class="col-md-10 page-content">
@@ -75,16 +81,6 @@
 							<th scope="row" style="vertical-align: middle;">W8-BEN外国账户税收遵从法</th>
 							<td><a href="{{ asset('document/pdf/chi/W8-BEN外國帐户税收遵重法.pdf') }}" target="_blank"><img src="{{asset('img/Adobe_PDF_file_icon_32x32.png')}}"> W8-BEN外国账户税收遵从法.pdf</a></td>
 							<td style="text-align: center"><a href="{{ asset('document/pdf/chi/W8-BEN外國帐户税收遵重法.pdf') }}" target="_blank"><button class="btn btn-primary">下载档案</button></a></td>
-						</tr>
-						<tr>
-							<th scope="row" style="vertical-align: middle;">客戸存款确认</th>
-							<td><a href="{{ asset('document/pdf/chi/客戸存款确认.pdf') }}" target="_blank"><img src="{{asset('img/Adobe_PDF_file_icon_32x32.png')}}"> 客戸存款确认.pdf</a></td>
-							<td style="text-align: center"><a href="{{ asset('document/pdf/chi/客戸存款确认.pdf') }}" target="_blank"><button class="btn btn-primary">下载档案</button></a></td>
-						</tr>
-						<tr>
-							<th scope="row" style="vertical-align: middle;">客户提款指示</th>
-							<td><a href="{{ asset('document/pdf/chi/客戶提款指示.pdf') }}" target="_blank"><img src="{{asset('img/Adobe_PDF_file_icon_32x32.png')}}"> 客户提款指示.pdf</a></td>
-							<td style="text-align: center"><a href="{{ asset('document/pdf/chi/客戶提款指示.pdf') }}" target="_blank"><button class="btn btn-primary">下载档案</button></a></td>
 						</tr>
 					</tbody>
 					<!-- /开户文件 -->
@@ -151,6 +147,16 @@
 					</tr>
 					</thead>
 					<tbody>
+					<tr>
+						<th scope="row" style="vertical-align: middle;">客戸存款确认</th>
+						<td><a href="{{ asset('document/pdf/chi/客戸存款确认.pdf') }}" target="_blank"><img src="{{asset('img/Adobe_PDF_file_icon_32x32.png')}}"> 客戸存款确认.pdf</a></td>
+						<td style="text-align: center"><a href="{{ asset('document/pdf/chi/客戸存款确认.pdf') }}" target="_blank"><button class="btn btn-primary">下载档案</button></a></td>
+					</tr>
+					<tr>
+						<th scope="row" style="vertical-align: middle;">客户提款指示</th>
+						<td><a href="{{ asset('document/pdf/chi/客戶提款指示.pdf') }}" target="_blank"><img src="{{asset('img/Adobe_PDF_file_icon_32x32.png')}}"> 客户提款指示.pdf</a></td>
+						<td style="text-align: center"><a href="{{ asset('document/pdf/chi/客戶提款指示.pdf') }}" target="_blank"><button class="btn btn-primary">下载档案</button></a></td>
+					</tr>
 					<tr>
 						<th scope="row" style="vertical-align: middle;">更改資料及帳卢服務通知</th>
 						<td><a href="{{ asset('document/pdf/chi/更改資料及帳卢服務通知.pdf') }}" target="_blank"><img src="{{asset('img/Adobe_PDF_file_icon_32x32.png')}}"> 更改資料及帳卢服務通知.pdf</a></td>

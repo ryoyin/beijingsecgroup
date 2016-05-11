@@ -78,10 +78,10 @@ class Marketnews
                 break;
         }
 
-        return $this->marketnews($member, $type, $page, $show);
+        return $this->marketnews($member, $type, $page, $show, $group);
     }
 
-    public function marketnews($member, $type, $page, $show) {
+    public function marketnews($member, $type, $page, $show, $group = NULL) {
 
         $init = $page * $show;
 
@@ -98,7 +98,7 @@ class Marketnews
             ->orderBy('times', 'desc')->paginate($show);
 //        exit;
 
-        if($type == 'main') $marketNews->setPath('market-news');
+        if($type == 'main') $marketNews->setPath('market-news')->appends(['group' => $group])->render();
 
         $data = array('marketnews' => $marketNews);
 

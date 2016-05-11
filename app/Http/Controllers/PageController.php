@@ -34,12 +34,20 @@ class PageController extends Controller
 
 	}
 
-	public function marketnews() {
+	public function marketnews(Request $request) {
 
 		$marketNews = New App\Classes\Marketnews();
 
+		$group = $request->input('group');
+		if($group == '') $group = 'A';
+
+		$groupArray = array('A' => '', 'B' => '', 'C' => '', 'D' => '');
+
+		$groupArray[$group] = 'active';
+
 		$data = array (
-			'newsInfo' => $marketNews->getMarketNewsByGroup('A', 'main', 0, 10) //新聞資訊
+			'newsInfo'   => $marketNews->getMarketNewsByGroup($group, 'main', 0, 10), //新聞資訊
+			'groupArray' => $groupArray
 		);
 
 		return view('frontend.marketnews', $data);

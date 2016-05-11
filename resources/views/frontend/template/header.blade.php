@@ -76,16 +76,18 @@
           <div class="clearfix"></div>--}}
 
           <!-- Login Block -->
-          <ul class="login-block">
-            <li>
-              {{ trans('web.login_to_trade') }}
-              <ul>
-                <li>&raquo;</li>
-                <li>&raquo;</li>
-                <li>&raquo;</li>
-              </ul>
-            </li>
-          </ul>
+          <a href="https://bjsginv.infocast.hk/cas/login" target="_blank">
+            <ul class="login-block hidden-custom">
+              <li>
+                {{ trans('web.login_to_trade') }}
+                <ul>
+                  <li>&raquo;</li>
+                  <li>&raquo;</li>
+                  <li>&raquo;</li>
+                </ul>
+              </li>
+            </ul>
+          </a>
 
           <script>
 //            var flash_arrow = 3;
@@ -118,7 +120,7 @@
       </div>
 
       <!-- Navigation Bar -->
-      <nav class="navbar navbar-default main_navbar">
+      <nav class="navbar navbar-default main_navbar ">
         <div class="container-fluid">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">

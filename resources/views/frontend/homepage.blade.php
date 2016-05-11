@@ -65,7 +65,7 @@
 
     @include('frontend.block.mostactive')
   </div>
-  <div class="col-md-3">
+  <div class="col-md-3 hidden-custom">
     @include('frontend.block.stockenquiry')
     <script>
       stockEnquiry(5);
@@ -97,7 +97,7 @@
   </div>
 </div>
 
-<div class="row trading-platform">
+<div class="row trading-platform hidden-custom">
   <!-- Online Trading System -->
   <div class="col-md-12 title">提供全面的交易平台，让你在任何地方也不会错过投资机会</div>
   <!-- App Trading System -->
@@ -136,24 +136,24 @@
           <h3>网上证券交易</h3>
           <p>一站式证券交易平台，使用方便，并提供其他先进功能，稳健及快速恢复的系统结构赋予最高性能、安全和稳健性的平台。</p>
         </li>
-        <li align="center"><a class="btn btn-primary login-btn" href="#" role="button">立即登入</a></li>
+        <li align="center"><a class="btn btn-primary login-btn" href="https://bjsginv.infocast.hk/cas/login" role="button" target="_blank">立即登入</a></li>
       </ul>
     </div>
   </div>
 </div>
 
-<div class="row service-block">
-  <div class="col-lg-4">
+<div class="row service-block hidden-custom">
+  <div class="col-md-4">
     <h2>交易服务</h2>
     <p>北京证券集团有限公司一向致力为客户提供全面证券买卖服务，配合多元化交易渠道及全面交易信息，让客户全方位把握投资良机。</p>
     <div class="img-block"><img class="img-rounded" src="{{ asset('img/trade-service.jpg') }}"></div>
   </div>
-  <div class="col-lg-4">
+  <div class="col-md-4">
     <h2>专业团队</h2>
     <p>以您为主的投资策略，让您全面掌握个人投资配置，我们会以专业客观的角度，为您创造最大价值，获取最理想的投资报酬。</p>
     <div class="img-block"><img class="img-rounded" src="{{ asset('img/invest-service.jpg') }}"></div>
   </div>
-  <div class="col-lg-4">
+  <div class="col-md-4">
     <h2>服务范围</h2>
     <p>在香港开设投资证券帐户，并提供港股、美股等境外股票买卖服务。为投资者提供咨询、分析、参谋等服务，最大限度降低投资风险。为投资者提供孖展融资服务，最大限度放大投资者的投资规模，实现投资效益最大化。</p>
     <div class="img-block"><img class="img-rounded" src="{{ asset('img/provided-service.jpg') }}"></div>

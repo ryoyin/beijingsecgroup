@@ -5,7 +5,7 @@
    <meta name="csrf-token" content="{{ csrf_token() }}">
 
 <script>
-function getNews(group) {
+function getNews(group, obj) {
     $.ajax({
         headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
         method: "POST",
@@ -14,6 +14,8 @@ function getNews(group) {
     })
     .done(function (data) {
         $('#news-content').html(data);
+        $('.list-group-item').removeClass('active');
+        $(obj).addClass('active');
     });
 }
 
@@ -21,6 +23,7 @@ function slideNews(infocastid) {
     $('.marketnews-title[newsid='+infocastid+']').slideToggle();
     $('.marketnews-content[newsid='+infocastid+']').slideToggle();
 }
+
 </script>
 
 <style>
@@ -47,7 +50,7 @@ function slideNews(infocastid) {
     <div class="col-md-12">
         <ol class="breadcrumb">
             <li><a href="{{ route('front.homepage') }}">首页</a></li>
-            <li class="active">{{ trans('web.form_download') }}</li>
+            <li class="active">新闻资讯</li>
         </ol>
     </div>
 
@@ -57,12 +60,18 @@ function slideNews(infocastid) {
             <div class="col-md-2 page-content">
                 <div class="col-md-12 page-title">新闻资讯</div>
                 <div class="col-md-12">
-                    <ul class="market-news-menu">
+                    {{--<ul class="market-news-menu">
                         <li><a href="#newsInfo" style="font-weight: bold;" onclick="getNews('A')" class="active">新闻资讯</a></li>
                         <li><a href="#investInfo" style="font-weight: bold;" onclick="getNews('B')">投资锦囊</a></li>
                         <li><a href="#companyInfo" style="font-weight: bold;" onclick="getNews('C')">公司资料</a></li>
                         <li><a href="#marketInfo" style="font-weight: bold;" onclick="getNews('D')">市场资讯</a></li>
-                    </ul>
+                    </ul>--}}
+                    <div class="list-group">
+                        <a href="#" class="list-group-item {{ $groupArray['A'] }}" onclick="getNews('A', this)">新闻资讯</a>
+                        <a href="#" class="list-group-item {{ $groupArray['B'] }}" onclick="getNews('B', this)">投资锦囊</a>
+                        <a href="#" class="list-group-item {{ $groupArray['C'] }}" onclick="getNews('C', this)">公司资料</a>
+                        <a href="#" class="list-group-item {{ $groupArray['D'] }}" onclick="getNews('D', this)">市场资讯</a>
+                    </div>
                 </div>
             </div>
             <div class="col-md-10 page-content">

@@ -10,26 +10,48 @@
 
 		}
 	}
-} 
-/*************************************************
-************* End: Media Max Width 991 *************
-*************************************************/
+	.hidden-custom {
+		display: none !important;;
+	}
+}
 
+@media (max-width: 560px) {
+	.company-name {
+		li {
+			foat: none;
+			text-align: center;
+			&:nth-child(1) {
+				font-size: 25px !important;
+			}
 
-/*************************************************
-************ Start: Media Max Width 400 **********
-*************************************************/
-@media (max-width: 400px) {
-	.masthead {
-		h3 img {	position: absolute;	top: -2px; left: -9px; height: 35px !important; }	
-		.company-name { height: 88px;
-			&:nth-child(1) { font-size: 25px !important; }	
-			&:nth-child(2) { font-size: 18px !important; }
+			&:nth-child(2) {
+				font-size: 15px !important;
+			}
 		}
+	}
+
+	.masthead h3 {
+		padding-bottom: 0 !important;
+
+		img {
+			float:none;
+		}
+	}
+
+	.footer .app-block .app-container .app-item {
+		float:none !important;
+	}
+}
+
+@media (max-width: 397px) {
+	.masthead h3 img { padding: 0 130px !important;}
+	.company-name li {
+		text-align: center;
+		padding: 10px 35px 0 !important;
 	}
 }
 /*************************************************
-************* End: Media Max Width 400 ***********
+************* End: Media Max Width 991 *************
 *************************************************/
 
 .bg-success, .bg-danger {
