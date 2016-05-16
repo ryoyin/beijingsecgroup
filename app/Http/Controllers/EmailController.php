@@ -24,7 +24,7 @@ class EmailController extends Controller
 
         // 收件者資料
         $userinfo = array(
-            'email'=>'cs@beijingsecgroup.com',
+            'email'=>'royho@beijingsecgroup.com',
             'subject'=>'Enquiry from BSG Web Site.'
         );
 
