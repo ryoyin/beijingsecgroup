@@ -25,12 +25,13 @@ class EmailController extends Controller
         // 收件者資料
         $userinfo = array(
             'email'=>'cs@beijingsecgroup.com',
-            'subject'=>'Enquiry from BSG Web Site.'
+            'subject'=>'Enquiry from BSG Web Site.',
+            'frmEmail' => $template_data['email']
         );
 
         // 寄送郵件，使用use方法將資料從外部傳送給匿名函式使用
         Mail::send('email.contactus', $template_data, function($message) use ($userinfo) {
-            $message->from('web@beijingsecgroup.com');
+            $message->from($userinfo['frmEmail']);
             $message->to($userinfo['email'])->subject($userinfo['subject']);
         });
 	  
