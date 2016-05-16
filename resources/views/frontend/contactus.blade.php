@@ -69,8 +69,8 @@
 						<div class="col-md-2 col-xs-12 title">电邮</div>
 						<div class="col-md-10 col-xs-12 content"><input type="text" name="enquiry_email"></div>
 						<div class="col-md-2 col-xs-12 title">內容</div>
-						<div class="col-md-10 col-xs-12 content"><textarea name="enquiry_content"></textarea></div>
-						<div class="col-md-12" align="right"><button type="submit" class="btn btn-info btn-lg">提交查询</button></div>
+						<div class="col-md-12 col-xs-12 content"><textarea name="enquiry_content"></textarea></div>
+						<div class="col-md-12 col-xs-12" align="right"><button type="submit" class="btn btn-info btn-lg">提交查询</button></div>
 					</form>
 				</div>
 			</div>
