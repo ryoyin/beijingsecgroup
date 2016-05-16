@@ -15,6 +15,21 @@
 	}
 }
 
+@media (max-width: 767px) {
+
+	.navbar-main {
+		display: none;
+	}
+
+	.nav-custom {
+		display: block !important;
+		li {
+			float: left;
+		}
+	}
+
+}
+
 @media (max-width: 560px) {
 	.company-name {
 		li {
