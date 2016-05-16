@@ -59,7 +59,7 @@
   <img src="{{ asset('img/banner/banner4_1140x493.jpg') }}" style="width: 100%">
 </div>
 
-<div class="row stock-block">
+<div class="row stock-block hidden">
   <div class="col-md-9">
     @include('frontend.block.marketnews')
 
