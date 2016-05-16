@@ -27,8 +27,6 @@ Route::post('/ajax/stock/stockenquiry', ['uses' => 'InfocastController@stockEnqu
 Route::get('/schedule/requestmostactive', ['uses' => 'InfocastController@requestMostActive', 'as' => 'schedule.requestmostactive']);
 Route::get('/schedule/requestmarketnews', ['uses' => 'InfocastController@requestMarketNews', 'as' => 'schedule.requestmarketnews']);
 
-Route::post('/mail/send_enquiry', 'EmailController@send_web_enquiry')->name('email.send_web_enquiry');
-
 Route::group(['middleware' => ['web']], function () {
     /*Infocast API for Index*/
     /*API CALL*/
@@ -42,6 +40,7 @@ Route::group(['middleware' => ['web']], function () {
     //Route::get('/mail/test_mail_out', 'EmailController@test_mail_out')->name('email.test_mail_out');
     //Route::get('/mail/test_mail_in', 'EmailController@test_mail_in')->name('email.test_mail_in');
 
+    Route::post('/mail/send_enquiry', 'EmailController@send_web_enquiry')->name('email.send_web_enquiry');
     
     /*Static Page inside controller*/
     Route::get('/', ['uses' => 'PageController@homepage', 'as' => 'front.homepage']);
