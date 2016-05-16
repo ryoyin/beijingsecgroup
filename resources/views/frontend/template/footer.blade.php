@@ -1,6 +1,6 @@
 		<!-- Site footer -->
 		<footer class="footer">
-			<div class="app-block">
+			<div class="app-block hidden">
 				<div class="app-container">
 					<ul>
 						<li class="app-item">

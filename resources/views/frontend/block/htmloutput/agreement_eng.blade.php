@@ -157,6 +157,8 @@
             <p>In accordance with the terms of the Personal Data (Privacy) Ordinance, Cap.486 of the Laws of Hong Kong (“the Ordinance”), the Company has the right to charge a reasonable fee for the processing of any data access request.</p>
             <p>In addition to the Company’s duty of confidentiality to customers, the Company shall at all times observe the above privacy principles and the Ordinance of the Hong Kong SAR in collecting, maintaining and using the personal data of customers.</p>
             <p>This Policy may be revised, amended or supplemented from time to time by the Company.</p>
+
+            <p style="text-decoration: underline">Infocast Limited and its information providers endeavor to ensure the accuracy and reliability of the information provided, but do not guarantee its accuracy and reliability and accept no liability (whether in tort or contract or otherwise) for any loss or damage arising from any inaccuracies or omissions.</p>
         </p>
     </div>
 
