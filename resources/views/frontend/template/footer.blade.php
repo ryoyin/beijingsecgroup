@@ -80,7 +80,7 @@
         </script>
         <style>
             .modal-dialog {
-                width: 50%; /* respsonsive width */
+                /*width: 50%; !* respsonsive width *!*/
                 /*margin-left:-40%*/
             }
         </style>
