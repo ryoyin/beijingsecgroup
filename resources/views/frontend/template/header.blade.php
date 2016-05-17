@@ -45,7 +45,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   </head>
   <body>
-	<div class="container">
+	<div class="container" style="padding-left: 0 !important; padding-right: 0 !important;">
 	<!-- The justified navigation menu is meant for single line per list item.
            Multiple lines will require custom code not provided by Bootstrap. -->
       <div class="masthead" style="background-image: url('{{ asset('img/header_background.jpg') }}');">
@@ -153,14 +153,14 @@
 
         </div><!-- /.container-fluid -->
 
-        <div class="col-md-12 nav-custom" style="display: none;">
-          <ul class="nav navbar-nav">
-            <!-- <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li> -->
-            <li><a href="{{route('front.homepage')}}">{{ trans('web.home') }}</a></li>
-            <li><a href="{{route('front.aboutus')}}">{{ trans('web.about_us') }}</a></li>
-            <li><a href="{{route('front.marketnews')}}">{{ trans('web.market_news') }}</a></li>
-            <li><a href="{{route('front.companystructure')}}">{{ trans('web.company_structure') }}</a></li>
-            <li><a href="{{route('front.download')}}">{{ trans('web.form_download') }}</a></li>
-            <li><a href="{{route('front.contactus')}}">{{ trans('web.contact_us') }}</a></li>
-          </ul></div>
+        {{--<div class="col-md-12 nav-custom" style="display: none;">--}}
+          {{--<ul class="nav navbar-nav">--}}
+            {{--<!-- <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li> -->--}}
+            {{--<li><a href="{{route('front.homepage')}}">{{ trans('web.home') }}</a></li>--}}
+            {{--<li><a href="{{route('front.aboutus')}}">{{ trans('web.about_us') }}</a></li>--}}
+            {{--<li><a href="{{route('front.marketnews')}}">{{ trans('web.market_news') }}</a></li>--}}
+            {{--<li><a href="{{route('front.companystructure')}}">{{ trans('web.company_structure') }}</a></li>--}}
+            {{--<li><a href="{{route('front.download')}}">{{ trans('web.form_download') }}</a></li>--}}
+            {{--<li><a href="{{route('front.contactus')}}">{{ trans('web.contact_us') }}</a></li>--}}
+          {{--</ul></div>--}}
       </nav>

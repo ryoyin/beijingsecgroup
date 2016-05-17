@@ -15,7 +15,7 @@
 	}
 }
 
-@media (max-width: 767px) {
+/*@media (max-width: 767px) {
 
 	.navbar-main {
 		display: none;
@@ -28,13 +28,28 @@
 		}
 	}
 
-}
+}*/
 
-@media (max-width: 560px) {
+@media (min-width: 410px) and (max-width: 600px) {
 	.company-name {
 		li {
-			foat: none;
-			text-align: center;
+			&:nth-child(1) {
+				padding-left: 15px !important;
+			}
+
+			&:nth-child(2) {
+				padding-left: 15px !important;
+			}
+		}
+	}
+
+}
+
+@media (max-width: 600px) {
+	.company-name {
+		li {
+			//float: none;
+			//text-align: center;
 			&:nth-child(1) {
 				font-size: 25px !important;
 			}
@@ -49,7 +64,9 @@
 		padding-bottom: 0 !important;
 
 		img {
-			float:none;
+			//float:none;
+			position: relative;
+			top: -10px;
 		}
 	}
 
@@ -58,12 +75,28 @@
 	}
 }
 
-@media (max-width: 397px) {
-	.masthead h3 img { padding: 0 130px !important;}
-	.company-name li {
-		text-align: center;
-		padding: 10px 35px 0 !important;
+@media (max-width: 410px) {
+
+	.masthead {
+		h3 {
+			width: 100%;
+			text-align: center;
+			img {
+				padding-left: 0 !important;
+				float: none !important;
+			}
+
+			.company-name {
+				float: none !important;
+
+				li {
+					text-align: center;
+					padding-left: 0 !important;
+				}
+			}
+		}
 	}
+
 }
 /*************************************************
 ************* End: Media Max Width 991 *************
@@ -92,7 +125,7 @@
 *************** Start: Master Header *************
 *************************************************/
 // Start: Master Header
-.masthead { display: inline-block; background-color: #3471a7; width: 100%; position: relative; background-image: url("img/header_background.jpg");
+.masthead { /*display: inline-block;*/ background-color: #3471a7; width: 100%; position: relative; background-image: url("img/header_background.jpg");
 
 	// Start: Top Left Block
 	h3 { display: inline-block; padding: 10px 10px 20px;
