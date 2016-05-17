@@ -113,14 +113,14 @@
           <ul>
             <li class="app-item">
               <ul class="ios_icon">
-                <li><img src="{{ asset('img/app_store_download_icon.png') }}" style="height: 45px; padding: 5px;"></li>
-                <li>iPhone 平台下载</li>
+                <li><a href="https://itunes.apple.com/hk/app/beijing-securities-group-limited/id1091181118?mt=8"><img src="{{ asset('img/app_store_download_icon.png') }}" style="height: 45px; padding: 5px;"></a></li>
+                <li><a href="https://itunes.apple.com/hk/app/beijing-securities-group-limited/id1091181118?mt=8">iPhone 平台下载</a></li>
               </ul>
             </li>
             <li class="app-item">
               <ul class="android_icon">
-                <li><img src="{{ asset('img/google-play-badge.png') }}" style="height: 45px; padding: 5px;"></li>
-                <li>Android 平台下载</li>
+                <li><a href="https://play.google.com/store/apps/details?id=hk.com.bjsg.imobility"><img src="{{ asset('img/google-play-badge.png') }}" style="height: 45px; padding: 5px;"></a></li>
+                <li><a href="https://itunes.apple.com/hk/app/beijing-securities-group-limited/id1091181118?mt=8">Android 平台下载</a></li>
               </ul>
             </li>
           </ul>

@@ -1,19 +1,23 @@
 		<!-- Site footer -->
 		<footer class="footer">
-			<div class="app-block hidden">
+			<div class="app-block">
 				<div class="app-container">
 					<ul>
 						<li class="app-item">
-							<ul class="ios_icon">
-								<li><img src="{{ asset('img/app_store_download_icon.png') }}" style="height: 78px; padding: 7px;"></li>
-								<li>{{ trans('web.iphone_trade_download') }}</li>
-							</ul>					
+							<a href="https://itunes.apple.com/hk/app/beijing-securities-group-limited/id1091181118?mt=8">
+								<ul class="ios_icon">
+									<li><img src="{{ asset('img/app_store_download_icon.png') }}" style="height: 78px; padding: 7px;"></li>
+									<li>{{ trans('web.iphone_trade_download') }}</li>
+								</ul>
+							</a>
 						</li>
 						<li class="app-item">
-							<ul class="android_icon">
-								<li><img src="{{ asset('img/google-play-badge.png') }}" style="height: 78px; padding: 7px;"></li>
-								<li>{{ trans('web.android_trade_download') }}</li>
-							</ul>					
+							<a href="https://play.google.com/store/apps/details?id=hk.com.bjsg.imobility">
+								<ul class="android_icon">
+									<li><img src="{{ asset('img/google-play-badge.png') }}" style="height: 78px; padding: 7px;"></li>
+									<li>{{ trans('web.android_trade_download') }}</li>
+								</ul>
+							</a>
 						</li>
 						{{--<li class="app-item">--}}
 							{{--<ul class="weixin_qr">--}}
