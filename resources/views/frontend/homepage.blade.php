@@ -63,7 +63,7 @@
   <div class="col-md-12">
     @include('frontend.block.marketnews')
 
-    <div class="hidden">
+    <div>
       @include('frontend.block.mostactive')
     </div>
   </div>
