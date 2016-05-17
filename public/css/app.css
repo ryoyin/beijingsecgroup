@@ -538,7 +538,8 @@
         font-weight: 100; }
     #stock-result-block .row .update-time {
       text-align: right;
-      font-size: 12px; }
+      font-size: 12px;
+      font-weight: 100; }
 
 .market-news-menu .active {
   border-bottom: double; }

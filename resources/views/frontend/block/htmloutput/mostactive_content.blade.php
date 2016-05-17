@@ -38,6 +38,6 @@
 
 @endforeach
 
-<tr><td colspan='6' align='right'>资料由港汇资讯提供 最少延迟15分钟 最後更新時間 {{ $dateTimeString }}</td></tr>
+<tr><td colspan='6' align='right'>资料由港汇资讯提供 最少延迟15分钟 最后更新时间 {{ $dateTimeString }}</td></tr>
 
 </tbody>

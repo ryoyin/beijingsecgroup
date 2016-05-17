@@ -60,14 +60,14 @@
 </div>
 
 <div class="row stock-block">
-  <div class="col-md-12">
+  <div class="col-md-9">
     @include('frontend.block.marketnews')
 
     <div>
       @include('frontend.block.mostactive')
     </div>
   </div>
-  <div class="col-md-3 hidden-custom hidden">
+  <div class="col-md-3">
     @include('frontend.block.stockenquiry')
     <script>
       stockEnquiry(5);
