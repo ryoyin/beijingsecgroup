@@ -74,7 +74,7 @@ function slideNews(infocastid) {
                     </div>
                 </div>
             </div>
-            <div class="col-md-10 page-content">
+            <div class="col-md-10 page-content right">
                 <table class="table table-hover">
                     <thead>
                     <tr>

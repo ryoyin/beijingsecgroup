@@ -26,7 +26,7 @@
 	<!-- Company Information -->
 	<div class="row">	
 		<div class="col-md-12 information">
-			<div class="col-md-2 page-content">
+			<div class="col-md-2 page-content left">
 				<div class="col-md-12 page-title">{{ trans('web.form_download') }}</div>
 				<div class="col-md-12">
 					<div class="list-group">
@@ -34,6 +34,7 @@
 						<a href="#agreement" class="list-group-item">协议书及附件</a>
 						<a href="#charge" class="list-group-item">收费表</a>
 						<a href="#others" class="list-group-item">其他下载</a>
+						<a href="#apk" class="list-group-item">Android APK 下载</a>
 					</div>
 					<script>
 						$('.list-group-item').click(function() {
@@ -43,7 +44,7 @@
 					</script>
 				</div>
 			</div>
-			<div class="col-md-10 page-content">
+			<div class="col-md-10 page-content right">
 				<table class="table table-hover download-table">
 					<!-- 开户文件 -->
 					<thead>
@@ -194,6 +195,26 @@
 					</tr>
 					</tbody>
 					<!-- /其他下载 -->
+
+					<!-- 收费表 -->
+					<thead>
+					<tr>
+						<td colspan="3"><a name="apk"><h3>Android APK</h3></a></td>
+					</tr>
+					<tr>
+						<th>档案名称</th>
+						<th>档案</th>
+						<th style="text-align: center;">档案</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<th scope="row" style="vertical-align: middle;">Android 交易平台下载</th>
+						<td style="vertical-align: middle"><a href="{{ asset('document/apk/InvesTrade_bjsgRelease-1.2.17-release.1.apk') }}" target="_blank"><img src="{{ asset('img/Android_Robot_100.png') }}" style="height:32px;"> InvesTrade_bjsgRelease-1.2.17-release.1.apk</a></td>
+						<td style="text-align: center"><a href="{{ asset('document/apk/InvesTrade_bjsgRelease-1.2.17-release.1.apk') }}" target="_blank"><button class="btn btn-primary">下载档案</button></a></td>
+					</tr>
+					</tbody>
+					<!-- /收费表 -->
 
 				</table>
 
