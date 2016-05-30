@@ -62,7 +62,7 @@ class EmailController extends Controller
 
         // 收件者資料
         $userinfo = array(
-            'email'=>'royho@beijingsecgroup.com',
+            'email'=>'cs@beijingsecgroup.com',
             'subject'=>'預約開戶 - '.$template_data['name']
 //            'frmEmail' => $template_data['email']
         );

@@ -9,4 +9,4 @@
 <p>
 市: {{ $city }}
 <p>
-区 {{ $district }}
+区: {{ $district }}
