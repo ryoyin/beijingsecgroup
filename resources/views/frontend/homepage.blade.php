@@ -59,14 +59,16 @@
   <img src="{{ asset('img/banner/banner4_1140x493.jpg') }}" style="width: 100%">
 </div>
 
-<div class="row stock-block hidden">
-  <div class="col-md-9 left">
+<div class="row stock-block">
+  <div class="col-md-12 left">
     @include('frontend.block.marketnews')
 
-    @include('frontend.block.mostactive')
+    <div class="hidden">
+      @include('frontend.block.mostactive')
+    </div>
 
   </div>
-  <div class="col-md-3 right">
+  <div class="col-md-3 right hidden">
     @include('frontend.block.stockenquiry')
     <script>
       stockEnquiry(5);

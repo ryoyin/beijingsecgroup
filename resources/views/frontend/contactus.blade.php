@@ -34,7 +34,7 @@
 			</div>
 			<div class="row">	
 				<div class="col-md-3 col-xs-3 title">电话</div>
-				<div class="col-md-9 col-xs-9 content"><i class="fa fa-phone"></i> (852) 3899 1373</div>
+				<div class="col-md-9 col-xs-9 content"><i class="fa fa-phone"></i> (852) 3899 1333</div>
 			</div>
 			<div class="row">	
 				<div class="col-md-3 col-xs-3 title">传真</div>
@@ -43,6 +43,10 @@
 			<div class="row">	
 				<div class="col-md-3 col-xs-3 title">电邮</div>
 				<div class="col-md-9 col-xs-9 content"><i class="fa fa-envelope"></i> <a href="mailto:cs@beijingsecgroup.com">cs@beijingsecgroup.com</a></div>
+			</div>
+			<div class="row">
+				<div class="col-md-3 col-xs-3 title">地址</div>
+				<div class="col-md-9 col-xs-9 content"><i class="fa fa-building"></i> 香港湾仔港湾道 18 号中环广场 4005 室</div>
 			</div>
 
 			<div class="row">
