@@ -40,7 +40,11 @@ Route::group(['middleware' => ['web']], function () {
     //Route::get('/mail/test_mail_out', 'EmailController@test_mail_out')->name('email.test_mail_out');
     //Route::get('/mail/test_mail_in', 'EmailController@test_mail_in')->name('email.test_mail_in');
 
+    //enquiry
     Route::post('/mail/send_enquiry', 'EmailController@send_web_enquiry')->name('email.send_web_enquiry');
+
+    //appointment
+    Route::post('/mail/send_appointment', 'EmailController@send_web_appointment')->name('email.send_web_appointment');
     
     /*Static Page inside controller*/
     Route::get('/', ['uses' => 'PageController@homepage', 'as' => 'front.homepage']);
@@ -48,6 +52,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/company-structure', ['uses' => 'PageController@companystructure', 'as' => 'front.companystructure']);
     Route::get('/download', ['uses' => 'PageController@download', 'as' => 'front.download']);
     Route::get('/about-us', ['uses' => 'PageController@aboutus', 'as' => 'front.aboutus']);
+    Route::get('/appointment', ['uses' => 'PageController@appointment', 'as' => 'front.appointment']);
     Route::get('/contact-us', ['uses' => 'PageController@contactus', 'as' => 'front.contactus']);
 
     /*Route for sending enquiry to email*/

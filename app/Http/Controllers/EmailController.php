@@ -45,6 +45,44 @@ class EmailController extends Controller
 		return $message;
 	}
 
+    public function send_web_appointment(Request $request) {
+
+        // 傳送給郵件view的變數資料
+//        dd($request);
+//        exit;
+
+        $template_data = array(
+            'sexual'    => $request->input('appointment_sexual'),
+            'name'    => $request->input('appointment_name'),
+            'tel'    => $request->input('appointment_tel'),
+            'province'   => $request->input('appointment_province'),
+            'city' => $request->input('appointment_city'),
+            'district' => $request->input('appointment_district')
+        );
+
+        // 收件者資料
+        $userinfo = array(
+            'email'=>'royho@beijingsecgroup.com',
+            'subject'=>'預約開戶 - '.$template_data['name']
+//            'frmEmail' => $template_data['email']
+        );
+
+        // 寄送郵件，使用use方法將資料從外部傳送給匿名函式使用
+        Mail::send('email.appointment', $template_data, function($message) use ($userinfo) {
+            $message->from($userinfo['email']);
+            $message->to($userinfo['email'])->subject($userinfo['subject']);
+        });
+
+        // get mail result
+        if(count(Mail::failures()) > 0){
+            $message = "failed";
+        } else {
+            $message = "sent";
+        }
+
+        return $message;
+    }
+
 	public function test_mail_out() {
 
         Mail::raw('From Beijingsecgroup to Gmail', function ($message) {

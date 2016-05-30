@@ -37,7 +37,7 @@ function slideNews(infocastid) {
     <!-- Wrapper for slides -->
     <div class="carousel-inner main_banner" role="listbox">
         <div class="item active">
-            <img src="{{ asset('img/banner/news_1_1140x350.jpg') }}" alt="Contact Us">
+            <img src="{{ asset('img/banner/news_1_1170x350.jpg') }}" alt="Contact Us">
             <!-- <div class="carousel-caption"></div> -->
         </div>
     </div>

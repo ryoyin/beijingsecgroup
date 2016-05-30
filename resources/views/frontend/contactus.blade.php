@@ -6,7 +6,7 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner main_banner" role="listbox">
     <div class="item active">
-      <img src="img/banner/contactus_1_1140x510.jpg" alt="Contact Us">
+      <img src="img/banner/contactus_1_1170x510.jpg" alt="Contact Us">
       <!-- <div class="carousel-caption"></div> -->
     </div>
   </div>

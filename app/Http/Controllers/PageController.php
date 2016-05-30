@@ -72,6 +72,12 @@ class PageController extends Controller
 
 	}
 
+	public function appointment() {
+
+		return view('frontend.appointment');
+
+	}
+
 	public function contactus() {
 
 		return view('frontend.contactus');

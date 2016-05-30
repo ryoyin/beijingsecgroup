@@ -1,7 +1,7 @@
 <div class="row">
 
-    <div class="col-md-12 rm-margin">
-        <div class="col-md-6">
+    <div class="col-md-12">
+        <div class="col-md-6 left">
             <!-- News from Infocast & Exchange -->
             <ul id="news-block-header">
                 <li><h4>新闻资讯</h4></li>
@@ -17,7 +17,7 @@
             </div><!-- // News from Infocast & Exchange -->
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-6 right">
             <!-- News from Infocast & Exchange -->
             <ul id="news-block-header">
                 <li><h4>投资锦囊</h4></li>

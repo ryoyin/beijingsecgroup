@@ -9,6 +9,7 @@ return [
     'company_structure' => '企业架构',
     'form_download' => '下载专区',
     'about_us' => '关于我们',
+    'appointment' => '预约开户',
     'contact_us' => '联络我们',
     'customer_hot_line' => '客户热线',
     'iphone_trade_download' => 'iPhone 交易平台下载',
