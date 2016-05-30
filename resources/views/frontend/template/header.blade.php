@@ -147,7 +147,7 @@
               <li><a href="{{route('front.contactus')}}">{{ trans('web.contact_us') }}</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="#">{{ trans('web.customer_hot_line') }} (852) 3899 1373</a></li>
+              <li><a href="#">{{ trans('web.customer_hot_line') }} (852) 3899 1333</a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
 

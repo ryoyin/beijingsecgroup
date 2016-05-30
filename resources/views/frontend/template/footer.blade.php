@@ -64,6 +64,7 @@
                 </div>
 		  </div>
 		</div><!-- /modal -->
+
         <script>
             $('#myModal').modal({
                 backdrop: 'static',
@@ -71,7 +72,7 @@
                 show: false
             })
 
-            if(Cookies.get('accept_agreement') != 1) {
+            if(Cookies.get('accept_agreement') != 1 && "{{ Route::getCurrentRoute()->getPath() }}" != "appointment") {
                 $('#myModal').modal('toggle');
             }
 

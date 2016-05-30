@@ -37,41 +37,43 @@
 					<meta name="csrf-token" content="{{ csrf_token() }}">
 
 					<div class="col-md-12 content" id="sent-result">
-						<p class="bg-success" style="display: none;">已成功送出你的查询，我们会尽快联络阁下。</p>
-						<p class="bg-danger" style="display: none;">对不起，你都查询未能送出。</p>
+						<p class="bg-success" style="display: none;">已成功預約，我们会尽快联络阁下。</p>
+						<p class="bg-danger" style="display: none;">对不起，你的預約未能送出。你可以致电 (852) 3899 1333</p>
 					</div>
 
-					<div class="col-md-2 col-xs-12 title">性別</div>
-					<div class="col-md-10 col-xs-12 content">
-						<select name="appointment_sexual">
-							<option value="-"> -- </option>
-							<option value="Male">先生</option>
-							<option value="Female">女仕</option>
-						</select>
-					</div>
+                    <div id="appointment-data">
+                        <div class="col-md-2 col-xs-12 title">性別</div>
+                        <div class="col-md-10 col-xs-12 content">
+                            <select name="appointment_sexual">
+                                <option value="-"> -- </option>
+                                <option value="Male">先生</option>
+                                <option value="Female">女仕</option>
+                            </select>
+                        </div>
 
-					<div class="col-md-2 col-xs-12 title">姓名</div>
-					<div class="col-md-10 col-xs-12 content"><input type="text" name="appointment_name"></div>
+                        <div class="col-md-2 col-xs-12 title">姓名</div>
+                        <div class="col-md-10 col-xs-12 content"><input type="text" name="appointment_name"></div>
 
-					<div class="col-md-2 col-xs-12 title">电话</div>
-					<div class="col-md-10 col-xs-12 content"><input type="text" name="appointment_tel"></div>
+                        <div class="col-md-2 col-xs-12 title">电话</div>
+                        <div class="col-md-10 col-xs-12 content"><input type="text" name="appointment_tel"></div>
 
-					{{--<div class="col-md-2 col-xs-12 title">验证码</div>
-					<div class="col-md-7 col-xs-7 content"><input type="text" name="appointment_code"></div>
-					<div class="col-md-3 col-xs-5 content" style="text-align: center;"><button class="btn btn-warning" type="button" style="height: 30px; padding: 4px 12px;" onclick="getCode();">获取验证码</button></div>--}}
+                        {{--<div class="col-md-2 col-xs-12 title">验证码</div>
+                        <div class="col-md-7 col-xs-7 content"><input type="text" name="appointment_code"></div>
+                        <div class="col-md-3 col-xs-5 content" style="text-align: center;"><button class="btn btn-warning" type="button" style="height: 30px; padding: 4px 12px;" onclick="getCode();">获取验证码</button></div>--}}
 
-					<div class="col-md-2 col-xs-12 title">地点</div>
-					<div class="col-md-10 col-xs-12 content">
-						<script src="{{ asset('js/distpicker/distpicker.data.min.js') }}"></script>
-						<script src="{{ asset('js/distpicker/distpicker.min.js') }}"></script>
-						<div data-toggle="distpicker">
-							<select data-province="---- 选择省 ----" name="appointment_province"></select>
-							<select data-city="---- 选择市 ----" name="appointment_city"></select>
-							<select data-district="---- 选择区 ----" name="appointment_district"></select>
-						</div>
-					</div>
+                        <div class="col-md-2 col-xs-12 title">地点</div>
+                        <div class="col-md-10 col-xs-12 content">
+                            <script src="{{ asset('js/distpicker/distpicker.data.min.js') }}"></script>
+                            <script src="{{ asset('js/distpicker/distpicker.min.js') }}"></script>
+                            <div data-toggle="distpicker">
+                                <select data-province="---- 选择省 ----" name="appointment_province"></select>
+                                <select data-city="---- 选择市 ----" name="appointment_city"></select>
+                                <select data-district="---- 选择区 ----" name="appointment_district"></select>
+                            </div>
+                        </div>
 
-					<div class="col-md-12 col-xs-12" align="right"><button type="submit" class="btn btn-info btn-lg">提交查询</button></div>
+                        <div class="col-md-12 col-xs-12" align="right"><button type="submit" class="btn btn-info btn-lg">提交查询</button></div>
+                    </div>
 				</form>
 			</div>
 		</div>
@@ -123,11 +125,13 @@
             data: postData
         })
         .done(function( data ) {
+            $('#appointment-data').hide();
             if(data == 'sent') {
-                $(".bg-success").show().fadeOut(5000);
+                $(".bg-success").show();
             } else {
-                $(".bg-danger").show().fadeOut(5000);
+                $(".bg-danger").show();
             }
+            
         });
 
         event.preventDefault();

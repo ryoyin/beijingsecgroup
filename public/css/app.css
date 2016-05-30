@@ -69,6 +69,10 @@
 .bg-success, .bg-danger {
   padding: 10px 20px; }
 
+.appointment-block .bg-success, .appointment-block .bg-danger {
+  margin-top: 20px;
+  padding: 50px 40px; }
+
 /*************************************************
 *************** Start: Master Header *************
 *************************************************/
