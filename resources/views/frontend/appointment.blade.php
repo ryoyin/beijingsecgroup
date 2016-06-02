@@ -61,7 +61,10 @@
                         <div class="col-md-7 col-xs-7 content"><input type="text" name="appointment_code"></div>
                         <div class="col-md-3 col-xs-5 content" style="text-align: center;"><button class="btn btn-warning" type="button" style="height: 30px; padding: 4px 12px;" onclick="getCode();">获取验证码</button></div>--}}
 
-                        <div class="col-md-2 col-xs-12 title">地点</div>
+                        <div class="col-md-2 col-xs-12 title">电邮</div>
+                        <div class="col-md-10 col-xs-12 content"><input type="text" name="appointment_email"></div>
+
+                        {{--<div class="col-md-2 col-xs-12 title">地点</div>
                         <div class="col-md-10 col-xs-12 content">
                             <script src="{{ asset('js/distpicker/distpicker.data.min.js') }}"></script>
                             <script src="{{ asset('js/distpicker/distpicker.min.js') }}"></script>
@@ -70,7 +73,7 @@
                                 <select data-city="---- 选择市 ----" name="appointment_city"></select>
                                 <select data-district="---- 选择区 ----" name="appointment_district"></select>
                             </div>
-                        </div>
+                        </div>--}}
 
                         <div class="col-md-12 col-xs-12" align="right"><button type="submit" class="btn btn-info btn-lg">提交查询</button></div>
                     </div>
@@ -90,6 +93,7 @@
 
         var $name = $('input[name=appointment_name]').val();
         var $tel = $('input[name=appointment_tel]').val();
+        var $email = $('input[name=appointment_email]').val();
 //        var $code = $('input[name=appointment_code]').val();
 
         if($('select[name=appointment_sexual]').val() == '-') {
@@ -102,6 +106,10 @@
 
         if($tel.length < 8) {
             $errorMsg += '请输入电话号码!\n';
+        }
+
+        if(validateEmail($email) === false && $email.trim() != "") {
+            $errorMsg += '请输入正确的电邮地址!\n';
         }
 
 /*        if($code.length < 4) {
@@ -131,7 +139,7 @@
             } else {
                 $(".bg-danger").show();
             }
-            
+
         });
 
         event.preventDefault();
@@ -141,6 +149,15 @@
    /* function getCode() {
 
     }*/
+
+    function validateEmail(email){
+        var atpos = email.indexOf("@");
+        var dotpos = email.lastIndexOf(".");
+        if (atpos<1 || dotpos<atpos+2 || dotpos+2>=email.length) {
+//            alert("Not a valid e-mail address");
+            return false;
+        }
+    }
 </script>
 
 @endsection

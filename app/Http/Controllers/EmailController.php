@@ -52,12 +52,13 @@ class EmailController extends Controller
 //        exit;
 
         $template_data = array(
-            'sexual'    => $request->input('appointment_sexual'),
-            'name'    => $request->input('appointment_name'),
-            'tel'    => $request->input('appointment_tel'),
-            'province'   => $request->input('appointment_province'),
-            'city' => $request->input('appointment_city'),
-            'district' => $request->input('appointment_district')
+            'sexual'   => $request->input('appointment_sexual'),
+            'name'     => $request->input('appointment_name'),
+            'tel'      => $request->input('appointment_tel'),
+            'email'      => $request->input('appointment_email')
+//            'province' => $request->input('appointment_province'),
+//            'city'     => $request->input('appointment_city'),
+//            'district' => $request->input('appointment_district')
         );
 
         // 收件者資料
