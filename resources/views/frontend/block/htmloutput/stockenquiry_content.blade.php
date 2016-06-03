@@ -11,7 +11,13 @@
     <tr>
         <td colspan="2">
             <span class="last-price">{{ $lastPrice }}</span><br>
-            <span class="diff api_diff" style="color: red;">{{ $different }}</span>
+            <span class="diff api_diff"
+                  @if($different >= 0)
+                        style="color: green";
+                  @else
+                        style="color: red";
+                  @endif
+             >{{ $different }}</span>
         </td>
         <td>开市<br><span class="api_open">{{ $open }}</span></td>
         <td>前收市<br><span class="api_pvClose">{{ $pvClose }}</span></td>

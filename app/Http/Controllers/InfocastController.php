@@ -70,11 +70,14 @@ class InfocastController extends Controller
     private function stockEnquiryHTMLOutput($api_response) {
         $response = json_decode($api_response, TRUE);
 
+        $different = ($this->convertThousand($response['lastPrice'] - $response['pvClose']));
+        $different_percentage = round((($response['lastPrice'] - $response['pvClose']) / $response['pvClose'] * 100), 3).'%';
+
         $data = array(
             'code' => $response['code'],
             'stockName' => $response['name']['zh_CN'],
             'lastPrice' => $this->convertThousand($response['lastPrice']),
-            'different' => '-0.200(0.65%)',
+            'different' => $different.' ('.$different_percentage.')',
             'open' => $this->convertThousand($response['open']),
             'pvClose' => $this->convertThousand($response['pvClose']),
             'high' => $this->convertThousand($response['high']),
