@@ -142,7 +142,7 @@
               <li><a href="{{route('front.aboutus')}}">{{ trans('web.about_us') }}</a></li>
               <li><a href="{{route('front.marketnews')}}">{{ trans('web.market_news') }}</a></li>
               {{--<li><a href="{{route('front.companystructure')}}">{{ trans('web.company_structure') }}</a></li>--}}
-              {{--<li><a href="{{route('front.download')}}">{{ trans('web.form_download') }}</a></li>--}}
+              <li><a href="{{route('front.download')}}">{{ trans('web.form_download') }}</a></li>
               <li><a href="{{route('front.appointment')}}">{{ trans('web.appointment') }}</a></li>
               <li><a href="{{route('front.contactus')}}">{{ trans('web.contact_us') }}</a></li>
             </ul>
