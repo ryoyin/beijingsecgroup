@@ -29,17 +29,16 @@
 
     <!-- Sidebar Menu -->
     <ul class="sidebar-menu">
-      <li class="header">伺服器</li>
+      <li class="header">文章</li>
       <!-- Optionally, you can add icons to the links -->
-      <li class="active"><a href="#"><i class="fa fa-link"></i> <span>伺服器监测   </span></a></li>
-      <!-- <li><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
+      {{--<li><a href="{{ route('admin-blog') }}"><i class="fa fa-camera-retro"></i> <span>圖片庫   </span></a></li>--}}
       <li class="treeview">
-        <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span> <i class="fa fa-angle-left pull-right"></i></a>
+        <a href="#"><i class="fa fa-link"></i> <span>網站文章平台</span> <i class="fa fa-angle-left pull-right"></i></a>
         <ul class="treeview-menu">
-          <li><a href="#">Link in level 2</a></li>
-          <li><a href="#">Link in level 2</a></li>
+          <li><a href="#"><a href="{{ action('BlogController@index') }}"><i class="fa fa-book"></i> <span>網站文章平台   </span></a></a></li>
+          <li><a href="{{ action('BlogController@index') }}"><i class="fa fa-camera-retro"></i> <span>圖片庫   </span></a></li>
         </ul>
-      </li> -->
+      </li>
     </ul><!-- /.sidebar-menu -->
   </section>
   <!-- /.sidebar -->

@@ -27,6 +27,17 @@ Route::post('/ajax/stock/stockenquiry', ['uses' => 'InfocastController@stockEnqu
 Route::get('/schedule/requestmostactive', ['uses' => 'InfocastController@requestMostActive', 'as' => 'schedule.requestmostactive']);
 Route::get('/schedule/requestmarketnews', ['uses' => 'InfocastController@requestMarketNews', 'as' => 'schedule.requestmarketnews']);
 
+/*
+|--------------------------------------------------------------------------
+| Application Routes
+|--------------------------------------------------------------------------
+|
+| This route group applies the "web" middleware group to every route
+| it contains. The "web" middleware group is defined in your HTTP
+| kernel and includes session state, CSRF protection, and more.
+|
+*/
+
 Route::group(['middleware' => ['web']], function () {
     /*Infocast API for Index*/
     /*API CALL*/
@@ -40,7 +51,7 @@ Route::group(['middleware' => ['web']], function () {
     //Route::get('/mail/test_mail_out', 'EmailController@test_mail_out')->name('email.test_mail_out');
     //Route::get('/mail/test_mail_in', 'EmailController@test_mail_in')->name('email.test_mail_in');
 
-    //enquiry
+    /*Route for sending enquiry to email*/
     Route::post('/mail/send_enquiry', 'EmailController@send_web_enquiry')->name('email.send_web_enquiry');
 
     //appointment
@@ -55,31 +66,17 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/appointment', ['uses' => 'PageController@appointment', 'as' => 'front.appointment']);
     Route::get('/contact-us', ['uses' => 'PageController@contactus', 'as' => 'front.contactus']);
 
-    /*Route for sending enquiry to email*/
-//    Route::post('/mail/send_enquiry', 'EmailController@send_web_enquiry')->name('email.send_web_enquiry');
 
     /*Admin Page*/
-//    Route::get('/server/monitor', 'ServerMonitorController@index')->name('server-monitor');
-//    Route::get('/server/checkserverstatus', 'ServerMonitorController@checkServerStatus')->name('server-status');
-
-/*    Route::get('/test', array('as' => 'admin-homepage', function () {
-        return view('backend.test');
+    /*Route::get('/bjsgadmin/blog', array('as' => 'admin-blog', function () {
+        return view('backend.blog');
     }));*/
+
+    Route::resource('bjsgadmin/blog', 'BlogController');
+
 //    Route::post('/server/checkconnectionbyip', 'ServerMonitorController@checkConnectionByIP');
 
 });
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| This route group applies the "web" middleware group to every route
-| it contains. The "web" middleware group is defined in your HTTP
-| kernel and includes session state, CSRF protection, and more.
-|
-*/
 
-Route::group(['middleware' => ['web']], function () {
-    //
-});
+
