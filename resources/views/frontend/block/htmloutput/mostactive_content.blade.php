@@ -17,16 +17,43 @@
         $open = $stock['open'];
         $price = $stock['price'];
         $pvClose = $stock['pvClose'];
-        $diff = ($price - $pvClose);
 
         $openOutput = number_format($open / 1000, 3);
 
         $priceOutput = number_format($price / 1000, 3);
 
-        $diffOutput = $mathSymbol.number_format($diff / 1000, 3);
+        $sign = '';
 
-        $diffPercentage = $diff / $stock['pvClose'] * 100;
-        $diffPercentageOutput = $mathSymbol.number_format($diffPercentage, 2).'%';
+        if($pvClose > 0) {
+
+            $diff = ($price - $pvClose);
+
+            if($diff > 0) {
+                $color = 'green';
+                $sign = '<i class="fa fa-arrow-up" aria-hidden="true"></i>';
+            }
+
+            if($diff < 0) {
+                $color = 'red';
+                $sign = '<i class="fa fa-arrow-down" aria-hidden="true"></i>';
+            }
+
+            $diffOutput = abs(number_format($diff / 1000, 3));
+
+//            echo 'diff: '.$diff;
+//            echo 'pvClose: '.$pvClose;
+
+            $diffPercentage = ($diff / $pvClose * 100);
+
+//            echo $diffPercentage;
+            $diffPercentageOutput = number_format(abs($diffPercentage), 2).'%';
+
+        } else {
+
+            $diffOutput = '-';
+            $diffPercentageOutput = '-';
+
+        }
 
     ?>
 
@@ -35,8 +62,8 @@
         <td>{{ $stock['code'] }}</td>
         <td>{{ $stock['name']['zh_TW'] }}</td>
         <td style='font-weight: bold;'>{{ $priceOutput }}</td>
-        <td style='color: {{ $color }};'>{{ $diffOutput }}</td>
-        <td style='color: {{ $color }};'>{{ $diffPercentageOutput }}</td>
+        <td style='color: {{ $color }};'>{{ $diffOutput }} {!! $sign !!}</td>
+        <td style='color: {{ $color }};'>{{ $diffPercentageOutput }} {!! $sign !!}</td>
         <td>{{ $stock['turnover'] }}</td>
     </tr>
 

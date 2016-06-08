@@ -61,6 +61,7 @@ class Mostactive
         $returnJSON = $request->input('returnJSON');
         $rankby = $request->input('rankby');
 
+
         $mostActive = App\MostActive::where('type', $rankby)->first();
         $result = json_decode($mostActive->api_response, TRUE);
 
@@ -73,88 +74,37 @@ class Mostactive
 
     private function stockActiveHTMLOutput($result) {
 
-        $mathSymbol = "";
-
         switch($result['rankBy']) {
             case 'rise':
                 $headCol4 = "升幅";
                 $headCol5 = "升幅率(%)";
-                $mathSymbol = "+";
-                $color = "green";
                 break;
 
             case 'fall':
                 $headCol4 = "跌幅";
                 $headCol5 = "跌幅率(%)";
-                $color = "red";
                 break;
 
             default:
                 $headCol4 = "升跌";
                 $headCol5 = "升跌率(%)";
-                $color = "FFFFFF";
         }
 
         $dateTimeString = Helper::timestampToDateTimeString($result['updateTime']);
 
         $data = array(
-            'mathSymbol' => $mathSymbol,
             'headCol4' => $headCol4,
             'headCol5' => $headCol5,
-            'color' => $color,
             'dateTimeString' => $dateTimeString,
             'result' => $result
         );
 
-        return view('frontend.block.htmloutput.mostactive_content', $data);
+        //dd($result);
 
-        /*$htmlOutput = "
-        <thead class='mostActive-realtime-thead' datetime='".$dateTimeString."'>
-            <tr>
-                <th>號碼</th>
-                <th>名稱</th>
-                <th>現價</th>
-                <th>".$headCol4."</th>
-                <th>".$headCol5."</th>
-                <th>成交量</th>
-            </tr>
-        </thead>
-        ";
+//        exit;
 
-        $htmlOutput .= "<tbody class='mostActive-realtime'>";
+        return view('frontend.block.htmloutput.mostactive_content', $data)->render();
 
-        foreach($result['entryList'] AS $stock) {
-
-            $open = $stock['open'];
-            $openOutput = number_format($open / 1000, 3);
-
-            $price = $stock['price'];
-            $priceOutput = number_format($price / 1000, 3);
-
-            $rise = ($price - $open);
-            $riseOutput = $mathSymbol.number_format($rise / 1000, 3);
-
-            $risePercentage = $rise / $stock['open'] * 100;
-            $risePercentageOutput = $mathSymbol.number_format($risePercentage, 2).'%';
-
-            $htmlOutput .= "
-            <tr>
-                <td>".$stock['code']."</td>
-                <td>".$stock['name']['zh_TW']."</td>
-                <!--<td>".$openOutput."</td>-->
-                <td style='font-weight: bold;'>".$priceOutput."</td>
-                <td style='color: ".$color.";'>".$riseOutput."</td>
-                <td style='color: ".$color.";'>".$risePercentageOutput."</td>
-                <td>".$stock['trades']."</td>
-            </tr>";
-
-        }
-
-        $htmlOutput .= "<tr><td colspan='6' align='right'>最后更新日期: ".$dateTimeString."</td></tr>";
-
-        $htmlOutput .= "</tbody>";
-
-        return $htmlOutput;*/
     }
 
 }
