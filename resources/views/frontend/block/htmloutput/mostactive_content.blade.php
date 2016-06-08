@@ -5,7 +5,7 @@
     <th>现价</th>
     <th>{{ $headCol4 }}</th>
     <th>{{ $headCol5 }}</th>
-    <th>成交量</th>
+    <th>成交金额</th>
 </tr>
 </thead>
 <tbody class='mostActive-realtime'>
@@ -13,17 +13,21 @@
 @foreach ($result['entryList'] AS $stock)
 
     <?php
+
         $open = $stock['open'];
+        $price = $stock['price'];
+        $pvClose = $stock['pvClose'];
+        $diff = ($price - $pvClose);
+
         $openOutput = number_format($open / 1000, 3);
 
-        $price = $stock['price'];
         $priceOutput = number_format($price / 1000, 3);
 
-        $rise = ($price - $open);
-        $riseOutput = $mathSymbol.number_format($rise / 1000, 3);
+        $diffOutput = $mathSymbol.number_format($diff / 1000, 3);
 
-        $risePercentage = $rise / $stock['open'] * 100;
-        $risePercentageOutput = $mathSymbol.number_format($risePercentage, 2).'%';
+        $diffPercentage = $diff / $stock['pvClose'] * 100;
+        $diffPercentageOutput = $mathSymbol.number_format($diffPercentage, 2).'%';
+
     ?>
 
 
@@ -31,9 +35,9 @@
         <td>{{ $stock['code'] }}</td>
         <td>{{ $stock['name']['zh_TW'] }}</td>
         <td style='font-weight: bold;'>{{ $priceOutput }}</td>
-        <td style='color: {{ $color }};'>{{ $riseOutput }}</td>
-        <td style='color: {{ $color }};'>{{ $risePercentageOutput }}</td>
-        <td>{{ $stock['trades'] }}</td>
+        <td style='color: {{ $color }};'>{{ $diffOutput }}</td>
+        <td style='color: {{ $color }};'>{{ $diffPercentageOutput }}</td>
+        <td>{{ $stock['turnover'] }}</td>
     </tr>
 
 @endforeach
