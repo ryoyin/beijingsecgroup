@@ -440,7 +440,7 @@
       .stock-block #news-block-header li:nth-child(2) a {
         text-decoration: none; }
   .stock-block .news-block {
-    height: 407px;
+    height: 235px;
     overflow: scroll;
     overflow-x: hidden;
     margin-bottom: 25px; }

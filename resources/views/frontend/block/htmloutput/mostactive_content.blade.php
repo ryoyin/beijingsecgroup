@@ -5,7 +5,7 @@
     <th>现价</th>
     <th>{{ $headCol4 }}</th>
     <th>{{ $headCol5 }}</th>
-    <th>成交金额</th>
+    <th>{{ $headCol6 }}</th>
 </tr>
 </thead>
 <tbody class='mostActive-realtime'>
@@ -17,6 +17,14 @@
         $open = $stock['open'];
         $price = $stock['price'];
         $pvClose = $stock['pvClose'];
+
+        if($result['rankBy'] == 'volume') {
+            $volume = $stock['volume'];
+            $col6 = number_format(($volume / 1000000), 3).'M';
+        } else {
+            $turnover = $stock['turnover'];
+            $col6 = number_format(($turnover / 1000000), 3).'M';
+        }
 
         $openOutput = number_format($open / 1000, 3);
 
@@ -57,14 +65,13 @@
 
     ?>
 
-
     <tr>
         <td>{{ $stock['code'] }}</td>
         <td>{{ $stock['name']['zh_TW'] }}</td>
         <td style='font-weight: bold;'>{{ $priceOutput }}</td>
         <td style='color: {{ $color }};'>{{ $diffOutput }} {!! $sign !!}</td>
         <td style='color: {{ $color }};'>{{ $diffPercentageOutput }} {!! $sign !!}</td>
-        <td>{{ $stock['turnover'] }}</td>
+        <td>{{ $col6 }}</td>
     </tr>
 
 @endforeach

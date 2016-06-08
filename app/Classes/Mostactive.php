@@ -74,6 +74,10 @@ class Mostactive
 
     private function stockActiveHTMLOutput($result) {
 
+        $headCol4 = "升跌";
+        $headCol5 = "升跌率(%)";
+        $headCol6 = "成交金额";
+
         switch($result['rankBy']) {
             case 'rise':
                 $headCol4 = "升幅";
@@ -85,9 +89,9 @@ class Mostactive
                 $headCol5 = "跌幅率(%)";
                 break;
 
-            default:
-                $headCol4 = "升跌";
-                $headCol5 = "升跌率(%)";
+            case 'volume':
+                $headCol6 = "成交量";
+                break;
         }
 
         $dateTimeString = Helper::timestampToDateTimeString($result['updateTime']);
@@ -95,6 +99,7 @@ class Mostactive
         $data = array(
             'headCol4' => $headCol4,
             'headCol5' => $headCol5,
+            'headCol6' => $headCol6,
             'dateTimeString' => $dateTimeString,
             'result' => $result
         );
