@@ -193,6 +193,16 @@
 						<td><a href="{{ asset('document/pdf/chi/證券交收指示表格SECURITIES SETTLEMENT INSTRUCTION FORM.pdf') }}" target="_blank"><img src="{{asset('img/Adobe_PDF_file_icon_32x32.png')}}"> 證券交收指示表格 SECURITIES SETTLEMENT INSTRUCTION FORM.pdf</a></td>
 						<td style="text-align: center"><a href="{{ asset('document/pdf/chi/證券交收指示表格SECURITIES SETTLEMENT INSTRUCTION FORM.pdf') }}" target="_blank"><button class="btn btn-primary">下载档案</button></a></td>
 					</tr>
+					<tr>
+						<th scope="row" style="vertical-align: middle;">IPO Application Form</th>
+						<td><a href="{{ asset('document/pdf/chi/IPO Application Form.pdf') }}" target="_blank"><img src="{{asset('img/Adobe_PDF_file_icon_32x32.png')}}"> IPO Application Form.pdf</a></td>
+						<td style="text-align: center"><a href="{{ asset('document/pdf/chi/IPO Application Form.pdf') }}" target="_blank"><button class="btn btn-primary">下载档案</button></a></td>
+					</tr>
+					<tr>
+						<th scope="row" style="vertical-align: middle;">内部转移指示</th>
+						<td><a href="{{ asset('document/pdf/chi/内部转移指示.pdf') }}" target="_blank"><img src="{{asset('img/Adobe_PDF_file_icon_32x32.png')}}"> 内部转移指示.pdf</a></td>
+						<td style="text-align: center"><a href="{{ asset('document/pdf/chi/内部转移指示.pdf') }}" target="_blank"><button class="btn btn-primary">下载档案</button></a></td>
+					</tr>
 					</tbody>
 					<!-- /其他下载 -->
 
