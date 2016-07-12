@@ -28,6 +28,14 @@ Route::get('/schedule/requestmostactive', ['uses' => 'InfocastController@request
 Route::get('/schedule/requestmarketnews', ['uses' => 'InfocastController@requestMarketNews', 'as' => 'schedule.requestmarketnews']);
 Route::post('/ajax/stock/mostactive', ['uses' => 'InfocastController@mostactive', 'as' => 'ajax.stock.mostactive']);
 
+Route::get('iphoneapp', function () {
+    return Redirect::to('https://itunes.apple.com/hk/app/beijing-securities-group-limited/id1091181118?mt=8');
+});
+
+Route::get('androidapp', function () {
+    return Redirect::to('https://play.google.com/store/apps/details?id=hk.com.bjsg.imobility');
+});
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -61,6 +69,7 @@ Route::group(['middleware' => ['web']], function () {
     /*Static Page inside controller*/
     Route::get('/', ['uses' => 'PageController@homepage', 'as' => 'front.homepage']);
     Route::get('/market-news', ['uses' => 'PageController@marketnews', 'as' => 'front.marketnews']);
+    Route::get('/company-news', ['uses' => 'PageController@companynews', 'as' => 'front.companynews']);
     Route::get('/company-structure', ['uses' => 'PageController@companystructure', 'as' => 'front.companystructure']);
     Route::get('/download', ['uses' => 'PageController@download', 'as' => 'front.download']);
     Route::get('/about-us', ['uses' => 'PageController@aboutus', 'as' => 'front.aboutus']);

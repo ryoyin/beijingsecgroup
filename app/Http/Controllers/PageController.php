@@ -34,6 +34,10 @@ class PageController extends Controller
 
 	}
 
+	public function companynews() {
+		return view('frontend.companynews');
+	}
+
 	public function marketnews(Request $request) {
 
 		$marketNews = New App\Classes\Marketnews();
