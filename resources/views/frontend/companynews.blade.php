@@ -41,7 +41,7 @@
                         <a href="http://www.fintv.hk/Zhtw/116/4261/330312" target="_blank">北京证券邓文云：「在别人恐惧时贪婪」- 详细报导 [现代电视　FinTV]</a>
                     </div>
                     <div>
-                        <a href="http://www.fintv.hk/Zhtw/116/4261/330312" target="_blank"><img src="{{asset("img/companynews/20160707-01.png")}}"></a>
+                        <a href="http://www.fintv.hk/Zhtw/116/4261/330312" target="_blank"><img src="{{asset("img/companynews/20160707-01.png")}}" class="img-responsive img-thumbnail"></a>
                     </div>
                 </div>
                 <div class="col-md-12" style="padding-bottom: 30px;">
@@ -50,7 +50,7 @@
                         <a href="http://www.fintv.hk/Zhtw/116/4261/330313" target="_blank">北京证券邓文云：最大优势「知道哪里有鱼」- 详细报导 [现代电视　FinTV]</a>
                     </div>
                     <div class="col-*-12">
-                        <a href="http://www.fintv.hk/Zhtw/116/4261/330313" target="_blank"><img src="{{asset("img/companynews/20160707-02.png")}}"></a>
+                        <a href="http://www.fintv.hk/Zhtw/116/4261/330313" target="_blank"><img src="{{asset("img/companynews/20160707-02.png")}}" class="img-responsive img-thumbnail"></a>
                     </div>
                 </div>
                 <div class="col-md-12" style="padding-bottom: 30px;">
@@ -59,7 +59,7 @@
                         <a href="http://www2.finet.hk/Newscenter/news_detail/577c74a2e4b040afaaea17fd" target="_blank">资深港漂在香港奋斗出了一间证券公司- 详细报导 [财华社　FinNet]</a>
                     </div>
                     <div>
-                        <a href="http://www2.finet.hk/Newscenter/news_detail/577c74a2e4b040afaaea17fd" target="_blank"><img src="{{asset("img/companynews/34138243-f6ec-4d7b-8083-5df00e85412c.jpg")}}"></a>
+                        <a href="http://www2.finet.hk/Newscenter/news_detail/577c74a2e4b040afaaea17fd" target="_blank"><img src="{{asset("img/companynews/34138243-f6ec-4d7b-8083-5df00e85412c.jpg")}}" class="img-responsive img-thumbnail"></a>
                     </div>
                 </div>
             </div>

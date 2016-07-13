@@ -79,9 +79,9 @@
 							<td style="text-align: center"><a href="{{ asset('document/pdf/chi/W-8BEN 表格簡要說明.pdf') }}" target="_blank"><button class="btn btn-primary">下载档案</button></a></td>
 						</tr>
 						<tr>
-							<th scope="row" style="vertical-align: middle;">W8-BEN外国账户税收遵从法</th>
-							<td><a href="{{ asset('document/pdf/chi/W8-BEN外國帐户税收遵重法.pdf') }}" target="_blank"><img src="{{asset('img/Adobe_PDF_file_icon_32x32.png')}}"> W8-BEN外国账户税收遵从法.pdf</a></td>
-							<td style="text-align: center"><a href="{{ asset('document/pdf/chi/W8-BEN外國帐户税收遵重法.pdf') }}" target="_blank"><button class="btn btn-primary">下载档案</button></a></td>
+							<th scope="row" style="vertical-align: middle;">W-8BEN外国账户税收遵从法</th>
+							<td><a href="{{ asset('document/pdf/chi/W-8BEN外国账户税收遵从法.pdf') }}" target="_blank"><img src="{{asset('img/Adobe_PDF_file_icon_32x32.png')}}"> W-8BEN外国账户税收遵从法.pdf</a></td>
+							<td style="text-align: center"><a href="{{ asset('document/pdf/chi/W-8BEN外国账户税收遵从法.pdf') }}" target="_blank"><button class="btn btn-primary">下载档案</button></a></td>
 						</tr>
 					</tbody>
 					<!-- /开户文件 -->
@@ -159,9 +159,9 @@
 						<td style="text-align: center"><a href="{{ asset('document/pdf/chi/客戶提款指示.pdf') }}" target="_blank"><button class="btn btn-primary">下载档案</button></a></td>
 					</tr>
 					<tr>
-						<th scope="row" style="vertical-align: middle;">更改資料及帳卢服務通知</th>
-						<td><a href="{{ asset('document/pdf/chi/更改資料及帳卢服務通知.pdf') }}" target="_blank"><img src="{{asset('img/Adobe_PDF_file_icon_32x32.png')}}"> 更改資料及帳卢服務通知.pdf</a></td>
-						<td style="text-align: center"><a href="{{ asset('document/pdf/chi/更改資料及帳卢服務通知.pdf') }}" target="_blank"><button class="btn btn-primary">下载档案</button></a></td>
+						<th scope="row" style="vertical-align: middle;">更改資料及帳戶服務通知</th>
+						<td><a href="{{ asset('document/pdf/chi/更改資料及帳戶服務通知.pdf') }}" target="_blank"><img src="{{asset('img/Adobe_PDF_file_icon_32x32.png')}}"> 更改資料及帳戶服務通知.pdf</a></td>
+						<td style="text-align: center"><a href="{{ asset('document/pdf/chi/更改資料及帳戶服務通知.pdf') }}" target="_blank"><button class="btn btn-primary">下载档案</button></a></td>
 					</tr>
 					<tr>
 						<th scope="row" style="vertical-align: middle;">股票提取指示</th>
