@@ -81,7 +81,7 @@
                             {{--<textarea name = "appointment_message"></textarea>--}}
                         {{--</div>--}}
 
-                        <div class="col-md-2 col-xs-12 title">地点</div>
+                        {{--<div class="col-md-2 col-xs-12 title">地点</div>
                         <div class="col-md-10 col-xs-12 content">
                             <script src="{{ asset('js/distpicker/distpicker.data.min.js') }}"></script>
                             <script src="{{ asset('js/distpicker/distpicker.min.js') }}"></script>
@@ -90,9 +90,9 @@
                                 <select data-city="---- 选择市 ----" name="appointment_city"></select>
                                 <select data-district="---- 选择区 ----" name="appointment_district"></select>
                             </div>
-                        </div>
+                        </div>--}}
 
-                        <div class="col-md-12 col-xs-12" align="right"><button type="submit" class="btn btn-info btn-lg">提交查询</button></div>
+                        <div class="col-md-12 col-xs-12" align="right"><button type="submit" class="btn btn-info btn-lg">提交预约</button></div>
                     </div>
 				</form>
 			</div>
@@ -181,12 +181,5 @@
     }
 </script>
 
-<script>
-    $( document ).ready(function() {
-        $("select[name='appointment_province']").val("");
-        $("select[name='appointment_city']").val("");
-        $("select[name='appointment_district']").val("");
-    });
-</script>
 
 @endsection
