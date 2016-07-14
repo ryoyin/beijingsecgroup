@@ -74,6 +74,11 @@
 							<td style="text-align: center"><a href="{{ asset('document/pdf/chi/北京证券集团开戸文件（公司帐戸)表格.pdf') }}" target="_blank"><button class="btn btn-primary">下载档案</button></a></td>
 						</tr>
 						<tr>
+							<th scope="row" style="vertical-align: middle;">北京证券集团协议书及附件</th>
+							<td><a href="{{ asset('document/pdf/chi/北京证券集团協議書及附件.pdf') }}" target="_blank"><img src="{{asset('img/Adobe_PDF_file_icon_32x32.png')}}"> 北京证券集团协议书及附件.pdf</a></td>
+							<td style="text-align: center"><a href="{{ asset('document/pdf/chi/北京证券集团協議書及附件.pdf') }}" target="_blank"><button class="btn btn-primary">下载档案</button></a></td>
+						</tr>
+						<tr>
 							<th scope="row" style="vertical-align: middle;">W-8BEN 表格简要说明</th>
 							<td><a href="{{ asset('document/pdf/chi/W-8BEN 表格簡要說明.pdf') }}" target="_blank"><img src="{{asset('img/Adobe_PDF_file_icon_32x32.png')}}"> W-8BEN  表格简要说明.pdf</a></td>
 							<td style="text-align: center"><a href="{{ asset('document/pdf/chi/W-8BEN 表格簡要說明.pdf') }}" target="_blank"><button class="btn btn-primary">下载档案</button></a></td>
@@ -89,7 +94,7 @@
 					<!-- 协议书及附件 -->
 					<thead>
 						<tr>
-							<td colspan="3"><a name="agreement"><h3>协议书及附件</h3></a></td>
+							<td colspan="3"><a name="agreement"><h3>资本投资者入境计划文件</h3></a></td>
 						</tr>
 						<tr>
 							<th>表格名称</th>
@@ -98,11 +103,6 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-							<th scope="row" style="vertical-align: middle;">北京证券集团协议书及附件</th>
-							<td><a href="{{ asset('document/pdf/chi/北京证券集团協議書及附件.pdf') }}" target="_blank"><img src="{{asset('img/Adobe_PDF_file_icon_32x32.png')}}"> 北京证券集团协议书及附件.pdf</a></td>
-							<td style="text-align: center"><a href="{{ asset('document/pdf/chi/北京证券集团協議書及附件.pdf') }}" target="_blank"><button class="btn btn-primary">下载档案</button></a></td>
-						</tr>
 						<tr>
 							<th scope="row" style="vertical-align: middle;">资本投资者入境计划协议</th>
 							<td><a href="{{ asset('document/pdf/chi/資本投資者入境計劃協議.pdf') }}" target="_blank"><img src="{{asset('img/Adobe_PDF_file_icon_32x32.png')}}"> 资本投资者入境计划协议.pdf</a></td>
