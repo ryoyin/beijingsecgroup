@@ -148,6 +148,16 @@
                 </ul>
             </p>
 
+            <p>
+                Where the account opening documents are not executed in the presence of an employee of the licensed or registered person,
+                the signing of the Client Agreement (as defined in paragraph 6.1) and sighting of related identity documents should be certified by any other licensed or registered person,
+                an affiliate of a licensed or registered person, a JP (Justice of the Peace), or a professional person such as a branch manager of a bank,
+                certified public accountant, lawyer or notary public. Certification services that are recognized by the Electronic Transactions Ordinance (Cap. 553),
+                such as the certification services available from the Hongkong Post, may also be employed.
+            </p>
+
+            <p>PRC clients can obtain account opening verification at Notarial Offices in the PRC. Please note that the Account will not be opened until the application has been accepted by Beijing Securities Group Limited.</p>
+
             <p>The person to whom requests for access to data or correction of data or for information regarding policies and practices and kinds of data held are to be addressed is as follows:</p>
 
             <p>Beijing Securities Group Limited<br>
