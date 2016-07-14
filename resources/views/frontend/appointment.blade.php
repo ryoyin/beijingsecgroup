@@ -45,7 +45,7 @@
                         <div class="col-md-2 col-xs-12 title">性別</div>
                         <div class="col-md-10 col-xs-12 content">
                             <select name="appointment_sexual">
-                                <option value="-"> -- </option>
+                                <option value="-"> -- 请选择 -- </option>
                                 <option value="Male">先生</option>
                                 <option value="Female">女仕</option>
                             </select>
@@ -57,14 +57,31 @@
                         <div class="col-md-2 col-xs-12 title">电话</div>
                         <div class="col-md-10 col-xs-12 content"><input type="text" name="appointment_tel"></div>
 
+                        <div class="col-md-2 col-xs-12 title">地址</div>
+                        <div class="col-md-10 col-xs-12 content"><input type="text" name="appointment_address"></div>
+
                         {{--<div class="col-md-2 col-xs-12 title">验证码</div>
                         <div class="col-md-7 col-xs-7 content"><input type="text" name="appointment_code"></div>
                         <div class="col-md-3 col-xs-5 content" style="text-align: center;"><button class="btn btn-warning" type="button" style="height: 30px; padding: 4px 12px;" onclick="getCode();">获取验证码</button></div>--}}
 
-                        <div class="col-md-2 col-xs-12 title">电邮</div>
-                        <div class="col-md-10 col-xs-12 content"><input type="text" name="appointment_email"></div>
+                        {{--<div class="col-md-2 col-xs-12 title">电邮</div>--}}
+                        {{--<div class="col-md-10 col-xs-12 content"><input type="text" name="appointment_email"></div>--}}
 
-                        {{--<div class="col-md-2 col-xs-12 title">地点</div>
+                        {{--<div class="col-md-2 col-xs-12 title">预约时段</div>--}}
+                        {{--<div class="col-md-10 col-xs-12 content">--}}
+                            {{--<select name="appointment_datetime">--}}
+                                {{--<option value="-"> -- 请选择 -- </option>--}}
+                                {{--<option value="morning">上午</option>--}}
+                                {{--<option value="afternoon">下午</option>--}}
+                            {{--</select>--}}
+                        {{--</div>--}}
+
+                        {{--<div class="col-md-2 col-xs-12 title">留言</div>--}}
+                        {{--<div class="col-md-10 col-xs-12 content">--}}
+                            {{--<textarea name = "appointment_message"></textarea>--}}
+                        {{--</div>--}}
+
+                        <div class="col-md-2 col-xs-12 title">地点</div>
                         <div class="col-md-10 col-xs-12 content">
                             <script src="{{ asset('js/distpicker/distpicker.data.min.js') }}"></script>
                             <script src="{{ asset('js/distpicker/distpicker.min.js') }}"></script>
@@ -73,7 +90,7 @@
                                 <select data-city="---- 选择市 ----" name="appointment_city"></select>
                                 <select data-district="---- 选择区 ----" name="appointment_district"></select>
                             </div>
-                        </div>--}}
+                        </div>
 
                         <div class="col-md-12 col-xs-12" align="right"><button type="submit" class="btn btn-info btn-lg">提交查询</button></div>
                     </div>
@@ -93,7 +110,7 @@
 
         var $name = $('input[name=appointment_name]').val();
         var $tel = $('input[name=appointment_tel]').val();
-        var $email = $('input[name=appointment_email]').val();
+//        var $email = $('input[name=appointment_email]').val();
 //        var $code = $('input[name=appointment_code]').val();
 
         if($('select[name=appointment_sexual]').val() == '-') {
@@ -108,9 +125,13 @@
             $errorMsg += '请输入电话号码!\n';
         }
 
-        if(validateEmail($email) === false && $email.trim() != "") {
-            $errorMsg += '请输入正确的电邮地址!\n';
-        }
+//        if(validateEmail($email) === false && $email.trim() != "") {
+//            $errorMsg += '请输入正确的电邮地址!\n';
+//        }
+
+//        if($('select[name=appointment_datetime]').val() == '-') {
+//            $errorMsg += '请选择预约时段!\n';
+//        }
 
 /*        if($code.length < 4) {
             $errorMsg += '请输入验证码!\n';
@@ -158,6 +179,14 @@
             return false;
         }
     }
+</script>
+
+<script>
+    $( document ).ready(function() {
+        $("select[name='appointment_province']").val("");
+        $("select[name='appointment_city']").val("");
+        $("select[name='appointment_district']").val("");
+    });
 </script>
 
 @endsection
