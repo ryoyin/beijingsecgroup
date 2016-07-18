@@ -348,7 +348,7 @@
   .contact-us-block .information select {
     width: 100%;
     font-size: 15px;
-    padding: 2px 7px; }
+    padding: 3px 7px; }
   .contact-us-block .information input {
     width: 100%;
     font-size: 15px;
@@ -549,6 +549,77 @@
 
 /*************************************************
 ************** End: Market News Page ***********
+*************************************************/
+/*************************************************
+************** Start: Research Report Page ***********
+*************************************************/
+.research-report .title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #373a3f;
+  padding-bottom: 10px; }
+
+.research-report .info {
+  list-style: none;
+  padding: 0 0 5px;
+  margin: 0;
+  display: inline-block; }
+  .research-report .info li {
+    float: left; }
+    .research-report .info li:nth-child(2) {
+      padding-left: 20px; }
+    .research-report .info li i {
+      color: #1ab7ec; }
+    .research-report .info li span {
+      font-weight: bold; }
+
+.research-report .dialog-info {
+  font-size: 14px; }
+  .research-report .dialog-info li {
+    padding: 0; }
+
+.research-report .content {
+  clear: both; }
+
+.research-report .more {
+  display: inline-block;
+  padding: 6px 20px;
+  color: #FFFFFF;
+  background-color: #373a3f;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 30px 0 10px; }
+
+.research-report .table tbody tr td {
+  border-top: 0; }
+
+.research-report .sub-menu .title {
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 15px; }
+
+.research-report .sub-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+  .research-report .sub-menu ul li {
+    padding-bottom: 0px;
+    font-size: 12px; }
+    .research-report .sub-menu ul li .fa-arrow-right {
+      font-weight: bold;
+      color: #0ca0d0; }
+
+.research-report .sub-menu .month {
+  padding-top: 10px; }
+  .research-report .sub-menu .month li {
+    float: left;
+    padding: 5px 6px;
+    color: #FFFFFF;
+    background-color: #0ca0d0;
+    margin: 0 7px; }
+
+/*************************************************
+************** End: Research Report Page ***********
 *************************************************/
 .structure-coming {
   text-align: center;

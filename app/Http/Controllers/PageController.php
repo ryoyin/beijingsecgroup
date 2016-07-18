@@ -64,6 +64,12 @@ class PageController extends Controller
 
 	}
 
+	public function researchreport() {
+
+		return view('frontend.researchreport');
+
+	}
+
 	public function download() {
 
 		return view('frontend.download');

@@ -70,6 +70,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/', ['uses' => 'PageController@homepage', 'as' => 'front.homepage']);
     Route::get('/market-news', ['uses' => 'PageController@marketnews', 'as' => 'front.marketnews']);
     Route::get('/company-news', ['uses' => 'PageController@companynews', 'as' => 'front.companynews']);
+    Route::get('/research', ['uses' => 'PageController@researchreport', 'as' => 'front.researchreport']);
     Route::get('/company-structure', ['uses' => 'PageController@companystructure', 'as' => 'front.companystructure']);
     Route::get('/download', ['uses' => 'PageController@download', 'as' => 'front.download']);
     Route::get('/about-us', ['uses' => 'PageController@aboutus', 'as' => 'front.aboutus']);

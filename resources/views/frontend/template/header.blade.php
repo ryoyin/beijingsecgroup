@@ -142,6 +142,7 @@
               <li><a href="{{route('front.aboutus')}}">{{ trans('web.about_us') }}</a></li>
               <li><a href="{{route('front.marketnews')}}">{{ trans('web.market_news') }}</a></li>
               <li><a href="{{route('front.companynews')}}">集团新闻</a></li>
+              <li><a href="{{route('front.researchreport')}}">研究报告</a></li>
               {{--<li><a href="{{route('front.companystructure')}}">{{ trans('web.company_structure') }}</a></li>--}}
               <li><a href="{{route('front.download')}}">{{ trans('web.form_download') }}</a></li>
               <li><a href="{{route('front.appointment')}}">{{ trans('web.appointment') }}</a></li>
