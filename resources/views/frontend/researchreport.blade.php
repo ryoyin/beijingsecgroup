@@ -39,6 +39,8 @@
                     <table class="table">
                         <tbody id="news-content">
 
+
+
                         <tr>
                             <td>
                                 <div class="title" id="research-1">平安保险（2318-HK）</div>
@@ -53,10 +55,10 @@
                                 </div>
 
                                 <!-- Button trigger modal -->
-                                <div><span class="more" data-toggle="modal" data-target="#researchModal-2" style="cursor: pointer;">详情</span></div>
+                                <div><span class="more" data-toggle="modal" data-target="#researchModal-1" style="cursor: pointer;">详情</span></div>
 
                                 <!-- Modal -->
-                                <div class="modal fade" id="researchModal-2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                <div class="modal fade" id="researchModal-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
@@ -121,10 +123,10 @@
                                 </div>
 
                                 <!-- Button trigger modal -->
-                                <div><span class="more" data-toggle="modal" data-target="#researchModal-1" style="cursor: pointer;">详情</span></div>
+                                <div><span class="more" data-toggle="modal" data-target="#researchModal-2" style="cursor: pointer;">详情</span></div>
 
                                 <!-- Modal -->
-                                <div class="modal fade" id="researchModal-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                <div class="modal fade" id="researchModal-2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
@@ -471,32 +473,32 @@
                         <ul>
                             <li>
                                 <a href="#research-1" data-toggle="modal" data-target="#researchModal-1">
-                                    <i class="fa fa-arrow-right" aria-hidden="true" style="padding-right: 10px;"></i> 平安保险（2318-HK）
+                                    <i class="fa fa-arrow-right" aria-hidden="true" style="padding-right: 10px;"></i> 2016-07-18 平安保险（2318-HK）
                                 </a>
                             </li>
                             <li>
                                 <a href="#research-2" data-toggle="modal" data-target="#researchModal-2">
-                                    <i class="fa fa-arrow-right" aria-hidden="true" style="padding-right: 10px;"></i> 腾讯（700-HK）
+                                    <i class="fa fa-arrow-right" aria-hidden="true" style="padding-right: 10px;"></i> 2016-07-18 腾讯（700-HK）
                                 </a>
                             </li>
                             <li>
                                 <a href="#research-3" data-toggle="modal" data-target="#researchModal-3">
-                                    <i class="fa fa-arrow-right" aria-hidden="true" style="padding-right: 10px;"></i> 德昌电机（179-HK）
+                                    <i class="fa fa-arrow-right" aria-hidden="true" style="padding-right: 10px;"></i> 2016-07-15 德昌电机（179-HK）
                                 </a>
                             </li>
                             <li>
                                 <a href="#research-4" data-toggle="modal" data-target="#researchModal-4">
-                                    <i class="fa fa-arrow-right" aria-hidden="true" style="padding-right: 10px;"></i> 信义玻璃（868-HK）
+                                    <i class="fa fa-arrow-right" aria-hidden="true" style="padding-right: 10px;"></i> 2016-07-15 信义玻璃（868-HK）
                                 </a>
                             </li>
                             <li>
                                 <a href="#research-5" data-toggle="modal" data-target="#researchModal-5">
-                                    <i class="fa fa-arrow-right" aria-hidden="true" style="padding-right: 10px;"></i> 晨鸣纸业（1812-HK）
+                                    <i class="fa fa-arrow-right" aria-hidden="true" style="padding-right: 10px;"></i> 2016-07-14 晨鸣纸业（1812-HK）
                                 </a>
                             </li>
                             <li>
                                 <a href="#research-6" data-toggle="modal" data-target="#researchModal-6">
-                                    <i class="fa fa-arrow-right" aria-hidden="true" style="padding-right: 10px;"></i> 吉利汽车（175-HK）
+                                    <i class="fa fa-arrow-right" aria-hidden="true" style="padding-right: 10px;"></i> 2016-07-14 吉利汽车（175-HK）
                                 </a>
                             </li>
                         </ul>
@@ -505,7 +507,7 @@
                         <ul>
                             <li><span style="font-size: 16px; font-weight: bold;">2016</span>
                                 <ul class="month">
-                                    <li>7 月</li>
+                                    <li><a href="research">7 月</a></li>
                                 </ul>
                             </li>
                         </ul>

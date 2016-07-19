@@ -608,15 +608,21 @@
     .research-report .sub-menu ul li .fa-arrow-right {
       font-weight: bold;
       color: #0ca0d0; }
+    .research-report .sub-menu ul li a {
+      color: #000000; }
 
 .research-report .sub-menu .month {
   padding-top: 10px; }
   .research-report .sub-menu .month li {
     float: left;
-    padding: 5px 6px;
-    color: #FFFFFF;
-    background-color: #0ca0d0;
     margin: 0 7px; }
+    .research-report .sub-menu .month li a {
+      padding: 5px 6px;
+      color: #FFFFFF;
+      background-color: #0ca0d0;
+      color: #FFFFFF; }
+      .research-report .sub-menu .month li a:hover {
+        text-decoration: none; }
 
 /*************************************************
 ************** End: Research Report Page ***********

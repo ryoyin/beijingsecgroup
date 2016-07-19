@@ -668,16 +668,26 @@
 					font-weight: bold;
 					color: #0ca0d0;
 				}
+				a {
+					color: #000000;
+				}
 			}
 		}
 		.month {
 			padding-top: 10px;
 			li {
 				float: left;
-				padding: 5px 6px;
-				color: #FFFFFF;
-				background-color: #0ca0d0;
 				margin: 0 7px;
+
+				a {
+					padding: 5px 6px;
+					color: #FFFFFF;
+					background-color: #0ca0d0;
+					color: #FFFFFF;
+					&:hover {
+						text-decoration: none;
+					}
+				}
 			}
 		}
 	}
