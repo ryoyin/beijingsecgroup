@@ -64,9 +64,15 @@ class PageController extends Controller
 
 	}
 
-	public function researchreport() {
+	public function research() {
 
-		return view('frontend.researchreport');
+		$research = New App\Classes\Research();
+
+		$data = array(
+			'researches' => $research->getResearch()
+		);
+
+		return view('frontend.research', $data);
 
 	}
 
