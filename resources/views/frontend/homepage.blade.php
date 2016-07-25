@@ -61,6 +61,26 @@
 
 <div class="row stock-block">
   <div class="col-md-9 left">
+
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="padding-bottom: 10px;">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <a href="http://www.hkex.com.hk/cas/sc/index.htm" target="_blank"><img src="{{ asset('img/sub_banner/cas_banner.png') }}" class="img-responsive"></a>
+        </div>
+{{--        <div class="item">
+          <a href="" target="_blank"><img src="{{ asset('img/sub_banner/cas_banner.png') }}" class="img-responsive"></a>
+        </div>--}}
+      </div>
+
+    </div>
+
     @include('frontend.block.marketnews')
     @include('frontend.block.mostactive')
   </div>
