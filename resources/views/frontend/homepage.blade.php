@@ -74,9 +74,9 @@
         <div class="item active">
           <a href="http://www.hkex.com.hk/cas/sc/index.htm" target="_blank"><img src="{{ asset('img/sub_banner/cas_banner.png') }}" class="img-responsive"></a>
         </div>
-{{--        <div class="item">
-          <a href="" target="_blank"><img src="{{ asset('img/sub_banner/cas_banner.png') }}" class="img-responsive"></a>
-        </div>--}}
+        <div class="item">
+          <a href="http://www.hkex.com.hk/vcm/sc/index.htm" target="_blank"><img src="{{ asset('img/sub_banner/vcm_banner.png') }}" class="img-responsive"></a>
+        </div>
       </div>
 
     </div>
