@@ -49,7 +49,7 @@
                                     <li><i class="fa fa-line-chart" aria-hidden="true"></i> <span>分析师:</span> {{$research['author']}}</li>
                                     <li><i class="fa fa-calendar" aria-hidden="true"></i> <span>发布日期:</span> {{$research['publish_date']}}</li>
                                 </ul>
-                                <div class="content">{{$research['short_desc']}}</div>
+                                <div class="content">{!! $research['short_desc'] !!}</div>
 
                                 <!-- Button trigger modal -->
                                 <div><span class="more" data-toggle="modal" data-target="#researchModal-{{$research['id']}}" style="cursor: pointer;">详情</span></div>

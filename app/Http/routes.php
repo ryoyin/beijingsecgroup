@@ -84,9 +84,17 @@ Route::group(['middleware' => ['web']], function () {
         return view('backend.blog');
     }));*/
 
-    Route::resource('bjsgadmin/blog', 'BlogController');
+
 
 //    Route::post('/server/checkconnectionbyip', 'ServerMonitorController@checkConnectionByIP');
+
+    Route::group(['middleware' => 'web'], function () {
+        Route::auth();
+
+//    Route::get('/home', 'AdminController@index');
+//        Route::get('/bjsgadmin', 'AdminController@admin');
+        Route::resource('bjsgadmin/blog', 'BlogController');
+    });
 
 });
 

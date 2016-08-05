@@ -28,7 +28,7 @@ class AuthController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    protected $redirectTo = '/bjsgadmin/blog';
 
     /**
      * Create a new authentication controller instance.
@@ -69,4 +69,13 @@ class AuthController extends Controller
             'password' => bcrypt($data['password']),
         ]);
     }
+
+    //disable registration
+    /*public function register() {
+        return redirect('/login');
+    }
+
+    public function showRegistrationForm() {
+        return redirect('/login');
+    }*/
 }

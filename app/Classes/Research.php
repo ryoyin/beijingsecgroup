@@ -15,11 +15,17 @@ use Carbon\Carbon;
 class Research
 {
 
-    public function getResearch() {
+    public function getResearch($show = 50, $status = 2) {
 
-        $research = App\Research::where('status', 2)->orderBy('publish_date', 'desc')->paginate(6);
+        $research = App\Research::orderBy('publish_date', 'desc');
 
-        return $research;
+        if($status === NULL) {
+            $research->where('status', '!=', 4);
+        } else {
+            $research->where('status', $status);
+        }
+
+        return $research->paginate($show);
 
     }
 

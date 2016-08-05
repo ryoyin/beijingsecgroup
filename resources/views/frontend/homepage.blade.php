@@ -63,6 +63,7 @@
   <div class="col-md-9 left">
 
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="padding-bottom: 10px;">
+
       <!-- Indicators -->
       <ol class="carousel-indicators">
         <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>

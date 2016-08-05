@@ -69,7 +69,7 @@ class PageController extends Controller
 		$research = New App\Classes\Research();
 
 		$data = array(
-			'researches' => $research->getResearch()
+			'researches' => $research->getResearch(10, 2)
 		);
 
 		return view('frontend.research', $data);
