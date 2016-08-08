@@ -143,7 +143,13 @@ class BlogController extends Controller
      */
     public function show($id)
     {
-        //
+        /*$research = App\Research::find($id);
+
+        $data = array(
+          'research' => $research,
+        );
+
+        return view('backend.blog.post', $data)*/;
     }
 
     /**
@@ -262,7 +268,7 @@ class BlogController extends Controller
         if($isValidFile) {
             $research->file_path = $alternative_path.$filename;
         }
-        
+
         $research->save();
 
         return redirect('bjsgadmin/blog')->with('alert-success', 'Research was successful updated!');;

@@ -74,7 +74,11 @@
               </div>
 
               <div class="form-group">
-                <a href="{{ asset($research['file_path']) }}" target="_blank">{{ public_path().'/'.$research['file_path'] }}</a>
+                <a href="{{ asset($research['file_path']) }}" target="_blank">
+                    @if($research['file_path'] != '')
+                        {{ public_path().'/'.$research['file_path'] }}
+                    @endif
+                </a>
               </div>
 
           </div><!-- /.box-body -->
