@@ -220,8 +220,8 @@
 					<tbody>
 					<tr>
 						<th scope="row" style="vertical-align: middle;">Android 交易平台下载</th>
-						<td style="vertical-align: middle"><a href="{{ asset('document/apk/InvesTrade_bjsgRelease-1.2.17-release.1.apk') }}" target="_blank"><img src="{{ asset('img/Android_Robot_100.png') }}" style="height:32px;"> InvesTrade_bjsgRelease-1.2.17-release.1.apk</a></td>
-						<td style="text-align: center"><a href="{{ asset('document/apk/InvesTrade_bjsgRelease-1.2.17-release.1.apk') }}" target="_blank"><button class="btn btn-primary">下载档案</button></a></td>
+						<td style="vertical-align: middle"><a href="{{ asset('document/apk/InvesTrade_bjsgRelease-1.3.4-release.2.apk') }}" target="_blank"><img src="{{ asset('img/Android_Robot_100.png') }}" style="height:32px;"> InvesTrade_bjsgRelease-1.3.4-release.2.apk</a></td>
+						<td style="text-align: center"><a href="{{ asset('document/apk/InvesTrade_bjsgRelease-1.3.4-release.2.apk') }}" target="_blank"><button class="btn btn-primary">下载档案</button></a></td>
 					</tr>
 					</tbody>
 					<!-- /收费表 -->
