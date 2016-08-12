@@ -36,6 +36,10 @@
 				<div class="col-md-3 col-xs-3 title">电话</div>
 				<div class="col-md-9 col-xs-9 content"><i class="fa fa-phone"></i> (852) 3899 1333</div>
 			</div>
+			<div class="row">
+				<div class="col-md-3 col-xs-3 title">国内专线</div>
+				<div class="col-md-9 col-xs-9 content"><i class="fa fa-globe"></i> 4009001028</div>
+			</div>
 			<div class="row">	
 				<div class="col-md-3 col-xs-3 title">传真</div>
 				<div class="col-md-9 col-xs-9 content"><i class="fa fa-fax"></i> (852) 3899 1388</div>
