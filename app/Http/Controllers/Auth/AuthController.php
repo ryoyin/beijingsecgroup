@@ -71,11 +71,11 @@ class AuthController extends Controller
     }
 
     //disable registration
-    /*public function register() {
+    public function register() {
         return redirect('/login');
     }
 
     public function showRegistrationForm() {
         return redirect('/login');
-    }*/
+    }
 }
