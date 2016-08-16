@@ -36,7 +36,7 @@ map.addControl(ctrl_sca);
 }
 
 //标注点数组
-var markerArr = [{title:"北京证券集团有限公司",content:"香港灣仔港灣道&nbsp;18&nbsp;號中環廣場&nbsp;4005&nbsp;室",point:"114.185324|22.282881",isOpen:1,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
+var markerArr = [{title:"北京首通证券香港集团有限公司",content:"香港灣仔港灣道&nbsp;18&nbsp;號中環廣場&nbsp;4005&nbsp;室",point:"114.185324|22.282881",isOpen:1,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
 	 ];
 //创建marker
 function addMarker(){

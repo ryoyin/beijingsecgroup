@@ -36,7 +36,7 @@
 
 <div class="div0"><img src="mobile_bsg_logo_512x512.png"></div>
 
-<div class="div1">欢迎来到北京证券集团有限公司网页</div>
+<div class="div1">欢迎来到北京首通证券香港集团有限公司网页</div>
 
 <div class="div2"><img src="under-construction-icon.jpg" style="height: 100px;"> <span style="position: relative; top: -40px;">对不起，本网站正在维护中</span></div>
 </body>

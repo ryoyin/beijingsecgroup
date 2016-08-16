@@ -46,7 +46,7 @@
 			</div>
 			<div class="row">	
 				<div class="col-md-3 col-xs-3 title">电邮</div>
-				<div class="col-md-9 col-xs-9 content"><i class="fa fa-envelope"></i> <a href="mailto:cs@beijingsecgroup.com">cs@beijingsecgroup.com</a></div>
+				<div class="col-md-9 col-xs-9 content"><i class="fa fa-envelope"></i> <a href="mailto:cs@bjsthkgroup.com">cs@bjsthkgroup.com</a></div>
 			</div>
 			<div class="row">
 				<div class="col-md-3 col-xs-3 title">地址</div>

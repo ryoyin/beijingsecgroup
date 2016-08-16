@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'site_title' => '北京证券集团有限公司',
-    'company_name' => '北京证券集团有限公司',
+    'site_title' => '北京首通证券香港集团有限公司',
+    'company_name' => '北京首通证券香港集团有限公司',
     'home' => '首页',
     'login_to_trade' => '登入网上交易系统',
     'market_news' => '新闻资讯',

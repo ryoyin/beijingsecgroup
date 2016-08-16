@@ -56,7 +56,7 @@
           <img src="{{ asset('img/bsg_logo_500x500.png') }}">
           <ul class="company-name">
             <li>{{ trans('web.company_name') }}</li>
-            <li>Beijing Securities Group Limited</li>
+            <li>Beijing Shoutong Securities Hong Kong Group Limited</li>
           </ul>
         </h3>
 

@@ -5,7 +5,7 @@
           <!-- Anything you want -->
         </div>
         <!-- Default to the left -->
-        <strong>Copyright &copy; 2015 <a href="#">Beijing Securities Group Limited</a>.</strong> All rights reserved.
+        <strong>Copyright &copy; 2015 <a href="#">Beijing Shoutong Securities Hong Kong Group Limited</a>.</strong> All rights reserved.
       </footer>
 
       <?php //@include('backend.template.control_sidebar'); ?>

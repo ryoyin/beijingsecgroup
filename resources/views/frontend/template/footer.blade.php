@@ -40,7 +40,7 @@
 			<div class="clearfix"></div>
 
 			<div class="bottom">
-				<p><b>&copy; 2016 版权属北京证券集团有限公司所有 </b></p>
+				<p><b>&copy; 2016 版权属北京首通证券香港集团有限公司所有 </b></p>
 							 
 				<ul>
 					<li><a href="#" data-toggle="modal" data-target="#myModal">免责声明</a></li>

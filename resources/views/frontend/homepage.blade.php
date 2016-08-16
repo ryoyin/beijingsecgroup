@@ -165,7 +165,7 @@
 <div class="row service-block hidden-custom">
   <div class="col-md-4">
     <h2>交易服务</h2>
-    <p>北京证券集团有限公司一向致力为客户提供全面证券买卖服务，配合多元化交易渠道及全面交易信息，让客户全方位把握投资良机。</p>
+    <p>北京首通证券香港集团有限公司一向致力为客户提供全面证券买卖服务，配合多元化交易渠道及全面交易信息，让客户全方位把握投资良机。</p>
     <div class="img-block"><img class="img-rounded" src="{{ asset('img/trade-service.jpg') }}"></div>
   </div>
   <div class="col-md-4">

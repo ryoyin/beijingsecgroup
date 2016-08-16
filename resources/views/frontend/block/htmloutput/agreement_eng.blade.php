@@ -15,7 +15,7 @@
 
         <p>
             <b>General</b><br>
-            The materials on this Website are not intended for use by persons located in, or persons who are resident in jurisdictions which restrict the distribution of this material by Beijing Securities Group Limited . (the “Company”). Persons accessing this Website are required to note the said restrictions in their jurisdictions.<br>
+            The materials on this Website are not intended for use by persons located in, or persons who are resident in jurisdictions which restrict the distribution of this material by Beijing Shoutong Securities Hong Kong Group Limited . (the “Company”). Persons accessing this Website are required to note the said restrictions in their jurisdictions.<br>
             The material in this Website should not be regarded as an offer or solicitation to sell investments or products related thereto, or to make deposits in any jurisdiction to any person where it would be unlawful to do so.<br>
             The information contained herein is not intended to provide any professional advice and should not be relied upon in that regard. Persons accessing this Website are advised to obtain appropriate and independent professional advice wherever necessary.<br>
             Any information, products or services supplied in this Website may be withdrawn or amended at any time without advance notice, at the discretion of the Company. The eligibility of clients for particular information, products or services is subject to the final and absolute discretion of the Company.<br>
@@ -156,11 +156,11 @@
                 such as the certification services available from the Hongkong Post, may also be employed. PRC clients can obtain account opening verification at Notarial Offices in the PRC.
             </p>
 
-            <p>Please note that the Account will not be opened until the application has been accepted by Beijing Securities Group Limited.</p>
+            <p>Please note that the Account will not be opened until the application has been accepted by Beijing Shoutong Securities Hong Kong Group Limited.</p>
 
             <p>The person to whom requests for access to data or correction of data or for information regarding policies and practices and kinds of data held are to be addressed is as follows:</p>
 
-            <p>Beijing Securities Group Limited<br>
+            <p>Beijing Shoutong Securities Hong Kong Group Limited<br>
             Suite 4005, 40/F, Central Plaza, 18 Harbour Road, Wan Chai, Hong Kong, Hong Kong</p>
 
             <p>Fax: (852) 3899 1388	Customer Service Hotline: (852) 3899 1373</p>
