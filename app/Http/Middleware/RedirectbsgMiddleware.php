@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Symfony\Component\HttpKernel\Exception\HttpException;
 
 class RedirectbsgMiddleware
 {
@@ -15,9 +16,9 @@ class RedirectbsgMiddleware
      */
     public function handle($request, Closure $next)
     {
-//        echo $_SERVER['SERVER_ADDR'];
-        if($_SERVER['SERVER_ADDR'] != '127.0.0.1' && strpos($_SERVER['SERVER_NAME'], 'beijingsecgroup') !== FALSE) {
-            echo 'redirect';
+        //check server addr not dev and contain old domain name beijingsecgroup
+        if($_SERVER['SERVER_ADDR'] == '127.0.0.1' && strpos($_SERVER['SERVER_NAME'], 'beijingsecgroup') !== FALSE) {
+            throw new HttpException(301);
         }
 
         return $next($request);

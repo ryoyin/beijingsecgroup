@@ -58,8 +58,11 @@
         <div class="container">
             <div class="content">
                 <div class="title">
-                    系统正在维护中!
+                    <img src="http://www.bjsthkgroup.com/img/bsg_logo_500x500.png"><br>
+                    <span>"北京证券集团有限公司"</span> 已经改名为<br><span>"北京首通证券香港集团有限公司"</span>
                 </div>
+                <div class="short_desc">网址 http://www.beijingsecgroup.com 已转为 http://www.bjsthkgroup.com</div>
+                <div class="redirect">5秒后将会自动转址到 <a href="http://www.bjsthkgroup.com">http://www.bjsthkgroup.com</a> <- 如自动转址不成功，请按此连结。</div>
             </div>
         </div>
     </body>
