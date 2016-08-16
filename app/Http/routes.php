@@ -16,7 +16,7 @@
 | Sub Domain Routes
 |--------------------------------------------------------------------------
 |
-| This route is for admin.beijingsecgroup.com
+| This route is for admin.bjsthkgroup.com
 |
 */
 
@@ -78,23 +78,20 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/appointment', ['uses' => 'PageController@appointment', 'as' => 'front.appointment']);
     Route::get('/contact-us', ['uses' => 'PageController@contactus', 'as' => 'front.contactus']);
 
-
     /*Admin Page*/
     /*Route::get('/bjsgadmin/blog', array('as' => 'admin-blog', function () {
         return view('backend.blog');
     }));*/
 
-
-
 //    Route::post('/server/checkconnectionbyip', 'ServerMonitorController@checkConnectionByIP');
 
-    Route::group(['middleware' => 'web'], function () {
+//    Route::group(['middleware' => 'web'], function () {
         Route::auth();
 
 //    Route::get('/home', 'AdminController@index');
 //        Route::get('/bjsgadmin', 'AdminController@admin');
         Route::resource('bjsgadmin/blog', 'BlogController');
-    });
+//    });
 
 });
 
