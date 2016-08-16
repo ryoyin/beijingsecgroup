@@ -25,8 +25,8 @@ class PageController extends Controller
 		$data = array(
 			'newsInfo' => $marketNews->getMarketNewsByGroup('A'), //新聞資訊
 			'investInfo' => $marketNews->getMarketNewsByGroup('B'), //投資錦囊
-			'companyInfo' => $marketNews->getMarketNewsByGroup('C'), //公司資料
-			'marketInfo' => $marketNews->getMarketNewsByGroup('D'), //市場資訊
+//			'companyInfo' => $marketNews->getMarketNewsByGroup('C'), //公司資料
+//			'marketInfo' => $marketNews->getMarketNewsByGroup('D'), //市場資訊
 			'mostactive' => array('rise', 'fall', 'turnover', 'volume') //活跃股票
 		);
 
