@@ -65,5 +65,14 @@
                 <div class="redirect">5秒后将会自动转址到 <a href="http://www.bjsthkgroup.com">http://www.bjsthkgroup.com</a> <- 如自动转址不成功，请按此连结。</div>
             </div>
         </div>
+
+        <script>
+            window.setTimeout(function(){
+
+                // Move to a new location or you can do something else
+                window.location.href = "http://www.bjsthkgroup.com";
+
+            }, 5000);
+        </script>
     </body>
 </html>
