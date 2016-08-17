@@ -20,11 +20,11 @@ class PageController extends Controller
 
 	public function homepage() {
 
-		$marketNews = New App\Classes\Marketnews();
+//		$marketNews = New App\Classes\Marketnews();
 
 		$data = array(
-			'newsInfo' => $marketNews->getMarketNewsByGroup('A'), //新聞資訊
-			'investInfo' => $marketNews->getMarketNewsByGroup('B'), //投資錦囊
+//			'newsInfo' => $marketNews->getMarketNewsByGroup('A'), //新聞資訊
+//			'investInfo' => $marketNews->getMarketNewsByGroup('B'), //投資錦囊
 //			'companyInfo' => $marketNews->getMarketNewsByGroup('C'), //公司資料
 //			'marketInfo' => $marketNews->getMarketNewsByGroup('D'), //市場資訊
 			'mostactive' => array('rise', 'fall', 'turnover', 'volume') //活跃股票
