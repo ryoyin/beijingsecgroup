@@ -56,7 +56,7 @@ class Kernel extends ConsoleKernel
         })->everyTenMinutes();
 
         $schedule->call(function () {
-            $marketNews = App\MarketNews::where('created_at', '<', date('Y-m-d', strtotime('-30 days')))->delete();
+            $marketNews = App\MarketNews::where('created_at', '<', date('Y-m-d', strtotime('-14 days')))->delete();
         })->everyMinute();
 
     }
