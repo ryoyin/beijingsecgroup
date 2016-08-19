@@ -3,7 +3,7 @@
     <head>
         <title>北京首通证券香港集团有限公司</title>
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+        {{--<link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">--}}
 
         <style>
             html, body {
