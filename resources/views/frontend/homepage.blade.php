@@ -82,7 +82,7 @@
 
     </div>
 
-{{--    @include('frontend.block.marketnews')--}}
+    @include('frontend.block.marketnews')
     @include('frontend.block.mostactive')
   </div>
   <div class="col-md-3 right">

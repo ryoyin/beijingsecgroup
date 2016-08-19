@@ -37,8 +37,8 @@ class Kernel extends ConsoleKernel
 
 //            $request_mostactive_result = 'ok';
 /*            Mail::raw($request_mostactive_result, function ($message) {
-                $message->from('royho@beijingsecgroup.com');
-                $message->to('royho@beijingsecgroup.com')->subject('Retrieve Most Active');
+                $message->from('royho@bjsthkgroup.com');
+                $message->to('royho@bjsthkgroup.com')->subject('Retrieve Most Active');
             });*/
 
             $marketNews = New App\Classes\Marketnews();
@@ -49,11 +49,15 @@ class Kernel extends ConsoleKernel
             }
 
   /*          Mail::raw($request_marketnews_result, function ($message) {
-                $message->from('royho@beijingsecgroup.com');
-                $message->to('royho@beijingsecgroup.com')->subject('Retrieve Market News');
+                $message->from('royho@bjsthkgroup.com');
+                $message->to('royho@bjsthkgroup.com')->subject('Retrieve Market News');
             });*/
 
         })->everyTenMinutes();
+
+        $schedule->call(function () {
+            $marketNews = App\MarketNews::where('created_at', '<', date('Y-m-d', strtotime('-30 days')))->delete();
+        })->everyMinute();
 
     }
 }
