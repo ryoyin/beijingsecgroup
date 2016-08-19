@@ -17,4 +17,7 @@
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    RewriteCond %{HTTP_HOST} ^bjsthkgroup.com [NC]
+    RewriteRule ^(.*)$ http://www.bjsthkgroup.com/$1 [L,R=301]
 </IfModule>
