@@ -18,7 +18,8 @@ class RedirectbsgMiddleware
     {
         $exp_name = explode(".", $_SERVER['SERVER_NAME']);
         if($exp_name[0] != "www" && $exp_name[1] != "bjsthkgroup") {
-            return redirect('http://www.bjsthkgroup.com');
+            echo 1;
+//            return redirect('http://www.bjsthkgroup.com');
         }
 
         //check server addr not dev and contain old domain name beijingsecgroup
