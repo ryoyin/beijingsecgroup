@@ -22,7 +22,7 @@ class RedirectbsgMiddleware
             throw new HttpException(301);
         }
 
-        echo $_SERVER['SERVER_NAME'];
+//        echo $_SERVER['SERVER_NAME'];
 
         //Power Outage Message
         /*if(!session()->get('power_outage_notice')) {
