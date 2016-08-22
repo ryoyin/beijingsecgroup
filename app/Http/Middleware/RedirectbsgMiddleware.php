@@ -17,8 +17,11 @@ class RedirectbsgMiddleware
     public function handle($request, Closure $next)
     {
         $exp_name = explode(".", $_SERVER['SERVER_NAME']);
+        echo $exp_name[0];
+        echo $exp_name[1];
         if($exp_name[0] != "www" && $exp_name[1] != "bjsthkgroup") {
             echo 1;
+            exit;
 //            return redirect('http://www.bjsthkgroup.com');
         }
 
