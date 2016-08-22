@@ -22,14 +22,11 @@ class RedirectbsgMiddleware
             throw new HttpException(301);
         }
 
-
-        if(!session()->get('power_outage_notice')) {
-//            $response = $next($request);
+        //Power Outage Message
+        /*if(!session()->get('power_outage_notice')) {
             session(['power_outage_notice' => TRUE]);
             throw new HttpException(302);
-        }
-
-
+        }*/
 
         return $next($request);
     }
