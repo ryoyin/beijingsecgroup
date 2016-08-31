@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use Mail;
+use App;
 
 use App\Http\Requests;
 
@@ -24,7 +25,7 @@ class EmailController extends Controller
 
         // 收件者資料
         $userinfo = array(
-            'email'=>'cs@beijingsecgroup.com',
+            'email'=>'cs@bjsthkgroup.com',
             'subject'=>'Enquiry from BSG Web Site.',
             'frmEmail' => $template_data['email']
         );
@@ -51,6 +52,15 @@ class EmailController extends Controller
 //        dd($request);
 //        exit;
 
+        $system_param = App\Systemparam::where('param_name', '=', 'trading_system_account_no')->first();
+        $trading_system_value = unserialize($system_param->param_value);
+        $next_value = $trading_system_value['next_value'];
+
+        $trading_system_value['next_value'] = $trading_system_value['next_value'] + 1;
+
+        $system_param->param_value = serialize($trading_system_value);
+        $system_param->save();
+
         $template_data = array(
             'sexual'   => $request->input('appointment_sexual'),
             'name'     => $request->input('appointment_name'),
@@ -58,13 +68,14 @@ class EmailController extends Controller
             'address'  => $request->input('appointment_address'),
             'province' => $request->input('appointment_province'),
             'city'     => $request->input('appointment_city'),
-            'district' => $request->input('appointment_district')
+            'district' => $request->input('appointment_district'),
+            'accno'    => $next_value
         );
 
         // 收件者資料
         $userinfo = array(
-            'email'=>'cs@beijingsecgroup.com',
-            'subject'=>'預約開戶 - '.$template_data['name']
+            'email'=>'cs@bjsthkgroup.com',
+            'subject'=>'立即開戶 - '.$template_data['name']
 //            'frmEmail' => $template_data['email']
         );
 
@@ -78,7 +89,8 @@ class EmailController extends Controller
         if(count(Mail::failures()) > 0){
             $message = "failed";
         } else {
-            $message = "sent";
+            $message = $next_value;
+//            $message = 12;
         }
 
         return $message;
@@ -87,7 +99,7 @@ class EmailController extends Controller
 	public function test_mail_out() {
 
         Mail::raw('From Beijingsecgroup to Gmail', function ($message) {
-            $message->from('royho@beijingsecgroup.com');
+            $message->from('royho@bjsthkgroup.com');
             $message->to('royho.bsg@gmail.com')->subject('hello');
         });
 
@@ -119,7 +131,7 @@ class EmailController extends Controller
 
         Mail::raw('From Gmail to Beijingsecgroup', function ($message) {
             $message->from('royho.bsg@gmail.com');
-            $message->to('royho@beijingsecgroup.com')->subject('hello');
+            $message->to('royho@bjsthkgroup.com')->subject('hello');
         });
 
         // get mail result

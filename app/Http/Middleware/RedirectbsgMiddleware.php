@@ -23,10 +23,10 @@ class RedirectbsgMiddleware
         }
 
         //check server addr not dev and contain old domain name beijingsecgroup
-        $ips = array('127.0.0.1', '192.168.10.30');
-        if(!in_array($_SERVER['SERVER_ADDR'], $ips) && strpos($_SERVER['SERVER_NAME'], 'bjsthkgroup.com') === FALSE) {
-            throw new HttpException(301);
-        }
+//        $ips = array('127.0.0.1', '192.168.10.30');
+//        if(!in_array($_SERVER['SERVER_ADDR'], $ips) && strpos($_SERVER['SERVER_NAME'], 'bjsthkgroup.com') === FALSE) {
+//            throw new HttpException(301);
+//        }
 
         //        echo $_SERVER['SERVER_NAME'];
 

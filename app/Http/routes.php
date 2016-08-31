@@ -28,6 +28,19 @@ Route::get('/schedule/requestmostactive', ['uses' => 'InfocastController@request
 Route::get('/schedule/requestmarketnews', ['uses' => 'InfocastController@requestMarketNews', 'as' => 'schedule.requestmarketnews']);
 Route::post('/ajax/stock/mostactive', ['uses' => 'InfocastController@mostactive', 'as' => 'ajax.stock.mostactive']);
 
+//get system parameter
+/*Route::get('/systemparam', function() {
+    $system_param = App\Systemparam::where('param_name', '=', 'trading_system_account_no')->first();
+    $trading_system_value = unserialize($system_param->param_value);
+    $next_value = $trading_system_value['next_value'];
+
+    $trading_system_value['next_value'] = $trading_system_value['next_value'] + 1;
+
+    $system_param->param_value = serialize($trading_system_value);
+    $system_param->save();
+
+});*/
+
 Route::get('iphoneapp', function () {
     return Redirect::to('https://itunes.apple.com/hk/app/beijing-securities-group-limited/id1091181118?mt=8');
 });

@@ -37,7 +37,7 @@
 					<meta name="csrf-token" content="{{ csrf_token() }}">
 
 					<div class="col-md-12 content" id="sent-result">
-						<p class="bg-success" style="display: none;">已成功預約，我们会尽快联络阁下。</p>
+						<p class="bg-success" style="display: none;">已成功开户，户口号码是: #<span id="account_number"></span></p>
 						<p class="bg-danger" style="display: none;">对不起，你的預約未能送出。你可以致电 (852) 3899 1333</p>
 					</div>
 
@@ -155,7 +155,8 @@
         })
         .done(function( data ) {
             $('#appointment-data').hide();
-            if(data == 'sent') {
+            if(data != 'failed') {
+                $("#account_number").html(data);
                 $(".bg-success").show();
             } else {
                 $(".bg-danger").show();
