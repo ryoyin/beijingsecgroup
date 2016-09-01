@@ -6,3 +6,5 @@
 电话: {{ $tel }}
 <p>
 地址: {{ $address }}
+<p>
+Account Number: {{ $accno }}

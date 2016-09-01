@@ -92,7 +92,7 @@
                             </div>
                         </div>--}}
 
-                        <div class="col-md-12 col-xs-12" align="right"><button type="submit" class="btn btn-info btn-lg">提交预约</button></div>
+                        <div class="col-md-12 col-xs-12" align="right"><button type="submit" class="btn btn-info btn-lg">{{ trans('web.appointment') }}</button></div>
                     </div>
 				</form>
 			</div>
