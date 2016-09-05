@@ -7,4 +7,6 @@
 <p>
 地址: {{ $address }}
 <p>
+Email: {{ $email }}
+<p>
 Account Number: {{ $accno }}

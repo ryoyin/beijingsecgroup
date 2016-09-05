@@ -38,11 +38,12 @@
             <table id="research" class="table table-bordered table-striped">
               <thead>
               <tr>
+                <th>帳戶號碼</th>
                 <th>性別</th>
                 <th>性名</th>
                 <th>電話號碼</th>
                 <th>地址</th>
-                <th>帳戶號碼</th>
+                <th>Email</th>
                 <th>建立日期</th>
                 <th>最後更新</th>
               </tr>
@@ -50,11 +51,12 @@
               <tbody>
               @foreach($tradingaccounts AS $account)
                 <tr>
+                  <td>{{$account['account_no']}}</td>
                   <td>{{$account['name']}}</td>
                   <td>{{$account['sexual']}}</td>
                   <td>{{$account['tel']}}</td>
                   <td>{{$account['address']}}</td>
-                  <td>{{$account['account_no']}}</td>
+                  <td>{{$account['email']}}</td>
                   <td>{{$account['created_at']}}</td>
                   <td>{{$account['updated_at']}}</td>
                   {{--<td align="center">

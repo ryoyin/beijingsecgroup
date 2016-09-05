@@ -16,7 +16,7 @@ class EmailController extends Controller
 
         // 傳送給郵件view的變數資料
         $template_data = array(
-            'sexual'    => $request->input('enquiry_sexual'),
+            'sexual'  => $request->input('enquiry_sexual'),
             'name'    => $request->input('enquiry_name'),
             'tel'     => $request->input('enquiry_tel'),
             'email'   => $request->input('enquiry_email'),
@@ -57,6 +57,7 @@ class EmailController extends Controller
         $name = $request->input('appointment_name');
         $tel = $request->input('appointment_tel');
         $address = $request->input('appointment_address');
+        $email = $request->input('appointment_email');
 
         //get next account number
         $system_param = App\Systemparam::where('param_name', '=', 'trading_system_account_no')->first();
@@ -74,6 +75,7 @@ class EmailController extends Controller
         $trading_account->name = $name;
         $trading_account->tel = $tel;
         $trading_account->address = $address;
+        $trading_account->email = $email;
         $trading_account->account_no = $accno;
 
         $trading_account->save();
@@ -83,6 +85,7 @@ class EmailController extends Controller
             'name'     => $name,
             'tel'      => $tel,
             'address'  => $address,
+            'email'    => $email,
             'accno'    => $accno
         );
 

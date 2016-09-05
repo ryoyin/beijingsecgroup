@@ -18,6 +18,7 @@ class CreateTradingaccountsTable extends Migration
             $table->string('name');
             $table->string('tel');
             $table->string('address');
+            $table->string('email');
             $table->integer('account_no');
             $table->timestamps();
         });
