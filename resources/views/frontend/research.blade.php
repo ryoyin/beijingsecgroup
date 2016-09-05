@@ -26,7 +26,7 @@
     <div class="col-md-12">
         <ol class="breadcrumb">
             <li><a href="{{ route('front.homepage') }}">首页</a></li>
-            <li class="active">研究报告</li>
+            <li class="active">研究报告</li>\
         </ol>
     </div>
 
@@ -46,7 +46,7 @@
                             <td>
                                 <div class="title" id="research-{{$research['id']}}">{{$research['title']}}</div>
                                 <ul class="info">
-                                    <li><i class="fa fa-line-chart" aria-hidden="true"></i> <span>分析师:</span> {{$research['author']}}</li>
+                                    <li><i class="fa fa-line-chart" aria-hidden="true"></i> <span>证券交易策略师:</span> {{$research['author']}}</li>
                                     <li><i class="fa fa-calendar" aria-hidden="true"></i> <span>发布日期:</span> {{$research['publish_date']}}</li>
                                 </ul>
                                 <div class="content">{!! $research['short_desc'] !!}</div>
@@ -61,12 +61,12 @@
                                             <div class="modal-header">
                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                                 <h4 class="modal-title" id="myModalLabel">
-                                                    <b>个股追踪 - {{$research['title']}}</b>
+                                                    <b>今日看股 - {{$research['title']}}</b>
                                                 </h4>
                                             </div>
                                             <div class="modal-body">
                                                 <ul class="info dialog-info">
-                                                    <li><i class="fa fa-line-chart" aria-hidden="true"></i> <span>分析师:</span> {{$research['author']}}</li>
+                                                    <li><i class="fa fa-line-chart" aria-hidden="true"></i> <span>证券交易策略师:</span> {{$research['author']}}</li>
                                                     <li><i class="fa fa-calendar" aria-hidden="true"></i> <span>发布日期:</span> {{$research['publish_date']}}</li>
                                                 </ul>
 
@@ -171,7 +171,7 @@
                 <div class="col-md-2"></div>
                 <div class="col-md-3" style="padding: 0 10px;">
                     <div class="sub-menu">
-                        <div class="title">个别股票分析</div>
+                        <div class="title">今日看股</div>
                         <ul>
                             @foreach($researches AS $research )
                             <li>
