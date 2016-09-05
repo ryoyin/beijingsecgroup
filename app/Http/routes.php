@@ -104,6 +104,8 @@ Route::group(['middleware' => ['web']], function () {
 //    Route::get('/home', 'AdminController@index');
 //        Route::get('/bjsgadmin', 'AdminController@admin');
         Route::resource('bjsgadmin/blog', 'BlogController');
+        Route::resource('bjsgadmin/systemparam', 'SystemparamController');
+        Route::resource('bjsgadmin/tradingaccount', 'TradingAccountController');
 //    });
 
 });

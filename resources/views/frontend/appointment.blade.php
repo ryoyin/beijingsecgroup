@@ -37,7 +37,21 @@
 					<meta name="csrf-token" content="{{ csrf_token() }}">
 
 					<div class="col-md-12 content" id="sent-result">
-						<p class="bg-success" style="display: none;">已成功开户，户口号码是: #<span id="account_number"></span></p>
+						<p class="bg-success" style="display: none;">
+                            <b>您已成功开户，户口号码是:</b> #<span id="account_number"></span><br><br>
+                            感谢您对北京首通证券香港集团有限公司的支持和信任，我们将派专人与您联络。<br><br>
+                            <b>国内电话:</b> 400 900 1028<br>
+                            <b>聯絡人:</b> 徐成<br><br>
+                            <b>香港电话:</b> (852) 3899 1359 /（852）38991357<br>
+                            <b>聯絡人:</b> 叶先生、陈小姐<br><br>
+
+                            <b>请您准备好下列资料:</b><br>
+                            1.	身份证正本及正副面复印件<br>
+                            2.	港澳通行证正本及复印件<br>
+                            3.	香港银行账户<br>
+                            4.	补签北京首通证券香港集团有限公司《客户開戶协议书及附件》
+
+                        </p>
 						<p class="bg-danger" style="display: none;">对不起，你的預約未能送出。你可以致电 (852) 3899 1333</p>
 					</div>
 
@@ -51,8 +65,16 @@
                             </select>
                         </div>
 
-                        <div class="col-md-2 col-xs-12 title">姓名</div>
-                        <div class="col-md-10 col-xs-12 content"><input type="text" name="appointment_name"></div>
+                        <div class="col-md-2 col-xs-2 title">姓名</div>
+                        <div class="col-md-5 col-xs-5 content"><input type="text" name="appointment_name"></div>
+                        <div class="col-md-2 col-xs-2 title">姓別</div>
+                        <div class="col-md-3 col-xs-3 content">
+                            <select name="appointment_sexual">
+                                <option value="-"> -- 请选择 -- </option>
+                                <option value="Male">先生</option>
+                                <option value="Female">女仕</option>
+                            </select>
+                        </div>
 
                         <div class="col-md-2 col-xs-12 title">电话</div>
                         <div class="col-md-10 col-xs-12 content"><input type="text" name="appointment_tel"></div>

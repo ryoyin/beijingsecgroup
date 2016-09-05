@@ -52,24 +52,38 @@ class EmailController extends Controller
 //        dd($request);
 //        exit;
 
+        //assign value
+        $sexual = $request->input('appointment_sexual');
+        $name = $request->input('appointment_name');
+        $tel = $request->input('appointment_tel');
+        $address = $request->input('appointment_address');
+
+        //get next account number
         $system_param = App\Systemparam::where('param_name', '=', 'trading_system_account_no')->first();
         $trading_system_value = unserialize($system_param->param_value);
-        $next_value = $trading_system_value['next_value'];
+        $accno = $trading_system_value['next_value'];
 
+        //generate next account number and save to DB
         $trading_system_value['next_value'] = $trading_system_value['next_value'] + 1;
-
         $system_param->param_value = serialize($trading_system_value);
         $system_param->save();
 
+        $trading_account = New App\Tradingaccount;
+
+        $trading_account->sexual = $sexual;
+        $trading_account->name = $name;
+        $trading_account->tel = $tel;
+        $trading_account->address = $address;
+        $trading_account->account_no = $accno;
+
+        $trading_account->save();
+
         $template_data = array(
-            'sexual'   => $request->input('appointment_sexual'),
-            'name'     => $request->input('appointment_name'),
-            'tel'      => $request->input('appointment_tel'),
-            'address'  => $request->input('appointment_address'),
-            'province' => $request->input('appointment_province'),
-            'city'     => $request->input('appointment_city'),
-            'district' => $request->input('appointment_district'),
-            'accno'    => $next_value
+            'sexual'   => $sexual,
+            'name'     => $name,
+            'tel'      => $tel,
+            'address'  => $address,
+            'accno'    => $accno
         );
 
         // 收件者資料
@@ -89,7 +103,7 @@ class EmailController extends Controller
         if(count(Mail::failures()) > 0){
             $message = "failed";
         } else {
-            $message = $next_value;
+            $message = $accno;
 //            $message = 12;
         }
 

@@ -26,6 +26,7 @@ class BlogController extends Controller
         $research = New App\Classes\Research();
 
         $data = array(
+            'menu' => array('blog', 'blog.list'),
             'researches' => $research->getResearch(50, NULL)
         );
 
@@ -41,6 +42,7 @@ class BlogController extends Controller
     {
         $data = array(
             'title' => '新增',
+            'menu' => array('blog', 'blog.create'),
             'research' => array(
                 'title' => old('title'),
                 'author' => old('author'),
@@ -190,6 +192,7 @@ class BlogController extends Controller
 
         $data = array(
             'title' => '修改',
+            'menu' => array('blog', 'blog.list'),
             'research' => $research,
             'formMethod' => 'PUT',
             'action' => 'bjsgadmin/blog/'.$id

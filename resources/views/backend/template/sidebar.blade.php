@@ -32,13 +32,30 @@
       <li class="header">文章</li>
       <!-- Optionally, you can add icons to the links -->
       {{--<li><a href="{{ route('admin-blog') }}"><i class="fa fa-camera-retro"></i> <span>圖片庫   </span></a></li>--}}
-      <li class="treeview">
-        <a href="#"><i class="fa fa-link"></i> <span>網站文章平台</span> <i class="fa fa-angle-left pull-right"></i></a>
+      <li class="treeview {{ isActiveMenu('blog', $menu) }}">
+        <a href="#"><i class="fa fa-file-text-o"></i> <span>網站文章平台</span> <i class="fa fa-angle-left pull-right"></i></a>
         <ul class="treeview-menu">
-          <li><a href="#"><a href="{{ action('BlogController@index') }}"><i class="fa fa-book"></i> <span>網站文章平台   </span></a></a></li>
-          <li><a href="{{ action('BlogController@index') }}"><i class="fa fa-camera-retro"></i> <span>圖片庫   </span></a></li>
+          <li class="{{ isActiveMenu('blog.list', $menu) }}"><a href="#"><a href="{{ action('BlogController@index') }}"><i class="fa fa-dot-circle-o"></i> <span>文章列表   </span></a></a></li>
+          <li class="{{ isActiveMenu('blog.create', $menu) }}"><a href="{{ action('BlogController@create') }}"><i class="fa fa-dot-circle-o"></i> <span>新增文章   </span></a></li>
         </ul>
       </li>
+
+      <li class="treeview {{ isActiveMenu('tradingaccount', $menu) }}">
+        <a href="{{ action('TradingAccountController@index') }}"><i class="fa fa-info"></i> <span>交易系統帳號</span></a>
+      </li>
+
+      <li class="treeview {{ isActiveMenu('systemparam', $menu) }}">
+        <a href="#"><i class="fa fa-info"></i> <span>系統參數</span>  <i class="fa fa-angle-left pull-right"></i></a>
+        <ul class="treeview-menu">
+          <li class="{{ isActiveMenu('systemparam.list', $menu) }}"><a href="#"><a href="{{ action('SystemparamController@index') }}"><i class="fa fa-dot-circle-o"></i> <span>參數列表   </span></a></a></li>
+          <li class="{{ isActiveMenu('systemparam.create', $menu) }}"><a href="{{ action('SystemparamController@create') }}"><i class="fa fa-dot-circle-o"></i> <span>新增參數   </span></a></li>
+        </ul>
+      </li>
+
+      <li class="treeview">
+        {{--<a href="#"><i class="fa fa-picture-o"></i> <span>圖片庫</span></a>--}}
+      </li>
+
     </ul><!-- /.sidebar-menu -->
   </section>
   <!-- /.sidebar -->
