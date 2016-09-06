@@ -82,9 +82,9 @@
 						</thead>
 						<tbody>
 							<tr>
-								<th scope="row" style="vertical-align: middle;">InvesTrade_bjsgRelease-1.3.4-release.2</th>
-								<td><a href="{{ asset('document/apk/InvesTrade_bjsgRelease-1.3.4-release.2.apk') }}" target="_blank"><img src="{{asset('img/Adobe_PDF_file_icon_32x32.png')}}"> InvesTrade_bjsgRelease-1.3.4-release.2.apk</td>
-								<td style="text-align: center"><a href="{{ asset('document/apk/InvesTrade_bjsgRelease-1.3.4-release.2.apk') }}" target="_blank"><button class="btn btn-primary">下载档案</button></a>	</td>
+								<th scope="row" style="vertical-align: middle;">InvesTrade_bjsgRelease-1.3.5-release.2</th>
+								<td><a href="{{ asset('document/apk/InvesTrade_bjsgRelease-1.3.5-release.2.apk') }}" target="_blank"><img src="{{asset('img/Adobe_PDF_file_icon_32x32.png')}}"> InvesTrade_bjsgRelease-1.3.5-release.2.apk</td>
+								<td style="text-align: center"><a href="{{ asset('document/apk/InvesTrade_bjsgRelease-1.3.5-release.2.apk') }}" target="_blank"><button class="btn btn-primary">下载档案</button></a>	</td>
 							</tr>
 						</tbody>
 

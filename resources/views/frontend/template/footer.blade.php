@@ -20,7 +20,7 @@
 							</a>
 						</li>
 						<li class="app-item">
-							<a href="{{ asset('document/apk/InvesTrade_bjsgRelease-1.3.4-release.2.apk') }}">
+							<a href="{{ asset('document/apk/InvesTrade_bjsgRelease-1.3.5-release.2.apk') }}">
 								<ul class="android_icon">
 									<li><img src="{{ asset('img/Android_Robot_100.png') }}" style="height: 78px; padding: 7px;"></li>
 									<li>Android APK 交易平台下载</li>
